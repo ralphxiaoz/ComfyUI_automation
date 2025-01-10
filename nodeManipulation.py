@@ -43,49 +43,43 @@ def set_number_of_loras(workflow, num_loras):
         node_id for node_id, node in workflow.items() 
         if node.get('class_type') == 'LoraLoader'
         and node.get('_meta', {}).get('title', '').startswith('Lora')  # Only include numbered Loras
-    ])
+    ], key=int)
     
     # Ensure num_loras does not exceed available LoRAs
     num_loras = min(num_loras, len(lora_nodes))
     
-    # Build a complete map of node relationships
-    relationships = {}
-    for node_id, node in workflow.items():
-        inputs = node.get('inputs', {})
-        for input_key, input_value in inputs.items():
-            if isinstance(input_value, list) and len(input_value) == 2:
-                input_node_id = input_value[0]
-                if input_node_id in lora_nodes:
-                    if node_id not in relationships:
-                        relationships[node_id] = {}
-                    relationships[node_id][input_key] = input_node_id
+    # First, unlink all LoRA nodes
+    for lora_id in lora_nodes:
+        if 'inputs' in workflow[lora_id]:
+            workflow[lora_id]['inputs'] = {
+                k: v for k, v in workflow[lora_id]['inputs'].items() 
+                if k not in ['model', 'clip']
+            }
 
-    # Keep track of nodes to remove
-    nodes_to_remove = lora_nodes[num_loras:]
-
-    # Update connections for active LoRAs
-    for i, lora_node_id in enumerate(lora_nodes[:num_loras]):
+    # Then set up connections for active LoRAs
+    for i in range(num_loras):
+        current_lora = lora_nodes[i]
+        
         if i == 0:
-            # First LoRA's connections should not be modified
-            continue
-        elif i < num_loras - 1:
-            # Connect this LoRA to the next LoRA
-            next_lora = lora_nodes[i + 1]
-            workflow[next_lora]['inputs']['model'][0] = lora_node_id
-            workflow[next_lora]['inputs']['clip'][0] = lora_node_id
+            # First LoRA connects to checkpoint and CLIP
+            workflow[current_lora]['inputs']['model'] = ["1", 0]
+            workflow[current_lora]['inputs']['clip'] = ["2", 0]
+        else:
+            # Other LoRAs connect to previous LoRA
+            previous_lora = lora_nodes[i-1]
+            workflow[current_lora]['inputs']['model'] = [previous_lora, 0]
+            workflow[current_lora]['inputs']['clip'] = [previous_lora, 1]
 
-    # Connect all dependent nodes to the last active LoRA
+    # Update all nodes that take input from any LoRA to use the last active LoRA
     if num_loras > 0:
         last_lora = lora_nodes[num_loras - 1]
-        for dep_node_id, inputs in relationships.items():
-            for input_key, input_node in inputs.items():
-                if input_node in lora_nodes and dep_node_id not in lora_nodes[:num_loras]:
-                    workflow[dep_node_id]['inputs'][input_key][0] = last_lora
-
-    # Remove unused LoRA nodes
-    for node_id in nodes_to_remove:
-        if node_id in workflow:
-            del workflow[node_id]
+        for node_id, node in workflow.items():
+            if 'inputs' in node:
+                for input_key, input_value in node['inputs'].items():
+                    if isinstance(input_value, list) and len(input_value) == 2:
+                        if input_value[0] in lora_nodes and node_id not in lora_nodes:
+                            # Update the connection to point to the last active LoRA
+                            workflow[node_id]['inputs'][input_key][0] = last_lora
 
 
 def output_node_relationship(workflow):
@@ -129,7 +123,7 @@ def main():
     with open('randomizer_before_set_loras.json', 'w') as outfile:
         json.dump(workflow, outfile, indent=4)
 
-    set_number_of_loras(workflow, 2)
+    set_number_of_loras(workflow, 5)
     
     print("after set_number_of_loras:===")
     with open('randomizer_after_set_loras.json', 'w') as outfile:

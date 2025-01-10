@@ -38,8 +38,8 @@
         "inputs": {
             "text": "",
             "clip": [
-                "2",
-                0
+                "8",
+                1
             ]
         },
         "class_type": "CLIPTextEncode",
@@ -313,7 +313,7 @@
         },
         "class_type": "LoraLoader",
         "_meta": {
-            "title": "testLora"
+            "title": "Lora5"
         }
     }
 }
