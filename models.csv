@@ -1,0 +1,138 @@
+Type	Base	File_name	Trigger	Weight_from	Weight_to	Clip_skip	CFG	Steps	Sampler	Scheduler	HiRes_fix	Special	NSFW	Link
+Lora	SDXL 1.0	2b_nier_automata.safetensors	"<lora:2b_nier_automataXL:1>
+2B
+Nier AUTOMATA"	0.8	1									https://civitai.com/models/237264/2b-nier-automataxl
+Lora	SDXL 1.0	aesthetic_anime_v1s.safetensors	<lora:aesthetic_anime_v1s>	0.8	1.2									
+Lora	SD 1.5	animeoutlineV4_16.safetensors	"lineart, monochrome"				"3,5,7,11"	20	DPM++ 2M	Karras		HiRes fix		https://civitai.com/models/16014/anime-lineart-manga-like-style
+Lora	SD 1.5	backlight_slider_v10.safetensors	Add lightsource to front | Add lightsource to back	-5	5							"tigger word and weight are linked, how to implement?"		https://civitai.com/models/151576/light-control-back-front-backlight-slider
+Lora	SD 1.5	bichu-v0612.safetensors	"bichu, 
+oil painting,
+impressionism"	0.5	1									https://civitai.com/models/84542?modelVersionId=94277
+Lora	SDXL 1.0	oil painting.safetensors	"oil painting, 
+bichu"	0.5	1									https://civitai.com/models/118223?modelVersionId=128212
+Lora	Flux.1 D	Blue_Future.safetensors												
+Lora	SDXL 1.0	detailed_notrigger.safetensors		-1	1									https://civitai.com/models/229213/extremely-detailed-no-trigger-slidersntcaixyz
+Lora	SD 1.5	dm_canvas_style3_1530.safetensors												https://civitai.com/models/403521/abstract-acrylic-painting
+Lora	Flux.1 D	Ethereal_Brush_Anime_v1.0.safetensors												
+Lora	Pony	Expressive_H-000001.safetensors	Expressiveh	0.9	1	2								https://civitai.com/models/341353/expressiveh-hentai-lora-style
+Lora	SDXL 1.0	f1ngering-000036.safetensors	"f1ngering, fingering,female masturbation,fingers,hand"	0.9	1	2								https://civitai.com/models/497840/fingeringfemale-masturbation-or-animagine-v31
+Lora	SD 1.5	GoodHands-beta2.safetensors		1	1							This model is a LoCon		https://civitai.com/models/47085/envybetterhands-locon
+Lora	SD 1.5	gubinxin.safetensors	"chinese ink painting,
+<lora:gubinxin>"	0.8	1							HiRes needed		https://civitai.com/models/181682
+Lora	Flux.1 D	"It's a LoRA for portraits, BUT! actually specialized in backgrounds. v1.0.safetensors"		0.8	1	2								https://civitai.com/models/1005995/its-a-lora-for-portraits-but-actually-specialized-in-backgrounds-v10?modelVersionId=1127487
+Lora	SD 1.5	manga2_by_XUEBI.safetensors	"monochrome,greyscale,comic"											https://civitai.com/models/105648/manga-r18
+Lora	SD 1.5	masturbation_female.safetensors	"fingering, schlick, masturbation, NSFW, pussy"										NSFW	https://civitai.com/models/11088/female-masturbation-fingering
+Lora	SD 1.5	more_details.safetensors		0	1									https://civitai.com/models/82098/add-more-details-detail-enhancer-tweaker-lora
+Lora	SD 1.5	nier_anime_style_offset.safetensors	nier anime style	1	1									https://civitai.com/models/61240/nier-automata-anime-style-lora
+Lora	SD 1.5	pixel_f2.safetensors	pixel											https://civitai.com/models/44960/mpixel
+Lora		SOURCE_UNKNOWN_add_detail.safetensors												
+Lora	SD 1.5	tifa_v2.3.safetensors	"tifa lockhart, red_eyes, black hair, long hair"											https://civitai.com/models/11367/tifameenow
+Checkpoint	SD 1.5	abyssorangemix2NSFW_abyssorangemix2Nsfw.safetensors											"NSFW, SFW"	https://civitai.com/models/4449/abyssorangemix2-nsfw
+Checkpoint	SD 1.5	cetusMix_Coda2.safetensors												https://civitai.com/models/6755?modelVersionId=48569
+Checkpoint	SD 1.5	cetusMix_Codaedition.safetensors												https://civitai.com/models/6755?modelVersionId=20229
+Checkpoint	SD 1.5	cetusMix_Whalefall2.safetensors				2	"4,5,6,7,8"	20+	DPM++2M	Karras	Y			https://civitai.com/models/6755/cetus-mix
+Checkpoint	SD 1.5	dreamshaper_8.safetensors												
+Checkpoint	SD 1.5	dreamshaperPixelart_v10.safetensors	"pixel art,
+pixel art style"											https://civitai.com/models/129879/dreamshaper-pixelart
+Checkpoint	SDXL 1.0	dreamshaperXL_v21TurboDPMSDE.safetensors												
+Checkpoint	SD 1.5	fortyfourOilpainting_v10.safetensors	oilpainting	0.9	1.5		"2,3,7,11"							https://civitai.com/models/93262/fortyfouroilpaintingv1
+Checkpoint	SD 1.5	majicmixRealistic_v7.safetensors						20-40	Euler a		Y			https://civitai.com/models/43331/majicmix-realistic
+Checkpoint	SD 1.5	meinamix_v12Final.safetensors												https://civitai.com/models/7240?modelVersionId=948574
+Checkpoint	SD 1.5	meinamix_meinaV9.safetensors												https://civitai.com/models/7240?modelVersionId=46137
+Checkpoint		meinaunreal_v4.safetensors												
+Checkpoint		mistoonAnime_v10Illustrious.safetensors												
+Checkpoint		photon_v1.safetensors												
+Checkpoint	SDXL 1.0	photonium_v10.safetensors												https://civitai.com/models/268578/photonium
+Checkpoint	Illustrious	prefectiousXLNSFW_v10.safetensors												https://civitai.com/models/992378/prefectious-xl-nsfw
+Checkpoint		realcartoon3d_v17.safetensors												
+Checkpoint		revAnimated_v2Rebirth.safetensors												
+Checkpoint		sdXL_v10VAEFix.safetensors												
+Checkpoint		sdxlNijiSeven_sdxlNijiSeven.safetensors												
+Checkpoint		v1-5-pruned.ckpt.safetensors												
+Checkpoint		v1-5-pruned-emaonly.safetensors												
+Checkpoint	Illustrious	waiNSFWIllustrious_v80.safetensors												https://civitai.com/models/827184/wai-nsfw-illustrious-sdxl
+Checkpoint	Pony	duchaitenPonyXLNo_v70.safetensors	"Arcane
+ttguweiz
+carmesjocelin
+fiz-rot
+anninosj
+samdoesarts
+elliemaplefox
+sei5osuzuki
+BM94199
+yaoyao794
+sea_Pall
+Vergilhoo
+hamukukka
+omao_51061954
+letsfinalanswer
+106858
+sungmoomoo
+hakwansoo36
+wonbin_lee
+hex_jjung
+Ghibli
+niji3d
+Hoovesart
+cutesexyrobutts
+afrobull
+unfairr
+Khyle
+shexyo
+Sinozick
+ironlilyart
+mossacannibalis
+gabrielpicolo
+Rossdraws
+Kuvshinov_Ilya
+RDJlock
+wlopwangling
+beitemian
+strauzek
+RyanReos
+hdfurrybabes
+Apone3D
+wildeerstudio
+AkiyamaRyo
+fugtrup
+crazytown
+748cm
+ArawAraw
+stevencarson
+rescraft
+aromasensei
+ponyvid
+ponycos
+ghost236
+7200ss
+lizchiefffff"											https://civitai.com/models/376450?modelVersionId=962170
+Checkpoint	SDXL 1.0	animagineXLV31_v31.safetensors												https://civitai.com/models/260267?modelVersionId=403131
+Checkpoint	SD 1.5 Hyper	realisticVisionV60B1_v51HyperVAE.safetensors												https://civitai.com/models/4201/realistic-vision-v60-b1
+Lora	SD 1.5	AbstractPortrait_50_R.safetensors	pxint											https://civitai.com/models/31209/abstract-portraits
+Lora	SD 1.5	AbstractMalePortraits_v2R_60_R-128.safetensors	pxint											https://civitai.com/models/31209?modelVersionId=62176
+Checkpoint	SD 1.5	xsarchitectural_v11.safetensors												https://civitai.com/models/28112?modelVersionId=50722
+Lora	SD 1.5	XSarchitectural-38InteriorForBedroom.safetensors												https://civitai.com/models/45262/xsarchitectural-38interiorforbedroom
+Checkpoint	SD 1.5	lbcSimple_v20.safetensors												https://civitai.com/models/181285?modelVersionId=299118
+Lora	SDXL 1.0	texta.safetensors	"logo,
+text,
+sign that says
+the word"											https://civitai.com/models/221240/texta-generate-text-with-sdxl
+Lora	SD 1.5	WaterColoursScenev1.0.safetensors	"shuicai
+scene"											https://civitai.green/models/44480/watercolorsscenev1?modelVersionId=49107
+Lora	Illustrious	69 pov_illustrious_V1.0.safetensors	"69 pov, ass, pussy, anus, 1boy, penis, fellatio,oral"											https://civitai.com/models/1071741?modelVersionId=1203043
+Checkpoint		meichidarkmixReload_meichidarkanimv2Lust.safetensors												https://civitai.com/models/643227?modelVersionId=770375
+Lora	SDXL 1.0	Classic Western Dragons XL.safetensors	"dragon
+classic dragon
+exotic dragon
+magma dragon
+bone dragon
+undead dragon
+thunder dragon
+forest dragon
+golden dragon"											https://civitai.com/models/153332/western-dragon-collection-xl-classic-style
+Checkpoint	Pony	ponyDiffusionV6XL_v6StartWithThisOne.safetensors												https://civitai.com/models/257749?modelVersionId=290640
+Lora	Pony	g0th1c2XLP.safetensors	"g0th1c, glowing, neon lights, glowing eyes,"											https://civitai.com/models/888231?modelVersionId=1029540
+Lora	Pony	dragonriderpxl.safetensors	dragonriderpxl											https://civitai.com/models/722733/dragonrider-pony-xl-concept
+Lora	Pony	Pony_DetailV2.0.safetensors												https://civitai.com/models/383086?modelVersionId=449738
+Checkpoint	SDXL 1.0	ghostxl_v10BakedVAE.safetensors	"realistic anime art style, realistic art style"											https://civitai.com/models/312431/ghostxl
+Lora	Flux.1 D	flux.1_lora_flyway_Epic-detail_v2.safetensors		0.8	1									https://civitai.com/models/736706/epic-gorgeous-details
