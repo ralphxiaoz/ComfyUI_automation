@@ -23,7 +23,7 @@
   },
   "3": {
     "inputs": {
-      "text": "",
+      "text": "a robot in year 2077, cyberpunk style, cowboy shot",
       "clip": [
         "8",
         1
@@ -36,7 +36,7 @@
   },
   "4": {
     "inputs": {
-      "text": "",
+      "text": "embedding: easyNegative",
       "clip": [
         "8",
         1
@@ -293,7 +293,7 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE Decode"
+      "title": "VAE Decode Up"
     }
   },
   "20": {

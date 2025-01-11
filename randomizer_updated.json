@@ -1,7 +1,7 @@
 {
     "1": {
         "inputs": {
-            "ckpt_name": "abyssorangemix2NSFW_abyssorangemix2Nsfw.safetensors"
+            "ckpt_name": "cetusMix_Coda2.safetensors"
         },
         "class_type": "CheckpointLoaderSimple",
         "_meta": {
@@ -23,7 +23,7 @@
     },
     "3": {
         "inputs": {
-            "text": "",
+            "text": "a robot in year 2077, cyberpunk style, cowboy shot",
             "clip": [
                 "8",
                 1
@@ -36,7 +36,7 @@
     },
     "4": {
         "inputs": {
-            "text": "",
+            "text": "embedding: easyNegative",
             "clip": [
                 "8",
                 1
@@ -49,9 +49,17 @@
     },
     "5": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "dm_canvas_style3_1530.safetensors",
+            "strength_model": 1.0,
+            "strength_clip": 1,
+            "model": [
+                "1",
+                0
+            ],
+            "clip": [
+                "2",
+                0
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -60,9 +68,17 @@
     },
     "6": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "tifa_v2.3.safetensors",
+            "strength_model": 1.0,
+            "strength_clip": 1,
+            "model": [
+                "5",
+                0
+            ],
+            "clip": [
+                "5",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -71,9 +87,17 @@
     },
     "7": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "gubinxin.safetensors",
+            "strength_model": 0.8,
+            "strength_clip": 1,
+            "model": [
+                "6",
+                0
+            ],
+            "clip": [
+                "6",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -82,9 +106,17 @@
     },
     "8": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "masturbation_female.safetensors",
+            "strength_model": 1.0,
+            "strength_clip": 1,
+            "model": [
+                "7",
+                0
+            ],
+            "clip": [
+                "7",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -150,7 +182,7 @@
     },
     "12": {
         "inputs": {
-            "filename_prefix": "ComfyUI",
+            "filename_prefix": "randomizer-20250110222816-cetusMix_Coda2-dm_canvas_style3_1530, tifa_v2.3, gubinxin, masturbation_female",
             "images": [
                 "11",
                 0
@@ -285,3 +317,4 @@
         }
     }
 }
+// Datetime stamp: 2025-01-10T22:28:16.993200

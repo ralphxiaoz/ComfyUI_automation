@@ -1,8 +1,8 @@
 import json
 import random
 from urllib import request
-import csv
 import urllib.error
+import csv
 import time
 from datetime import datetime
 

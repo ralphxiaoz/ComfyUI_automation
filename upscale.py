@@ -1,7 +1,7 @@
 import json
 import os
 from PIL import Image, ExifTags
-from autoGen import queue_prompt, load_workflow
+from auto_gen import queue_prompt, load_workflow
 import time
 
 def extract_metadata(image_path):
