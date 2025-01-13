@@ -4,9 +4,19 @@ import json
 from datetime import datetime
 from urllib import request
 import urllib.error
-from node_manipulation import set_number_of_loras, set_lora, get_node_ID
+import time
+from node_manipulation import (
+    set_number_of_loras, 
+    set_lora, 
+    get_node_ID, 
+    set_KSampler, 
+    set_resolution,
+    set_positive_prompt,
+    set_negative_prompt
+)
+from gen_prompt import gen_positive_prompt, gen_negative_prompt
 
-def pick_models(num_loras, checkpoint=None, loras=None):
+def pick_models(num_loras, checkpoint=None, loras=None, skip_external=True):
     """
     Selects a checkpoint and a specified number of LoRAs from a CSV file.
 
@@ -14,6 +24,7 @@ def pick_models(num_loras, checkpoint=None, loras=None):
     - num_loras (int): The number of LoRAs to select.
     - checkpoint (str, optional): The name of a specific checkpoint to use. If None, a random checkpoint is selected.
     - loras (list of str, optional): A list of specific LoRA names to use. If None, random LoRAs are selected based on the checkpoint's base.
+    - skip_external (bool): If True, ignore models with a "location" of "external".
 
     Returns:
     - dict: A dictionary containing the selected checkpoint and LoRAs, along with their associated attributes.
@@ -26,8 +37,12 @@ def pick_models(num_loras, checkpoint=None, loras=None):
         for row in reader:
             models.append(row)
 
-    # Filter out Flux.1 D base models
-    models = [model for model in models if model['Base'] != 'Flux.1 D']
+    # Filter out Flux.1 D base models and excluded ones
+    models = [model for model in models if model['Base'] != 'Flux.1 D' and model['Excluded'] != 'Y']
+
+    # Optionally filter out external models
+    if skip_external:
+        models = [model for model in models if model.get('Location', '').lower() != 'external']
 
     # If checkpoint or loras are specified, use them
     selected_checkpoint = None
@@ -106,10 +121,9 @@ def load_models_into_workflow(workflow, models):
         weight = round(random.uniform(weight_from, weight_to), 1)
         set_lora(workflow, lora_node_title, lora_name, strength_model=weight)
 
-def queue_prompt(prompt):
-    p = {"prompt": prompt}
-    data = json.dumps(p).encode('utf-8')
-    
+def queue_workflow(workflow):
+    w = {"prompt": workflow}
+    data = json.dumps(w).encode('utf-8')
     
     req = request.Request("http://127.0.0.1:8188/prompt", data=data)
     try:
@@ -147,19 +161,32 @@ if __name__ == "__main__":
         reader = csv.DictReader(csvfile)
         checkpoints = [row['Name'] for row in reader if row['Type'] == 'Checkpoint']
 
-    for ckpt in checkpoints:
-        n = 2  # Replace with the desired index (1-based) of the checkpoint
-        ckpt = checkpoints[n - 1] if 0 < n <= len(checkpoints) else random.choice(checkpoints)
-        for i in range(1, 10):
+    with open('art_styles.csv', 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        art_styles = [row for row in reader]
+
+    ckpt = "dreamshaper_8.safetensors"
+
+    for style in art_styles:
+        style_name = style['name']
+        for i in range(1, 3):
+            print("===== queueing workflow =====")
             num_loras = random.randint(1, 4)
             models = pick_models(num_loras, checkpoint=ckpt, loras=None)
             load_models_into_workflow(workflow, models)
             current_time = datetime.now().strftime("%Y%m%d%H%M%S")
             checkpoint_used = models['checkpoint']
             loras_used = ', '.join([models[f'lora{i}'] for i in range(1, num_loras + 1)])
-            workflow["12"]["inputs"]["filename_prefix"] = f"randomizer-{current_time}-{checkpoint_used.replace('.safetensors', '')}-{loras_used.replace('.safetensors', '')}"
-            queue_prompt(workflow)
-
+            set_KSampler(workflow, "KSampler", seed=random.randint(1, 1000000), steps=20, cfg=7, sampler_name='dpmpp_2m', scheduler='karras', denoise=1)
+            set_positive_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, style_name=style_name)
+            set_negative_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, style_name=style_name)
+            set_resolution(workflow, "Empty Latent Image", 768, 768)
+            workflow["12"]["inputs"]["filename_prefix"] = f"randomizer-{style_name}-{current_time}-{checkpoint_used.replace('.safetensors', '')}-{loras_used.replace('.safetensors', '')}"
+            queue_workflow(workflow)
+            print("===== workflow queued =====")
+            if i % 2 == 0:
+                time.sleep(100)
+    
     # Save the updated workflow to a new JSON file
     with open('randomizer_updated.json', 'w') as outfile:
         json.dump(workflow, outfile, indent=4)
