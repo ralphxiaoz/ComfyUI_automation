@@ -1,0 +1,41 @@
+2025-01-12 23:56:31,063 - __main__ - INFO - Starting workflow generation
+2025-01-12 23:56:31,066 - __main__ - INFO - Processing style: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,066 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: dreamshaper_8.safetensors
+2025-01-12 23:56:31,072 - gen_prompt - INFO - Generating positive prompt - style: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,073 - gen_prompt - INFO - Generating trigger words - checkpoint: dreamshaper_8.safetensors, loras: manga2_by_XUEBI.safetensors, add_detail.safetensors, backlight_slider_v10.safetensors, AbstractPortrait_50_R.safetensors
+2025-01-12 23:56:31,076 - gen_prompt - INFO - Searching for Checkpoint: dreamshaper_8.safetensors
+2025-01-12 23:56:31,077 - gen_prompt - WARNING - No trigger_select found for dreamshaper_8.safetensors
+2025-01-12 23:56:31,077 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-12 23:56:31,078 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-12 23:56:31,078 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-12 23:56:31,079 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-12 23:56:31,079 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-12 23:56:31,079 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, Add lightsource to front, pxint
+2025-01-12 23:56:31,080 - gen_prompt - INFO - Generating style prompt - style_name: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,081 - gen_prompt - INFO - Found style. Result: {'name': 'Cat - PHOTOGRAPHY', 'positive': 'photography, capturing moments, storytelling, creative composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-12 23:56:31,082 - gen_prompt - INFO - Generated positive prompt: 1girl, cowboy shot, monochrome, greyscale, comic, Add lightsource to front, pxint, photography, capturing moments, storytelling, creative composition, masterpiece, best quality, ultra-detailed
+2025-01-12 23:56:31,082 - gen_prompt - INFO - Generating negative prompt - style: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,082 - gen_prompt - INFO - Generating style prompt - style_name: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,085 - gen_prompt - INFO - Found style. Result: {'name': 'Cat - PHOTOGRAPHY', 'positive': 'photography, capturing moments, storytelling, creative composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-12 23:56:31,085 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-12 23:56:31,087 - load_models - INFO - Queueing workflow
+2025-01-12 23:56:31,299 - load_models - INFO - Response: {"prompt_id": "ed3bf9bb-5b44-4eed-923e-a122f2c56795", "number": 3399, "node_errors": {}}
+2025-01-12 23:56:31,300 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: dreamshaper_8.safetensors
+2025-01-12 23:56:31,307 - gen_prompt - INFO - Generating positive prompt - style: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,308 - gen_prompt - INFO - Generating trigger words - checkpoint: dreamshaper_8.safetensors, loras: more_details.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors, masturbation_female.safetensors
+2025-01-12 23:56:31,308 - gen_prompt - INFO - Searching for Checkpoint: dreamshaper_8.safetensors
+2025-01-12 23:56:31,308 - gen_prompt - WARNING - No trigger_select found for dreamshaper_8.safetensors
+2025-01-12 23:56:31,309 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-12 23:56:31,309 - gen_prompt - WARNING - No trigger_select found for more_details.safetensors
+2025-01-12 23:56:31,310 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-12 23:56:31,310 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-12 23:56:31,311 - gen_prompt - INFO - Final trigger words: pxint, fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-12 23:56:31,311 - gen_prompt - INFO - Generating style prompt - style_name: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,312 - gen_prompt - INFO - Found style. Result: {'name': 'Cat - PHOTOGRAPHY', 'positive': 'photography, capturing moments, storytelling, creative composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-12 23:56:31,313 - gen_prompt - INFO - Generated positive prompt: 1girl, cowboy shot, pxint, fingering,  schlick,  masturbation,  NSFW,  pussy, photography, capturing moments, storytelling, creative composition, masterpiece, best quality, ultra-detailed
+2025-01-12 23:56:31,314 - gen_prompt - INFO - Generating negative prompt - style: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,314 - gen_prompt - INFO - Generating style prompt - style_name: Cat - PHOTOGRAPHY
+2025-01-12 23:56:31,316 - gen_prompt - INFO - Found style. Result: {'name': 'Cat - PHOTOGRAPHY', 'positive': 'photography, capturing moments, storytelling, creative composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-12 23:56:31,317 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-12 23:56:31,318 - load_models - INFO - Queueing workflow
+2025-01-12 23:56:31,352 - load_models - INFO - Response: {"prompt_id": "f0c4181d-37fe-4eb0-be80-a6e7cb650df6", "number": 3400, "node_errors": {}}

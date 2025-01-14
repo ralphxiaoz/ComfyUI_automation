@@ -1,0 +1,163 @@
+2025-01-13 00:15:15,914 - __main__ - INFO - Starting workflow generation
+2025-01-13 00:15:15,917 - __main__ - INFO - Processing style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:15,917 - load_models - INFO - Selecting models - num_loras: 2, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:15,921 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:15,923 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: animeoutlineV4_16.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:15:15,923 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:15,923 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:15,924 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:15:15,924 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:15:15,924 - gen_prompt - INFO - Final trigger words: lineart,  monochrome, pxint
+2025-01-13 00:15:15,926 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:15,928 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:15,928 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, lineart,  monochrome, pxint, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:15,929 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:15,929 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:15,931 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:15,931 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:15,933 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,159 - load_models - INFO - Response: {"prompt_id": "e1e95570-9177-497e-b225-756d84707f3b", "number": 3401, "node_errors": {}}
+2025-01-13 00:15:16,160 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,165 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,165 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: animeoutlineV4_16.safetensors, manga2_by_XUEBI.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors, dm_canvas_style3_1530.safetensors
+2025-01-13 00:15:16,166 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,166 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,166 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:15:16,167 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:15:16,167 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:15:16,169 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:15:16,169 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:15:16,169 - gen_prompt - INFO - Final trigger words: lineart,  monochrome, monochrome, greyscale, comic, pxint
+2025-01-13 00:15:16,170 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,171 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,171 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, lineart,  monochrome, monochrome, greyscale, comic, pxint, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,172 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,173 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,174 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,175 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,175 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,290 - load_models - INFO - Response: {"prompt_id": "5a992fcd-a391-4877-8b7a-9f4280acd7e8", "number": 3402, "node_errors": {}}
+2025-01-13 00:15:16,291 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,294 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,295 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: animeoutlineV4_16.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors, add_detail.safetensors
+2025-01-13 00:15:16,295 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,295 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,295 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:15:16,297 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:15:16,297 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:15:16,298 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:15:16,298 - gen_prompt - INFO - Final trigger words: lineart,  monochrome, pxint
+2025-01-13 00:15:16,298 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,300 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,300 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, lineart,  monochrome, pxint, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,301 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,301 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,304 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,304 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,306 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,350 - load_models - INFO - Response: {"prompt_id": "7a90258a-d38d-4cea-8204-bdd458dfe857", "number": 3403, "node_errors": {}}
+2025-01-13 00:15:16,351 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,355 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,355 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: add_detail.safetensors, GoodHands-beta2.safetensors, masturbation_female.safetensors
+2025-01-13 00:15:16,356 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,356 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,356 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:15:16,357 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:15:16,357 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:15:16,357 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:15:16,359 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:15:16,359 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-13 00:15:16,359 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,361 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,361 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, fingering,  schlick,  masturbation,  NSFW,  pussy, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,363 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,363 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,364 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,364 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,367 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,385 - load_models - INFO - Response: {"prompt_id": "7ae95e55-4002-4502-92c1-9117bdcc16a3", "number": 3404, "node_errors": {}}
+2025-01-13 00:15:16,385 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,388 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,388 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: masturbation_female.safetensors
+2025-01-13 00:15:16,389 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,389 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,390 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:15:16,390 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-13 00:15:16,390 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,391 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,393 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, fingering,  schlick,  masturbation,  NSFW,  pussy, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,394 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,394 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,397 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,397 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,399 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,413 - load_models - INFO - Response: {"prompt_id": "6ac66abd-0525-4a10-a28a-c6f7811b2147", "number": 3405, "node_errors": {}}
+2025-01-13 00:15:16,414 - load_models - INFO - Selecting models - num_loras: 2, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,418 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,418 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: nier_anime_style_offset.safetensors, AbstractPortrait_50_R.safetensors
+2025-01-13 00:15:16,419 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,419 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,419 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:15:16,420 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-13 00:15:16,420 - gen_prompt - INFO - Final trigger words: nier anime style, pxint
+2025-01-13 00:15:16,420 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,423 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,423 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, nier anime style, pxint, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,424 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,424 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,426 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,426 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,428 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,446 - load_models - INFO - Response: {"prompt_id": "e3d6b560-dd9e-42e3-b2f3-06424fd430c4", "number": 3406, "node_errors": {}}
+2025-01-13 00:15:16,447 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,450 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,450 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: add_detail.safetensors
+2025-01-13 00:15:16,451 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,451 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,451 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:15:16,453 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:15:16,453 - gen_prompt - INFO - Final trigger words: 
+2025-01-13 00:15:16,453 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,455 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,455 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, , Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,457 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,457 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,460 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,460 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,461 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,473 - load_models - INFO - Response: {"prompt_id": "527ff52f-da72-4bfc-8f8a-a35e0dfeb21a", "number": 3407, "node_errors": {}}
+2025-01-13 00:15:16,474 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,478 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,479 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: manga2_by_XUEBI.safetensors, nier_anime_style_offset.safetensors, GoodHands-beta2.safetensors
+2025-01-13 00:15:16,479 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,479 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,479 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:15:16,481 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:15:16,481 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:15:16,481 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:15:16,482 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, nier anime style
+2025-01-13 00:15:16,482 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,484 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,484 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, monochrome, greyscale, comic, nier anime style, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,485 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,486 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,488 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,488 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,490 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,515 - load_models - INFO - Response: {"prompt_id": "707854e1-eb7b-43a9-9398-f76ce4a8b0e1", "number": 3408, "node_errors": {}}
+2025-01-13 00:15:16,515 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,518 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,518 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: bichu-v0612.safetensors
+2025-01-13 00:15:16,518 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:15:16,519 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:15:16,519 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:15:16,520 - gen_prompt - INFO - Final trigger words: bichu,  oil painting,  impressionism
+2025-01-13 00:15:16,520 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,522 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,523 - gen_prompt - INFO - Generated positive prompt: a girl with glowing patterns on skin, hard to tell if she's angel or demon, smiling at viewer, bichu,  oil painting,  impressionism, Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination, masterpiece, best quality, ultra-detailed
+2025-01-13 00:15:16,523 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,524 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture > Alebrije
+2025-01-13 00:15:16,525 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture > Alebrije', 'positive': 'Alebrije sculpture style, vibrant and fantastical Mexican folk art, intricate and whimsical animal figures, handcrafted, celebrates creativity and imagination', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:15:16,525 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:15:16,527 - load_models - INFO - Queueing workflow
+2025-01-13 00:15:16,556 - load_models - INFO - Response: {"prompt_id": "c8385ba1-c0ae-4655-bca2-8f8e25f1bfb3", "number": 3409, "node_errors": {}}

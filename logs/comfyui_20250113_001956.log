@@ -1,0 +1,845 @@
+2025-01-13 00:19:56,583 - __main__ - INFO - Starting workflow generation
+2025-01-13 00:19:56,586 - __main__ - INFO - Processing style: Fashion - Cyberpunk
+2025-01-13 00:19:56,586 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,593 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,594 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: bichu-v0612.safetensors, nier_anime_style_offset.safetensors, animeoutlineV4_16.safetensors, GoodHands-beta2.safetensors
+2025-01-13 00:19:56,594 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,595 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:56,595 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:19:56,597 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:19:56,597 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:19:56,597 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:19:56,598 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:19:56,598 - gen_prompt - INFO - Final trigger words: bichu,  oil painting,  impressionism, nier anime style, lineart,  monochrome
+2025-01-13 00:19:56,598 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,600 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,601 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, bichu,  oil painting,  impressionism, nier anime style, lineart,  monochrome, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:56,602 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,602 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,605 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,606 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:56,607 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:56,817 - load_models - INFO - Response: {"prompt_id": "31f2a5d4-b964-402f-9b33-cb5be8699f12", "number": 3419, "node_errors": {}}
+2025-01-13 00:19:56,818 - load_models - INFO - Selecting models - num_loras: 2, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,822 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,822 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: tifa_v2.3.safetensors, nier_anime_style_offset.safetensors
+2025-01-13 00:19:56,822 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,823 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:56,823 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:19:56,824 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:19:56,824 - gen_prompt - INFO - Final trigger words: tifa lockhart,  red_eyes,  black hair,  long hair, nier anime style
+2025-01-13 00:19:56,824 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,827 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,827 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, tifa lockhart,  red_eyes,  black hair,  long hair, nier anime style, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:56,828 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,829 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,832 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,832 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:56,834 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:56,843 - load_models - INFO - Response: {"prompt_id": "510b2bf6-22ae-4a3e-8e7d-7549ea153494", "number": 3420, "node_errors": {}}
+2025-01-13 00:19:56,845 - load_models - INFO - Selecting models - num_loras: 2, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,848 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,848 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: masturbation_female.safetensors, GoodHands-beta2.safetensors
+2025-01-13 00:19:56,848 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,850 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:56,850 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:19:56,850 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:19:56,851 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:19:56,851 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-13 00:19:56,851 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,853 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,854 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:56,855 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,855 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,857 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,857 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:56,860 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:56,916 - load_models - INFO - Response: {"prompt_id": "f906531d-e5fe-4311-8534-08cbb3d49eab", "number": 3421, "node_errors": {}}
+2025-01-13 00:19:56,917 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,920 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,920 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: nier_anime_style_offset.safetensors
+2025-01-13 00:19:56,920 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,921 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:56,921 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:19:56,921 - gen_prompt - INFO - Final trigger words: nier anime style
+2025-01-13 00:19:56,921 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,924 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,924 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, nier anime style, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:56,925 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,925 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,926 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,928 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:56,929 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:56,937 - load_models - INFO - Response: {"prompt_id": "37ddbe07-f8a6-4de1-bfeb-67568129e6f5", "number": 3422, "node_errors": {}}
+2025-01-13 00:19:56,938 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,940 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,941 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: manga2_by_XUEBI.safetensors
+2025-01-13 00:19:56,941 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,942 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:56,942 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:19:56,942 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic
+2025-01-13 00:19:56,942 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,945 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,946 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:56,947 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,947 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,949 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,949 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:56,950 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:56,959 - load_models - INFO - Response: {"prompt_id": "7c47963f-6696-4b31-a648-f84e5aab6adc", "number": 3423, "node_errors": {}}
+2025-01-13 00:19:56,960 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,964 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,964 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: manga2_by_XUEBI.safetensors
+2025-01-13 00:19:56,964 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:56,965 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:56,965 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:19:56,965 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic
+2025-01-13 00:19:56,966 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,968 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,968 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:56,970 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:56,970 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:56,972 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:56,972 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:56,973 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:57,011 - load_models - INFO - Response: {"prompt_id": "840538c1-e95e-4818-b89a-83848427dd66", "number": 3424, "node_errors": {}}
+2025-01-13 00:19:57,011 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:57,015 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:57,015 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: nier_anime_style_offset.safetensors
+2025-01-13 00:19:57,015 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:57,016 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:57,016 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:19:57,016 - gen_prompt - INFO - Final trigger words: nier anime style
+2025-01-13 00:19:57,016 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:57,018 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:57,019 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, nier anime style, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:57,020 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:57,021 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:57,023 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:57,024 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:57,025 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:57,028 - load_models - INFO - Response: {"prompt_id": "dfbc0f26-89af-486b-a9aa-823341457917", "number": 3425, "node_errors": {}}
+2025-01-13 00:19:57,028 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:57,033 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:57,033 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: GoodHands-beta2.safetensors, masturbation_female.safetensors, nier_anime_style_offset.safetensors, Drawing.safetensors
+2025-01-13 00:19:57,033 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:57,034 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:57,034 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:19:57,035 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:19:57,035 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:19:57,035 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:19:57,037 - gen_prompt - INFO - Searching for Lora: Drawing.safetensors
+2025-01-13 00:19:57,038 - gen_prompt - WARNING - No trigger_select found for Drawing.safetensors
+2025-01-13 00:19:57,038 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy, nier anime style
+2025-01-13 00:19:57,038 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:57,040 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:57,040 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, nier anime style, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:57,041 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:57,041 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:57,043 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:57,044 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:57,045 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:57,055 - load_models - INFO - Response: {"prompt_id": "d5c2a2bd-1843-4038-b58c-623e6e0dcae2", "number": 3426, "node_errors": {}}
+2025-01-13 00:19:57,056 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:57,062 - gen_prompt - INFO - Generating positive prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:57,062 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: AbstractPortrait_50_R.safetensors, more_details.safetensors, backlight_slider_v10.safetensors
+2025-01-13 00:19:57,063 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:19:57,063 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:19:57,064 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-13 00:19:57,064 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-13 00:19:57,065 - gen_prompt - WARNING - No trigger_select found for more_details.safetensors
+2025-01-13 00:19:57,065 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:19:57,066 - gen_prompt - INFO - Final trigger words: pxint, Add lightsource to front
+2025-01-13 00:19:57,066 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:57,068 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:57,069 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, pxint, Add lightsource to front, Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic, masterpiece, best quality, ultra-detailed
+2025-01-13 00:19:57,070 - gen_prompt - INFO - Generating negative prompt - style: Fashion - Cyberpunk
+2025-01-13 00:19:57,070 - gen_prompt - INFO - Generating style prompt - style_name: Fashion - Cyberpunk
+2025-01-13 00:19:57,073 - gen_prompt - INFO - Found style. Result: {'name': 'Fashion - Cyberpunk', 'positive': 'Cyberpunk fashion style, inspired by futuristic dystopian settings, features high-tech and futuristic clothing, incorporates elements of technology and urban culture, promotes a bold and avant-garde aesthetic', 'negative': 'signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality'}
+2025-01-13 00:19:57,073 - gen_prompt - INFO - Generated negative prompt: signature, watermark, low quality, JPEG artifacts, off-center, deformed, cropped, worst quality, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:19:57,075 - load_models - INFO - Queueing workflow
+2025-01-13 00:19:57,147 - load_models - INFO - Response: {"prompt_id": "34959b38-4ea2-42a3-83f9-4260920436a5", "number": 3427, "node_errors": {}}
+2025-01-13 00:20:57,149 - __main__ - INFO - Processing style: Design - Letterhead
+2025-01-13 00:20:57,150 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,158 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,158 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: nier_anime_style_offset.safetensors, dm_canvas_style3_1530.safetensors, add_detail.safetensors, tifa_v2.3.safetensors
+2025-01-13 00:20:57,159 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,159 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,161 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:20:57,162 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,162 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,162 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:20:57,164 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:20:57,164 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:20:57,165 - gen_prompt - INFO - Final trigger words: nier anime style, tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:20:57,165 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,168 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,169 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, nier anime style, tifa lockhart,  red_eyes,  black hair,  long hair, Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,170 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,170 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,172 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,173 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,175 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,185 - load_models - INFO - Response: {"prompt_id": "048a6741-48bd-49bb-92cb-6c348efcf1e6", "number": 3428, "node_errors": {}}
+2025-01-13 00:20:57,186 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,194 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,194 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: GoodHands-beta2.safetensors, manga2_by_XUEBI.safetensors, backlight_slider_v10.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:20:57,194 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,195 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,195 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:20:57,197 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:20:57,197 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:20:57,198 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:20:57,199 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:20:57,200 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, Add lightsource to front, pxint
+2025-01-13 00:20:57,201 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,203 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,204 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, Add lightsource to front, pxint, Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,205 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,206 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,209 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,209 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,212 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,229 - load_models - INFO - Response: {"prompt_id": "938b5989-59e0-4457-81ef-1a671ca7a258", "number": 3429, "node_errors": {}}
+2025-01-13 00:20:57,230 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,235 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,236 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: bichu-v0612.safetensors
+2025-01-13 00:20:57,236 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,237 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,237 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:20:57,238 - gen_prompt - INFO - Final trigger words: bichu,  oil painting,  impressionism
+2025-01-13 00:20:57,239 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,240 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,241 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, bichu,  oil painting,  impressionism, Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,243 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,243 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,246 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,246 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,248 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,299 - load_models - INFO - Response: {"prompt_id": "9e0600af-c1b4-41a6-853c-9cf9ff91b356", "number": 3430, "node_errors": {}}
+2025-01-13 00:20:57,300 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,308 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,308 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: dm_canvas_style3_1530.safetensors, backlight_slider_v10.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors, masturbation_female.safetensors
+2025-01-13 00:20:57,309 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,310 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,310 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,312 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,313 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:20:57,314 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:20:57,314 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:20:57,315 - gen_prompt - INFO - Final trigger words: Add lightsource to back, pxint, fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-13 00:20:57,316 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,319 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,320 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, Add lightsource to back, pxint, fingering,  schlick,  masturbation,  NSFW,  pussy, Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,321 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,322 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,324 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,325 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,327 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,392 - load_models - INFO - Response: {"prompt_id": "d0bf7fe9-238f-4258-b257-5e6dab2e929a", "number": 3431, "node_errors": {}}
+2025-01-13 00:20:57,392 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,400 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,400 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: masturbation_female.safetensors, backlight_slider_v10.safetensors, manga2_by_XUEBI.safetensors
+2025-01-13 00:20:57,400 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,402 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,402 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:20:57,403 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:20:57,403 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:20:57,404 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy, Add lightsource to back, monochrome, greyscale, comic
+2025-01-13 00:20:57,404 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,406 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,407 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, Add lightsource to back, monochrome, greyscale, comic, Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,408 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,409 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,410 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,412 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,414 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,433 - load_models - INFO - Response: {"prompt_id": "943485b3-5538-4717-99b0-9c0ec1fea966", "number": 3432, "node_errors": {}}
+2025-01-13 00:20:57,434 - load_models - INFO - Selecting models - num_loras: 2, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,440 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,440 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: more_details.safetensors, nier_anime_style_offset.safetensors
+2025-01-13 00:20:57,440 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,440 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,441 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-13 00:20:57,442 - gen_prompt - WARNING - No trigger_select found for more_details.safetensors
+2025-01-13 00:20:57,442 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:20:57,443 - gen_prompt - INFO - Final trigger words: nier anime style
+2025-01-13 00:20:57,443 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,445 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,446 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, nier anime style, Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,447 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,448 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,450 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,451 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,453 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,488 - load_models - INFO - Response: {"prompt_id": "ea99714e-de40-4ae8-afe2-261755ab4644", "number": 3433, "node_errors": {}}
+2025-01-13 00:20:57,489 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,496 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,496 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: nier_anime_style_offset.safetensors, GoodHands-beta2.safetensors, dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,496 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,497 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,497 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:20:57,498 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:20:57,498 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:20:57,499 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,499 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,499 - gen_prompt - INFO - Final trigger words: nier anime style
+2025-01-13 00:20:57,500 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,501 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,502 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, nier anime style, Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,503 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,503 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,507 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,508 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,509 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,513 - load_models - INFO - Response: {"prompt_id": "0c25f4a8-e00f-4022-930d-7638c151834a", "number": 3434, "node_errors": {}}
+2025-01-13 00:20:57,514 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,518 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,518 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,518 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,519 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,519 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,520 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:20:57,520 - gen_prompt - INFO - Final trigger words: 
+2025-01-13 00:20:57,520 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,523 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,524 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, , Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,525 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,525 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,528 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,528 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,530 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,533 - load_models - INFO - Response: {"prompt_id": "958072c1-4799-414a-ba3d-3158215c1b5a", "number": 3435, "node_errors": {}}
+2025-01-13 00:20:57,534 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,537 - gen_prompt - INFO - Generating positive prompt - style: Design - Letterhead
+2025-01-13 00:20:57,538 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: GoodHands-beta2.safetensors
+2025-01-13 00:20:57,538 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:20:57,539 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:20:57,539 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:20:57,539 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:20:57,540 - gen_prompt - INFO - Final trigger words: 
+2025-01-13 00:20:57,540 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,543 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,544 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, , Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication, masterpiece, best quality, ultra-detailed
+2025-01-13 00:20:57,545 - gen_prompt - INFO - Generating negative prompt - style: Design - Letterhead
+2025-01-13 00:20:57,545 - gen_prompt - INFO - Generating style prompt - style_name: Design - Letterhead
+2025-01-13 00:20:57,547 - gen_prompt - INFO - Found style. Result: {'name': 'Design - Letterhead', 'positive': 'Letterhead design style, professional and branded letterhead, professional-grade execution, enhances brand identity and communication', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:20:57,547 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:20:57,549 - load_models - INFO - Queueing workflow
+2025-01-13 00:20:57,553 - load_models - INFO - Response: {"prompt_id": "7013c3e1-8595-4c72-90d2-ad07341a6851", "number": 3436, "node_errors": {}}
+2025-01-13 00:21:57,555 - __main__ - INFO - Processing style: Vector - Silhouette
+2025-01-13 00:21:57,555 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,562 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,562 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: add_detail.safetensors, more_details.safetensors, backlight_slider_v10.safetensors
+2025-01-13 00:21:57,563 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,564 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,564 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:21:57,566 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:21:57,566 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-13 00:21:57,567 - gen_prompt - WARNING - No trigger_select found for more_details.safetensors
+2025-01-13 00:21:57,567 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:21:57,568 - gen_prompt - INFO - Final trigger words: Add lightsource to front
+2025-01-13 00:21:57,568 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,571 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,572 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, Add lightsource to front, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,572 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,573 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,576 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,576 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,578 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,583 - load_models - INFO - Response: {"prompt_id": "25adfc47-4445-44f8-92b1-1742df1a9f86", "number": 3437, "node_errors": {}}
+2025-01-13 00:21:57,585 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,592 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,593 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: add_detail.safetensors, manga2_by_XUEBI.safetensors, masturbation_female.safetensors
+2025-01-13 00:21:57,593 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,594 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,594 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:21:57,595 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:21:57,596 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:21:57,596 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:21:57,598 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-13 00:21:57,598 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,601 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,602 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, fingering,  schlick,  masturbation,  NSFW,  pussy, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,604 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,604 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,607 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,608 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,610 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,614 - load_models - INFO - Response: {"prompt_id": "e8f850bb-693b-48cb-aa1b-aeb6806d6647", "number": 3438, "node_errors": {}}
+2025-01-13 00:21:57,615 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,621 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,621 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: tifa_v2.3.safetensors, bichu-v0612.safetensors, GoodHands-beta2.safetensors
+2025-01-13 00:21:57,623 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,624 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,624 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:21:57,626 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:21:57,626 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:21:57,627 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:21:57,627 - gen_prompt - INFO - Final trigger words: tifa lockhart,  red_eyes,  black hair,  long hair, bichu,  oil painting,  impressionism
+2025-01-13 00:21:57,627 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,630 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,631 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, tifa lockhart,  red_eyes,  black hair,  long hair, bichu,  oil painting,  impressionism, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,633 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,633 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,637 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,638 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,641 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,654 - load_models - INFO - Response: {"prompt_id": "1dbbd6b8-c2d9-4665-9e2e-555fc0d12387", "number": 3439, "node_errors": {}}
+2025-01-13 00:21:57,655 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,663 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,663 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: masturbation_female.safetensors, nier_anime_style_offset.safetensors, tifa_v2.3.safetensors, add_detail.safetensors
+2025-01-13 00:21:57,663 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,665 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,666 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:21:57,667 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:21:57,667 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:21:57,668 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:21:57,669 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:21:57,669 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy, nier anime style, tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:21:57,669 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,672 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,674 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, nier anime style, tifa lockhart,  red_eyes,  black hair,  long hair, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,675 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,675 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,678 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,679 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,681 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,738 - load_models - INFO - Response: {"prompt_id": "0761e591-f9a5-49a6-abc4-c8c61b1fb81a", "number": 3440, "node_errors": {}}
+2025-01-13 00:21:57,740 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,748 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,749 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: AbstractPortrait_50_R.safetensors, add_detail.safetensors, manga2_by_XUEBI.safetensors, tifa_v2.3.safetensors
+2025-01-13 00:21:57,749 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,750 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,751 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-13 00:21:57,751 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:21:57,752 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:21:57,752 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:21:57,753 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:21:57,754 - gen_prompt - INFO - Final trigger words: pxint, monochrome, greyscale, comic, tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:21:57,754 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,757 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,758 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, pxint, monochrome, greyscale, comic, tifa lockhart,  red_eyes,  black hair,  long hair, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,759 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,759 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,762 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,763 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,765 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,770 - load_models - INFO - Response: {"prompt_id": "cec0c8bf-5d4c-4fd7-a6ba-3ced7f55ed86", "number": 3441, "node_errors": {}}
+2025-01-13 00:21:57,770 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,779 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,779 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: backlight_slider_v10.safetensors, GoodHands-beta2.safetensors, masturbation_female.safetensors, nier_anime_style_offset.safetensors
+2025-01-13 00:21:57,779 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,780 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,781 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:21:57,782 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:21:57,782 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:21:57,782 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:21:57,783 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:21:57,784 - gen_prompt - INFO - Final trigger words: Add lightsource to back, fingering,  schlick,  masturbation,  NSFW,  pussy, nier anime style
+2025-01-13 00:21:57,785 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,787 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,788 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, Add lightsource to back, fingering,  schlick,  masturbation,  NSFW,  pussy, nier anime style, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,789 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,790 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,792 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,794 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,796 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,801 - load_models - INFO - Response: {"prompt_id": "9662f84a-52dd-44c7-82ca-6a429a9077d3", "number": 3442, "node_errors": {}}
+2025-01-13 00:21:57,802 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,808 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,808 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: dm_canvas_style3_1530.safetensors, GoodHands-beta2.safetensors, backlight_slider_v10.safetensors
+2025-01-13 00:21:57,809 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,810 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,810 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:21:57,811 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:21:57,811 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:21:57,812 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:21:57,813 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:21:57,814 - gen_prompt - INFO - Final trigger words: Add lightsource to front
+2025-01-13 00:21:57,814 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,817 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,818 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, Add lightsource to front, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,819 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,820 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,822 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,822 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,825 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,833 - load_models - INFO - Response: {"prompt_id": "ce4e5d30-5774-4448-b619-211a2fd99478", "number": 3443, "node_errors": {}}
+2025-01-13 00:21:57,834 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,839 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,839 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: tifa_v2.3.safetensors
+2025-01-13 00:21:57,840 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,840 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,841 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:21:57,842 - gen_prompt - INFO - Final trigger words: tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:21:57,842 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,845 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,845 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, tifa lockhart,  red_eyes,  black hair,  long hair, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,848 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,848 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,850 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,851 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,853 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,860 - load_models - INFO - Response: {"prompt_id": "6f3547b6-d5f9-4f78-8cdd-c55e295752fb", "number": 3444, "node_errors": {}}
+2025-01-13 00:21:57,861 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,868 - gen_prompt - INFO - Generating positive prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,869 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: manga2_by_XUEBI.safetensors, animeoutlineV4_16.safetensors, backlight_slider_v10.safetensors, Drawing.safetensors
+2025-01-13 00:21:57,869 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:21:57,870 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:21:57,871 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:21:57,872 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:21:57,872 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:21:57,873 - gen_prompt - INFO - Searching for Lora: Drawing.safetensors
+2025-01-13 00:21:57,875 - gen_prompt - WARNING - No trigger_select found for Drawing.safetensors
+2025-01-13 00:21:57,876 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, lineart,  monochrome, Add lightsource to front
+2025-01-13 00:21:57,876 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,880 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,880 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, lineart,  monochrome, Add lightsource to front, black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector, masterpiece, best quality, ultra-detailed
+2025-01-13 00:21:57,882 - gen_prompt - INFO - Generating negative prompt - style: Vector - Silhouette
+2025-01-13 00:21:57,882 - gen_prompt - INFO - Generating style prompt - style_name: Vector - Silhouette
+2025-01-13 00:21:57,884 - gen_prompt - INFO - Found style. Result: {'name': 'Vector - Silhouette', 'positive': 'black vector silhouette on solid white background, minimalist, SVG silhouette art style, clean lines and shapes, scalable graphics, professional-grade execution, stylized, professional vector', 'negative': 'signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:21:57,885 - gen_prompt - INFO - Generated negative prompt: signature, shading, gradient, painting, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:21:57,887 - load_models - INFO - Queueing workflow
+2025-01-13 00:21:57,953 - load_models - INFO - Response: {"prompt_id": "8a17fba1-7bdf-433d-bd8a-1e1f342a5b62", "number": 3445, "node_errors": {}}
+2025-01-13 00:22:57,955 - __main__ - INFO - Processing style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:57,956 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:57,965 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:57,966 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: more_details.safetensors, manga2_by_XUEBI.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors, nier_anime_style_offset.safetensors
+2025-01-13 00:22:57,966 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:57,967 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:57,967 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-13 00:22:57,968 - gen_prompt - WARNING - No trigger_select found for more_details.safetensors
+2025-01-13 00:22:57,968 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:22:57,969 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:22:57,970 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:22:57,970 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, pxint, nier anime style
+2025-01-13 00:22:57,971 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:57,974 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:57,974 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, pxint, nier anime style, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:57,976 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:57,976 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:57,978 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:57,979 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:57,980 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:57,991 - load_models - INFO - Response: {"prompt_id": "b2ae7a8c-b635-47d8-a798-0c4c0ef22e42", "number": 3446, "node_errors": {}}
+2025-01-13 00:22:57,993 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,000 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,000 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: GoodHands-beta2.safetensors, tifa_v2.3.safetensors, dm_canvas_style3_1530.safetensors
+2025-01-13 00:22:58,000 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,002 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,003 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:22:58,003 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:22:58,003 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:22:58,005 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:22:58,006 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:22:58,006 - gen_prompt - INFO - Final trigger words: tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:22:58,006 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,009 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,010 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, tifa lockhart,  red_eyes,  black hair,  long hair, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,011 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,011 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,014 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,015 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,017 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,022 - load_models - INFO - Response: {"prompt_id": "b722035f-e561-40ff-ab89-385d26ae88a2", "number": 3447, "node_errors": {}}
+2025-01-13 00:22:58,022 - load_models - INFO - Selecting models - num_loras: 2, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,029 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,029 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: masturbation_female.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:22:58,029 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,030 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,030 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:22:58,031 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:22:58,032 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy, pxint
+2025-01-13 00:22:58,032 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,035 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,036 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, pxint, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,037 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,039 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,042 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,042 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,045 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,049 - load_models - INFO - Response: {"prompt_id": "79828355-3281-469c-94ce-e6251fb7c189", "number": 3448, "node_errors": {}}
+2025-01-13 00:22:58,050 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,057 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,058 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: masturbation_female.safetensors, tifa_v2.3.safetensors, dm_canvas_style3_1530.safetensors, nier_anime_style_offset.safetensors
+2025-01-13 00:22:58,058 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,059 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,059 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:22:58,061 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:22:58,063 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:22:58,063 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:22:58,064 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:22:58,065 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy, tifa lockhart,  red_eyes,  black hair,  long hair, nier anime style
+2025-01-13 00:22:58,065 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,069 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,070 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, tifa lockhart,  red_eyes,  black hair,  long hair, nier anime style, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,071 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,071 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,075 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,076 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,077 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,158 - load_models - INFO - Response: {"prompt_id": "0d61f4e0-b6d4-46a7-a3b3-3d1b6e400378", "number": 3449, "node_errors": {}}
+2025-01-13 00:22:58,159 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,166 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,166 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: AbstractMalePortraits_v2R_60_R-128.safetensors, manga2_by_XUEBI.safetensors, add_detail.safetensors
+2025-01-13 00:22:58,166 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,168 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,169 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:22:58,169 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:22:58,170 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:22:58,170 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:22:58,171 - gen_prompt - INFO - Final trigger words: pxint, monochrome, greyscale, comic
+2025-01-13 00:22:58,171 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,174 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,175 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, pxint, monochrome, greyscale, comic, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,176 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,176 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,179 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,179 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,182 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,197 - load_models - INFO - Response: {"prompt_id": "60aaf738-10a1-44bd-b39f-c47574266454", "number": 3450, "node_errors": {}}
+2025-01-13 00:22:58,198 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,205 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,206 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: more_details.safetensors, add_detail.safetensors, masturbation_female.safetensors
+2025-01-13 00:22:58,206 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,207 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,207 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-13 00:22:58,208 - gen_prompt - WARNING - No trigger_select found for more_details.safetensors
+2025-01-13 00:22:58,208 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:22:58,210 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:22:58,210 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:22:58,211 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-13 00:22:58,212 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,213 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,215 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,216 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,216 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,220 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,221 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,224 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,293 - load_models - INFO - Response: {"prompt_id": "7fb1c762-7bcd-4dfd-ba8c-f3f8c95ee178", "number": 3451, "node_errors": {}}
+2025-01-13 00:22:58,293 - load_models - INFO - Selecting models - num_loras: 2, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,299 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,299 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: animeoutlineV4_16.safetensors, backlight_slider_v10.safetensors
+2025-01-13 00:22:58,300 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,300 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,300 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:22:58,301 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:22:58,301 - gen_prompt - INFO - Final trigger words: lineart,  monochrome, Add lightsource to back
+2025-01-13 00:22:58,303 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,305 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,306 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, lineart,  monochrome, Add lightsource to back, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,307 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,307 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,309 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,310 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,312 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,321 - load_models - INFO - Response: {"prompt_id": "bb12cd67-e8f6-47f4-91ca-af3dd0264177", "number": 3452, "node_errors": {}}
+2025-01-13 00:22:58,321 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,329 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,329 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: GoodHands-beta2.safetensors, nier_anime_style_offset.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors, AbstractPortrait_50_R.safetensors
+2025-01-13 00:22:58,329 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,330 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,330 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:22:58,331 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:22:58,331 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:22:58,333 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:22:58,334 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-13 00:22:58,334 - gen_prompt - INFO - Final trigger words: nier anime style, pxint, pxint
+2025-01-13 00:22:58,335 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,337 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,338 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, nier anime style, pxint, pxint, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,340 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,340 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,342 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,343 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,345 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,394 - load_models - INFO - Response: {"prompt_id": "742f2cd5-5578-4979-b90d-a7642d26201f", "number": 3453, "node_errors": {}}
+2025-01-13 00:22:58,395 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,401 - gen_prompt - INFO - Generating positive prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,401 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: manga2_by_XUEBI.safetensors, GoodHands-beta2.safetensors, tifa_v2.3.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:22:58,401 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:22:58,402 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:22:58,403 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:22:58,403 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:22:58,405 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:22:58,405 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:22:58,406 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:22:58,406 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, tifa lockhart,  red_eyes,  black hair,  long hair, pxint
+2025-01-13 00:22:58,406 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,409 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,409 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, tifa lockhart,  red_eyes,  black hair,  long hair, pxint, Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship, masterpiece, best quality, ultra-detailed
+2025-01-13 00:22:58,411 - gen_prompt - INFO - Generating negative prompt - style: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,411 - gen_prompt - INFO - Generating style prompt - style_name: Craft - Sculpture - Netsuke
+2025-01-13 00:22:58,413 - gen_prompt - INFO - Found style. Result: {'name': 'Craft - Sculpture - Netsuke', 'positive': 'Netsuke craft style, traditional Japanese miniature sculpture, intricately carved and detailed, functional and decorative, reflects Japanese culture and craftsmanship', 'negative': 'signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-13 00:22:58,413 - gen_prompt - INFO - Generated negative prompt: signature, watermark, ugly, off-center, deformed, cropped, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:22:58,416 - load_models - INFO - Queueing workflow
+2025-01-13 00:22:58,420 - load_models - INFO - Response: {"prompt_id": "497cc373-e2e0-48a7-b397-bd1db8ac6b5b", "number": 3454, "node_errors": {}}
+2025-01-13 00:23:58,422 - __main__ - INFO - Processing style: Photography - Portrait
+2025-01-13 00:23:58,423 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,430 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,430 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: dm_canvas_style3_1530.safetensors, bichu-v0612.safetensors, Drawing.safetensors, nier_anime_style_offset.safetensors
+2025-01-13 00:23:58,430 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,431 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,431 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:23:58,431 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:23:58,431 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:23:58,433 - gen_prompt - INFO - Searching for Lora: Drawing.safetensors
+2025-01-13 00:23:58,434 - gen_prompt - WARNING - No trigger_select found for Drawing.safetensors
+2025-01-13 00:23:58,434 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:23:58,434 - gen_prompt - INFO - Final trigger words: bichu,  oil painting,  impressionism, nier anime style
+2025-01-13 00:23:58,435 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,437 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,438 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, bichu,  oil painting,  impressionism, nier anime style, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,439 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,439 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,441 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,441 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,443 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,448 - load_models - INFO - Response: {"prompt_id": "e36ce87f-20f6-434c-a737-06e15751032d", "number": 3455, "node_errors": {}}
+2025-01-13 00:23:58,449 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,455 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,455 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: manga2_by_XUEBI.safetensors, bichu-v0612.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:23:58,456 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,457 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,457 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-13 00:23:58,458 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:23:58,459 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:23:58,459 - gen_prompt - INFO - Final trigger words: monochrome, greyscale, comic, bichu,  oil painting,  impressionism, pxint
+2025-01-13 00:23:58,460 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,461 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,462 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, monochrome, greyscale, comic, bichu,  oil painting,  impressionism, pxint, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,464 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,464 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,466 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,467 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,468 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,473 - load_models - INFO - Response: {"prompt_id": "8c706a06-88d4-4620-a735-028f02622df4", "number": 3456, "node_errors": {}}
+2025-01-13 00:23:58,473 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,478 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,478 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: tifa_v2.3.safetensors
+2025-01-13 00:23:58,478 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,479 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,479 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:23:58,480 - gen_prompt - INFO - Final trigger words: tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:23:58,481 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,483 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,483 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, tifa lockhart,  red_eyes,  black hair,  long hair, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,484 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,486 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,487 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,487 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,489 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,494 - load_models - INFO - Response: {"prompt_id": "61721c5a-a1e0-47cb-b21a-875feab1bea1", "number": 3457, "node_errors": {}}
+2025-01-13 00:23:58,495 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,499 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,500 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: animeoutlineV4_16.safetensors
+2025-01-13 00:23:58,500 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,501 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,501 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:23:58,501 - gen_prompt - INFO - Final trigger words: lineart,  monochrome
+2025-01-13 00:23:58,502 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,504 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,504 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, lineart,  monochrome, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,506 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,506 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,510 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,511 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,512 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,526 - load_models - INFO - Response: {"prompt_id": "532dfc4c-1388-4ddc-b4b5-7a9028b86a83", "number": 3458, "node_errors": {}}
+2025-01-13 00:23:58,526 - load_models - INFO - Selecting models - num_loras: 1, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,532 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,533 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: backlight_slider_v10.safetensors
+2025-01-13 00:23:58,533 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,534 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,534 - gen_prompt - INFO - Searching for Lora: backlight_slider_v10.safetensors
+2025-01-13 00:23:58,535 - gen_prompt - INFO - Final trigger words: Add lightsource to front
+2025-01-13 00:23:58,535 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,538 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,538 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, Add lightsource to front, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,541 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,541 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,544 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,545 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,546 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,581 - load_models - INFO - Response: {"prompt_id": "e4ef131f-9733-4ec0-b8f2-fd2388cfa34f", "number": 3459, "node_errors": {}}
+2025-01-13 00:23:58,582 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,589 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,589 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: add_detail.safetensors, AbstractMalePortraits_v2R_60_R-128.safetensors, tifa_v2.3.safetensors
+2025-01-13 00:23:58,589 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,590 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,591 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:23:58,591 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:23:58,591 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-13 00:23:58,592 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:23:58,592 - gen_prompt - INFO - Final trigger words: pxint, tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:23:58,593 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,595 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,595 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, pxint, tifa lockhart,  red_eyes,  black hair,  long hair, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,598 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,598 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,600 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,600 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,602 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,606 - load_models - INFO - Response: {"prompt_id": "4ddddb27-db0b-4cad-bdfb-6d593a159e75", "number": 3460, "node_errors": {}}
+2025-01-13 00:23:58,606 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,614 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,614 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: GoodHands-beta2.safetensors, add_detail.safetensors, masturbation_female.safetensors, dm_canvas_style3_1530.safetensors
+2025-01-13 00:23:58,614 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,614 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,616 - gen_prompt - INFO - Searching for Lora: GoodHands-beta2.safetensors
+2025-01-13 00:23:58,616 - gen_prompt - WARNING - No trigger_select found for GoodHands-beta2.safetensors
+2025-01-13 00:23:58,616 - gen_prompt - INFO - Searching for Lora: add_detail.safetensors
+2025-01-13 00:23:58,617 - gen_prompt - WARNING - No trigger_select found for add_detail.safetensors
+2025-01-13 00:23:58,619 - gen_prompt - INFO - Searching for Lora: masturbation_female.safetensors
+2025-01-13 00:23:58,619 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-13 00:23:58,619 - gen_prompt - WARNING - No trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-13 00:23:58,620 - gen_prompt - INFO - Final trigger words: fingering,  schlick,  masturbation,  NSFW,  pussy
+2025-01-13 00:23:58,620 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,621 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,622 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, fingering,  schlick,  masturbation,  NSFW,  pussy, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,624 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,624 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,626 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,626 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,629 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,635 - load_models - INFO - Response: {"prompt_id": "dd78ea0b-06a7-4b4e-adc3-8ec7072a60bf", "number": 3461, "node_errors": {}}
+2025-01-13 00:23:58,636 - load_models - INFO - Selecting models - num_loras: 4, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,644 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,645 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: tifa_v2.3.safetensors, animeoutlineV4_16.safetensors, nier_anime_style_offset.safetensors, bichu-v0612.safetensors
+2025-01-13 00:23:58,645 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,646 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,646 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:23:58,647 - gen_prompt - INFO - Searching for Lora: animeoutlineV4_16.safetensors
+2025-01-13 00:23:58,648 - gen_prompt - INFO - Searching for Lora: nier_anime_style_offset.safetensors
+2025-01-13 00:23:58,648 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:23:58,649 - gen_prompt - INFO - Final trigger words: tifa lockhart,  red_eyes,  black hair,  long hair, lineart,  monochrome, nier anime style, bichu,  oil painting,  impressionism
+2025-01-13 00:23:58,649 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,652 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,653 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, tifa lockhart,  red_eyes,  black hair,  long hair, lineart,  monochrome, nier anime style, bichu,  oil painting,  impressionism, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,655 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,655 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,657 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,658 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,660 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,665 - load_models - INFO - Response: {"prompt_id": "334ca3f4-0b1e-4830-af0e-001ea21795e9", "number": 3462, "node_errors": {}}
+2025-01-13 00:23:58,665 - load_models - INFO - Selecting models - num_loras: 3, checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,674 - gen_prompt - INFO - Generating positive prompt - style: Photography - Portrait
+2025-01-13 00:23:58,674 - gen_prompt - INFO - Generating trigger words - checkpoint: meinamix_v12Final.safetensors, loras: bichu-v0612.safetensors, tifa_v2.3.safetensors, more_details.safetensors
+2025-01-13 00:23:58,675 - gen_prompt - INFO - Searching for Checkpoint: meinamix_v12Final.safetensors
+2025-01-13 00:23:58,675 - gen_prompt - WARNING - No trigger_select found for meinamix_v12Final.safetensors
+2025-01-13 00:23:58,675 - gen_prompt - INFO - Searching for Lora: bichu-v0612.safetensors
+2025-01-13 00:23:58,676 - gen_prompt - INFO - Searching for Lora: tifa_v2.3.safetensors
+2025-01-13 00:23:58,678 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-13 00:23:58,678 - gen_prompt - WARNING - No trigger_select found for more_details.safetensors
+2025-01-13 00:23:58,679 - gen_prompt - INFO - Final trigger words: bichu,  oil painting,  impressionism, tifa lockhart,  red_eyes,  black hair,  long hair
+2025-01-13 00:23:58,679 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,681 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,682 - gen_prompt - INFO - Generated positive prompt: a demon/angel girl with glowing tatoo on skin, full body shot, bichu,  oil painting,  impressionism, tifa lockhart,  red_eyes,  black hair,  long hair, portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition, masterpiece, best quality, ultra-detailed
+2025-01-13 00:23:58,683 - gen_prompt - INFO - Generating negative prompt - style: Photography - Portrait
+2025-01-13 00:23:58,683 - gen_prompt - INFO - Generating style prompt - style_name: Photography - Portrait
+2025-01-13 00:23:58,685 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Portrait', 'positive': 'portrait photography, capturing emotion, personality, flattering lighting, professional, engaging, compelling composition', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-13 00:23:58,687 - gen_prompt - INFO - Generated negative prompt: bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, embedding:EasyNegative, bad quality, low quality, low resolution
+2025-01-13 00:23:58,689 - load_models - INFO - Queueing workflow
+2025-01-13 00:23:58,694 - load_models - INFO - Response: {"prompt_id": "486682a6-d040-4a84-bc4d-69706e54ba21", "number": 3463, "node_errors": {}}
