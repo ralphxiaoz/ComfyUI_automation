@@ -1,0 +1,61 @@
+{
+  "10": {
+    "inputs": {
+      "image": "179993.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "model": "thwri/CogFlorence-2.2-Large",
+      "precision": "fp16",
+      "attention": "sdpa"
+    },
+    "class_type": "DownloadAndLoadFlorence2Model",
+    "_meta": {
+      "title": "DownloadAndLoadFlorence2Model"
+    }
+  },
+  "12": {
+    "inputs": {
+      "text_input": "",
+      "task": "more_detailed_caption",
+      "fill_mask": true,
+      "keep_model_loaded": false,
+      "max_new_tokens": 1024,
+      "num_beams": 3,
+      "do_sample": true,
+      "output_mask_select": "",
+      "seed": 572164650928236,
+      "image": [
+        "10",
+        0
+      ],
+      "florence2_model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "Florence2Run",
+    "_meta": {
+      "title": "Florence2Run"
+    }
+  },
+  "13": {
+    "inputs": {
+      "text": "A portrait of a woman in a regal setting. She wears a golden, ornate dress with intricate patterns and tassels. The dress has a halter neckline and a deep V-neckline, exposing her cleavage. She sits on a golden chair with her legs crossed, wearing gold high-heeled sandals with a lace-up design. Her hair is styled in a crown, and she holds a small object in her hand. The background is a luxurious room with beige curtains and a window covered by sheer curtains. The color palette is warm, dominated by golds, whites, and browns, creating a luxurious and opulent atmosphere.",
+      "anything": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  }
+}

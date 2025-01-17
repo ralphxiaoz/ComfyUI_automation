@@ -1,0 +1,189 @@
+2025-01-16 23:23:27,630 - load_models - INFO - Found checkpoint meinamix_v12Final.safetensors with base SD 1.5
+2025-01-16 23:23:27,630 - load_models - INFO - Found 16 LoRAs matching base SD 1.5
+2025-01-16 23:23:27,630 - load_models - INFO - Added fixed LoRA: tifa_v2.3.safetensors
+2025-01-16 23:23:27,631 - load_models - WARNING - Fixed LoRA not found: genshinfull1-000006.safetensors
+2025-01-16 23:23:27,631 - load_models - INFO - Processing category style with 9 available LoRAs
+2025-01-16 23:23:27,631 - load_models - INFO - Added 2 LoRAs from category style
+2025-01-16 23:23:27,631 - load_models - INFO - Processing category detail with 2 available LoRAs
+2025-01-16 23:23:27,632 - load_models - INFO - Added all 2 LoRAs from category detail
+2025-01-16 23:23:27,632 - load_models - INFO - Processing category quality with 1 available LoRAs
+2025-01-16 23:23:27,632 - load_models - INFO - Added 1 random LoRAs from category quality
+2025-01-16 23:23:27,632 - load_models - INFO - Final selection: 6 LoRAs
+2025-01-16 23:23:27,633 - load_models - INFO - Selected LoRA: tifa_v2.3.safetensors (Category: character)
+2025-01-16 23:23:27,633 - load_models - INFO - Selected LoRA: AbstractPortrait_50_R.safetensors (Category: style)
+2025-01-16 23:23:27,633 - load_models - INFO - Selected LoRA: dm_canvas_style3_1530.safetensors (Category: style)
+2025-01-16 23:23:27,633 - load_models - INFO - Selected LoRA: more_details.safetensors (Category: detail)
+2025-01-16 23:23:27,633 - load_models - INFO - Selected LoRA: add_detail.safetensors (Category: detail)
+2025-01-16 23:23:27,633 - load_models - INFO - Selected LoRA: GoodHands-beta2.safetensors (Category: quality)
+2025-01-16 23:23:27,634 - __main__ - INFO - Starting workflow generation
+2025-01-16 23:23:27,637 - load_models - INFO - Found checkpoint dreamshaper_8.safetensors with base SD 1.5
+2025-01-16 23:23:27,637 - load_models - INFO - Found 16 LoRAs matching base SD 1.5
+2025-01-16 23:23:27,638 - load_models - INFO - Processing category style with 9 available LoRAs
+2025-01-16 23:23:27,638 - load_models - INFO - Added 0 LoRAs from category style
+2025-01-16 23:23:27,638 - load_models - INFO - Processing category outfit with 2 available LoRAs
+2025-01-16 23:23:27,638 - load_models - INFO - Added 0 LoRAs from category outfit
+2025-01-16 23:23:27,638 - load_models - INFO - Processing category lighting with 1 available LoRAs
+2025-01-16 23:23:27,638 - load_models - INFO - Added 0 LoRAs from category lighting
+2025-01-16 23:23:27,640 - load_models - INFO - Final selection: 0 LoRAs
+2025-01-16 23:23:27,640 - __main__ - INFO - ******Loras:******* []
+2025-01-16 23:23:27,640 - __main__ - INFO - Available LoRAs with the same base as the checkpoint: AbstractMalePortraits_v2R_60_R-128.safetensors, AbstractPortrait_50_R.safetensors, animeoutlineV4_16.safetensors, backlight_slider_v10.safetensors, bichu-v0612.safetensors, dm_canvas_style3_1530.safetensors, GoodHands-beta2.safetensors, gubinxin.safetensors, manga2_by_XUEBI.safetensors, masturbation_female.safetensors, more_details.safetensors, nier_anime_style_offset.safetensors, pixel_f2.safetensors, add_detail.safetensors, tifa_v2.3.safetensors, WaterColoursScenev1.0.safetensors, XSarchitectural-38InteriorForBedroom.safetensors, Drawing.safetensors, AMechaSSS.safetensors, see-through leotard-000004.safetensors, animal_holding_sign_v1.0.safetensors
+2025-01-16 23:23:27,640 - __main__ - INFO - Checkpoint and LoRAs have the same base: SD 1.5
+2025-01-16 23:23:27,640 - load_models - INFO - Getting model parameters - num_loras: 5, checkpoint: dreamshaper_8.safetensors
+2025-01-16 23:23:27,641 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'dreamshaper_8.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '', 'ckpt_sampler': '', 'ckpt_scheduler': '', 'ckpt_hires_fix': '', 'num_loras': 5, 'num_embeddings': 4, 'lora1': 'AbstractMalePortraits_v2R_60_R-128.safetensors', 'lora1_weight_from': '0.8', 'lora1_weight_to': '1', 'lora1_clip_skip': '', 'lora1_cfg': '', 'lora1_steps': '', 'lora1_sampler': '', 'lora1_scheduler': '', 'lora1_hires_fix': '', 'lora2': 'dm_canvas_style3_1530.safetensors', 'lora2_weight_from': '0.2', 'lora2_weight_to': '0.7', 'lora2_clip_skip': '', 'lora2_cfg': '', 'lora2_steps': '', 'lora2_sampler': '', 'lora2_scheduler': '', 'lora2_hires_fix': '', 'lora3': 'more_details.safetensors', 'lora3_weight_from': '0', 'lora3_weight_to': '1', 'lora3_clip_skip': '', 'lora3_cfg': '', 'lora3_steps': '', 'lora3_sampler': '', 'lora3_scheduler': '', 'lora3_hires_fix': '', 'lora4': 'manga2_by_XUEBI.safetensors', 'lora4_weight_from': '0.8', 'lora4_weight_to': '1', 'lora4_clip_skip': '', 'lora4_cfg': '', 'lora4_steps': '', 'lora4_sampler': '', 'lora4_scheduler': '', 'lora4_hires_fix': '', 'lora5': 'AbstractPortrait_50_R.safetensors', 'lora5_weight_from': '0.8', 'lora5_weight_to': '1', 'lora5_clip_skip': '', 'lora5_cfg': '', 'lora5_steps': '', 'lora5_sampler': '', 'lora5_scheduler': '', 'lora5_hires_fix': '', 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-16 23:23:27,641 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-16 23:23:27,641 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-16 23:23:27,641 - node_manipulation - INFO - 
+node_manipulation.set_lora(): Setting LoRA node: Lora1
+2025-01-16 23:23:27,642 - node_manipulation - INFO - node_manipulation.set_lora(): Parameters - lora=AbstractMalePortraits_v2R_60_R-128.safetensors, model_strength=0.8, clip_strength=1
+2025-01-16 23:23:27,642 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Lora1
+2025-01-16 23:23:27,642 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 5
+2025-01-16 23:23:27,642 - node_manipulation - INFO - node_manipulation.set_lora(): Successfully configured node 5
+2025-01-16 23:23:27,642 - node_manipulation - INFO - 
+node_manipulation.set_lora(): Setting LoRA node: Lora2
+2025-01-16 23:23:27,642 - node_manipulation - INFO - node_manipulation.set_lora(): Parameters - lora=dm_canvas_style3_1530.safetensors, model_strength=0.6, clip_strength=1
+2025-01-16 23:23:27,642 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Lora2
+2025-01-16 23:23:27,642 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 6
+2025-01-16 23:23:27,643 - node_manipulation - INFO - node_manipulation.set_lora(): Successfully configured node 6
+2025-01-16 23:23:27,643 - node_manipulation - INFO - 
+node_manipulation.set_lora(): Setting LoRA node: Lora3
+2025-01-16 23:23:27,643 - node_manipulation - INFO - node_manipulation.set_lora(): Parameters - lora=more_details.safetensors, model_strength=0.9, clip_strength=1
+2025-01-16 23:23:27,643 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Lora3
+2025-01-16 23:23:27,643 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 7
+2025-01-16 23:23:27,643 - node_manipulation - INFO - node_manipulation.set_lora(): Successfully configured node 7
+2025-01-16 23:23:27,643 - node_manipulation - INFO - 
+node_manipulation.set_lora(): Setting LoRA node: Lora4
+2025-01-16 23:23:27,644 - node_manipulation - INFO - node_manipulation.set_lora(): Parameters - lora=manga2_by_XUEBI.safetensors, model_strength=0.8, clip_strength=1
+2025-01-16 23:23:27,644 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Lora4
+2025-01-16 23:23:27,644 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 8
+2025-01-16 23:23:27,644 - node_manipulation - INFO - node_manipulation.set_lora(): Successfully configured node 8
+2025-01-16 23:23:27,644 - node_manipulation - INFO - 
+node_manipulation.set_lora(): Setting LoRA node: Lora5
+2025-01-16 23:23:27,644 - node_manipulation - INFO - node_manipulation.set_lora(): Parameters - lora=AbstractPortrait_50_R.safetensors, model_strength=0.9, clip_strength=1
+2025-01-16 23:23:27,644 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Lora5
+2025-01-16 23:23:27,645 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 21
+2025-01-16 23:23:27,645 - node_manipulation - INFO - node_manipulation.set_lora(): Successfully configured node 21
+2025-01-16 23:23:27,645 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-16 23:23:27,645 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=527344, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-16 23:23:27,646 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-16 23:23:27,646 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-16 23:23:27,646 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-16 23:23:27,646 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-16 23:23:27,646 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=dreamshaper_8.safetensors, loras=AbstractMalePortraits_v2R_60_R-128.safetensors, dm_canvas_style3_1530.safetensors, more_details.safetensors, manga2_by_XUEBI.safetensors, AbstractPortrait_50_R.safetensors, embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, style=Photography - Fashion
+2025-01-16 23:23:27,646 - gen_prompt - INFO - Generating positive prompt - style: Photography - Fashion
+2025-01-16 23:23:27,647 - gen_prompt - INFO - Getting trigger words - checkpoint: dreamshaper_8.safetensors, loras: AbstractMalePortraits_v2R_60_R-128.safetensors, dm_canvas_style3_1530.safetensors, more_details.safetensors, manga2_by_XUEBI.safetensors, AbstractPortrait_50_R.safetensors, embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-16 23:23:27,647 - gen_prompt - INFO - Searching for Checkpoint: dreamshaper_8.safetensors
+2025-01-16 23:23:27,647 - gen_prompt - WARNING - No Pos_trigger_select found for dreamshaper_8.safetensors
+2025-01-16 23:23:27,647 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-16 23:23:27,648 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,648 - gen_prompt - WARNING - No Pos_trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,648 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-16 23:23:27,649 - gen_prompt - WARNING - No Pos_trigger_select found for more_details.safetensors
+2025-01-16 23:23:27,649 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-16 23:23:27,649 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-16 23:23:27,649 - gen_prompt - INFO - Searching for Embedding: ng_deepnegative_v1_75t.pt
+2025-01-16 23:23:27,650 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-16 23:23:27,650 - gen_prompt - INFO - Searching for Embedding: badhandv4.pt
+2025-01-16 23:23:27,650 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-16 23:23:27,650 - gen_prompt - INFO - Searching for Embedding: easynegative.safetensors
+2025-01-16 23:23:27,651 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-16 23:23:27,651 - gen_prompt - INFO - Searching for Embedding: an14.pt
+2025-01-16 23:23:27,651 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-16 23:23:27,651 - gen_prompt - INFO - Searching for Checkpoint: dreamshaper_8.safetensors
+2025-01-16 23:23:27,652 - gen_prompt - WARNING - No Neg_trigger_select found for dreamshaper_8.safetensors
+2025-01-16 23:23:27,652 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-16 23:23:27,652 - gen_prompt - WARNING - No Neg_trigger_select found for AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-16 23:23:27,652 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,653 - gen_prompt - WARNING - No Neg_trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,653 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-16 23:23:27,653 - gen_prompt - WARNING - No Neg_trigger_select found for more_details.safetensors
+2025-01-16 23:23:27,653 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-16 23:23:27,654 - gen_prompt - WARNING - No Neg_trigger_select found for manga2_by_XUEBI.safetensors
+2025-01-16 23:23:27,654 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-16 23:23:27,654 - gen_prompt - WARNING - No Neg_trigger_select found for AbstractPortrait_50_R.safetensors
+2025-01-16 23:23:27,654 - gen_prompt - INFO - Searching for Embedding: ng_deepnegative_v1_75t.pt
+2025-01-16 23:23:27,655 - gen_prompt - INFO - Searching for Embedding: badhandv4.pt
+2025-01-16 23:23:27,655 - gen_prompt - INFO - Searching for Embedding: easynegative.safetensors
+2025-01-16 23:23:27,655 - gen_prompt - INFO - Searching for Embedding: an14.pt
+2025-01-16 23:23:27,656 - gen_prompt - INFO - Final trigger words: {'positive': 'pxint, monochrome, greyscale, comic, pxint', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-16 23:23:27,656 - gen_prompt - INFO - Getting style prompt - style_name: Photography - Fashion
+2025-01-16 23:23:27,657 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Fashion', 'positive': 'fashion photography, glamorous, stylish attire, captivating pose, dynamic composition, high-fashion aesthetic, professional studio lighting, expert styling, showcasing trend, conveying elegance, conveying attitude, evoking emotion, creating visual impact, editorial storytelling, artistic interpretation, fashion-forward visual', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-16 23:23:27,658 - gen_prompt - INFO - Generated positive prompt: 1mechanical girl,ultra realistic details, portrait, global illumination, shadows, octane render, 8k, ultra sharp,intricate, ornaments detailed, cold colors, metal, egypician detail, highly intricate details, realistic light, trending on cgsociety, glowing eyes, facing camera, neon details, machanical limbs,blood vessels connected to tubes,mechanical vertebra attaching to back,mechanical cervial attaching to neck,sitting,wires and cables connecting to head, pxint, monochrome, greyscale, comic, pxint, fashion photography, glamorous, stylish attire, captivating pose, dynamic composition, high-fashion aesthetic, professional studio lighting, expert styling, showcasing trend, conveying elegance, conveying attitude, evoking emotion, creating visual impact, editorial storytelling, artistic interpretation, fashion-forward visual, masterpiece, best quality, ultra-detailed
+2025-01-16 23:23:27,658 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-16 23:23:27,658 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-16 23:23:27,659 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-16 23:23:27,659 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: 1mechanical girl,ultra realistic details, portrait, global illumination, shadows, octane render, 8k, ultra sharp,intricate, ornaments detailed, cold colors, metal, egypician detail, highly intricate details, realistic light, trending on cgsociety, glowing eyes, facing camera, neon details, machanical limbs,blood vessels connected to tubes,mechanical vertebra attaching to back,mechanical cervial attaching to neck,sitting,wires and cables connecting to head, pxint, monochrome, greyscale, comic, pxint, fashion photography, glamorous, stylish attire, captivating pose, dynamic composition, high-fashion aesthetic, professional studio lighting, expert styling, showcasing trend, conveying elegance, conveying attitude, evoking emotion, creating visual impact, editorial storytelling, artistic interpretation, fashion-forward visual, masterpiece, best quality, ultra-detailed
+2025-01-16 23:23:27,659 - gen_prompt - INFO - Generating negative prompt - style: Photography - Fashion
+2025-01-16 23:23:27,659 - gen_prompt - INFO - Getting trigger words - checkpoint: dreamshaper_8.safetensors, loras: AbstractMalePortraits_v2R_60_R-128.safetensors, dm_canvas_style3_1530.safetensors, more_details.safetensors, manga2_by_XUEBI.safetensors, AbstractPortrait_50_R.safetensors, embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-16 23:23:27,659 - gen_prompt - INFO - Searching for Checkpoint: dreamshaper_8.safetensors
+2025-01-16 23:23:27,660 - gen_prompt - WARNING - No Pos_trigger_select found for dreamshaper_8.safetensors
+2025-01-16 23:23:27,660 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-16 23:23:27,661 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,661 - gen_prompt - WARNING - No Pos_trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,661 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-16 23:23:27,661 - gen_prompt - WARNING - No Pos_trigger_select found for more_details.safetensors
+2025-01-16 23:23:27,661 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-16 23:23:27,662 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-16 23:23:27,662 - gen_prompt - INFO - Searching for Embedding: ng_deepnegative_v1_75t.pt
+2025-01-16 23:23:27,662 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-16 23:23:27,662 - gen_prompt - INFO - Searching for Embedding: badhandv4.pt
+2025-01-16 23:23:27,663 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-16 23:23:27,663 - gen_prompt - INFO - Searching for Embedding: easynegative.safetensors
+2025-01-16 23:23:27,663 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-16 23:23:27,663 - gen_prompt - INFO - Searching for Embedding: an14.pt
+2025-01-16 23:23:27,664 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-16 23:23:27,664 - gen_prompt - INFO - Searching for Checkpoint: dreamshaper_8.safetensors
+2025-01-16 23:23:27,664 - gen_prompt - WARNING - No Neg_trigger_select found for dreamshaper_8.safetensors
+2025-01-16 23:23:27,665 - gen_prompt - INFO - Searching for Lora: AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-16 23:23:27,665 - gen_prompt - WARNING - No Neg_trigger_select found for AbstractMalePortraits_v2R_60_R-128.safetensors
+2025-01-16 23:23:27,665 - gen_prompt - INFO - Searching for Lora: dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,665 - gen_prompt - WARNING - No Neg_trigger_select found for dm_canvas_style3_1530.safetensors
+2025-01-16 23:23:27,665 - gen_prompt - INFO - Searching for Lora: more_details.safetensors
+2025-01-16 23:23:27,666 - gen_prompt - WARNING - No Neg_trigger_select found for more_details.safetensors
+2025-01-16 23:23:27,666 - gen_prompt - INFO - Searching for Lora: manga2_by_XUEBI.safetensors
+2025-01-16 23:23:27,666 - gen_prompt - WARNING - No Neg_trigger_select found for manga2_by_XUEBI.safetensors
+2025-01-16 23:23:27,666 - gen_prompt - INFO - Searching for Lora: AbstractPortrait_50_R.safetensors
+2025-01-16 23:23:27,666 - gen_prompt - WARNING - No Neg_trigger_select found for AbstractPortrait_50_R.safetensors
+2025-01-16 23:23:27,668 - gen_prompt - INFO - Searching for Embedding: ng_deepnegative_v1_75t.pt
+2025-01-16 23:23:27,668 - gen_prompt - INFO - Searching for Embedding: badhandv4.pt
+2025-01-16 23:23:27,668 - gen_prompt - INFO - Searching for Embedding: easynegative.safetensors
+2025-01-16 23:23:27,669 - gen_prompt - INFO - Searching for Embedding: an14.pt
+2025-01-16 23:23:27,669 - gen_prompt - INFO - Final trigger words: {'positive': 'pxint, monochrome, greyscale, comic, pxint', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-16 23:23:27,669 - gen_prompt - INFO - Getting style prompt - style_name: Photography - Fashion
+2025-01-16 23:23:27,671 - gen_prompt - INFO - Found style. Result: {'name': 'Photography - Fashion', 'positive': 'fashion photography, glamorous, stylish attire, captivating pose, dynamic composition, high-fashion aesthetic, professional studio lighting, expert styling, showcasing trend, conveying elegance, conveying attitude, evoking emotion, creating visual impact, editorial storytelling, artistic interpretation, fashion-forward visual', 'negative': 'bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted'}
+2025-01-16 23:23:27,671 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-16 23:23:27,671 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-16 23:23:27,671 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-16 23:23:27,671 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-16 23:23:27,672 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=512, height=768
+2025-01-16 23:23:27,672 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-16 23:23:27,672 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-16 23:23:27,672 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 512x768 for node 10
+2025-01-16 23:23:27,672 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-16 23:23:27,672 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1024, height=1536
+2025-01-16 23:23:27,672 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-16 23:23:27,673 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-16 23:23:27,673 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1024x1536 for node 17
+2025-01-16 23:23:27,673 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Save Image
+2025-01-16 23:23:27,673 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 12
+2025-01-16 23:23:27,673 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: VAE Decode_scaled
+2025-01-16 23:23:27,673 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 18
+2025-01-16 23:23:27,673 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-16 23:23:27,674 - load_models - INFO - Queueing workflow
+2025-01-16 23:23:27,879 - load_models - INFO - Response: {"prompt_id": "c1e87af8-31b0-4f42-b5f4-ff454564d351", "number": 65, "node_errors": {}}

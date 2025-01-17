@@ -11,46 +11,54 @@ from utils.logger_config import setup_logger
 
 logger = setup_logger(__name__)
 
-def get_trigger_words(ckpt_name: str, lora_names: Union[str, List[str]]) -> str:
+def get_trigger_words(ckpt_name: str, lora_names: Union[str, List[str]], embeddings: Union[str, List[str]]) -> Dict[str, str]:
     """
-    Gets trigger words for a given checkpoint and a list of LoRAs.
+    Gets positive and negative trigger words for a given checkpoint, LoRAs, and embeddings.
 
     Parameters:
     - ckpt_name (str): The name of the checkpoint.
     - lora_names (list of str): A list of LoRA names.
+    - embeddings (list of str): A list of embedding names.
 
     Returns:
-    - str: A comma-separated string of trigger words.
+    - dict: A dictionary with 'positive' and 'negative' trigger words.
     """
-    logger.info(f"Getting trigger words - checkpoint: {ckpt_name}, loras: {lora_names}")
+    logger.info(f"Getting trigger words - checkpoint: {ckpt_name}, loras: {lora_names}, embeddings: {embeddings}")
     
     if isinstance(lora_names, str):
         lora_names = [name.strip() for name in lora_names.split(',')]
         logger.debug(f"Converted lora_names string to list: {lora_names}")
+    
+    if isinstance(embeddings, str):
+        embeddings = [name.strip() for name in embeddings.split(',')]
+        logger.debug(f"Converted embeddings string to list: {embeddings}")
 
-    def get_keywords(name, type_):
+    def get_keywords(name, type_, trigger_col, select_col):
+        if not name:  # Skip if name is empty
+            return []
+            
         logger.info(f"Searching for {type_}: {name}")
         with open(get_path('res', 'models.csv'), newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 if row['Name'] == name and row['Type'] == type_:
-                    trigger_select = row['Trigger_select']
+                    trigger_select = row[select_col]
                     if not trigger_select:
-                        logger.warning(f"No trigger_select found for {name}")
+                        logger.warning(f"No {select_col} found for {name}")
                         return []
                     
-                    trigger_keywords = row['Trigger'].split(',')
-                    logger.debug(f"Found triggers for {name}: {trigger_keywords}")
+                    trigger_keywords = row[trigger_col].split(',') if row[trigger_col] else []
+                    logger.debug(f"Found {trigger_col} for {name}: {trigger_keywords}")
                     
                     if trigger_select.isdigit():
                         num_choices = int(trigger_select)
-                        selected = random.sample(trigger_keywords, num_choices)
+                        selected = random.sample(trigger_keywords, num_choices) if trigger_keywords else []
                         logger.debug(f"Selected {num_choices} triggers: {selected}")
                         return selected
                     elif trigger_select == "random":
-                        count = random.randint(2, len(trigger_keywords))
+                        count = random.randint(2, len(trigger_keywords)) if trigger_keywords else 0
                         logger.debug(f"Random selection - count: {count}, keywords: {trigger_keywords}")
-                        return random.sample(trigger_keywords, count)
+                        return random.sample(trigger_keywords, count) if count > 0 else []
                     elif trigger_select == "all":
                         logger.debug(f"Using all triggers: {trigger_keywords}")
                         return trigger_keywords
@@ -61,18 +69,34 @@ def get_trigger_words(ckpt_name: str, lora_names: Union[str, List[str]]) -> str:
             logger.warning(f"No matching model found for {name}")
             return []
 
-    checkpoint_keywords = get_keywords(ckpt_name, "Checkpoint")
-    lora_keywords = []
+    # Get positive triggers
+    pos_checkpoint_keywords = get_keywords(ckpt_name, "Checkpoint", "Pos_trigger", "Pos_trigger_select")
+    pos_lora_keywords = []
     for lora_name in lora_names:
-        lora_keywords.extend(get_keywords(lora_name, "Lora"))
+        pos_lora_keywords.extend(get_keywords(lora_name, "Lora", "Pos_trigger", "Pos_trigger_select"))
+    pos_embedding_keywords = []
+    for embedding_name in embeddings:
+        pos_embedding_keywords.extend(get_keywords(embedding_name, "Embedding", "Pos_trigger", "Pos_trigger_select"))
     
-    result = ', '.join(checkpoint_keywords + lora_keywords)
+    # Get negative triggers
+    neg_checkpoint_keywords = get_keywords(ckpt_name, "Checkpoint", "Neg_trigger", "Neg_trigger_select")
+    neg_lora_keywords = []
+    for lora_name in lora_names:
+        neg_lora_keywords.extend(get_keywords(lora_name, "Lora", "Neg_trigger", "Neg_trigger_select"))
+    neg_embedding_keywords = []
+    for embedding_name in embeddings:
+        neg_embedding_keywords.extend(get_keywords(embedding_name, "Embedding", "Neg_trigger", "Neg_trigger_select"))
+    
+    result = {
+        'positive': ', '.join(filter(None, pos_checkpoint_keywords + pos_lora_keywords + pos_embedding_keywords)),
+        'negative': ', '.join(filter(None, neg_checkpoint_keywords + neg_lora_keywords + neg_embedding_keywords))
+    }
     logger.info(f"Final trigger words: {result}")
     return result
 
-def gen_style_prompt(style_name=None):
+def get_style_prompt(style_name=None):
     """
-    Generates a style prompt by reading from art_styles.csv.
+    Gets a style prompt by reading from art_styles.csv.
 
     Parameters:
     - style_name (str, optional): The name of the style to retrieve. If None, returns a random style.
@@ -83,7 +107,7 @@ def gen_style_prompt(style_name=None):
     Raises:
     - ValueError: If the specified style_name is not found in the CSV.
     """
-    logger.info(f"Generating style prompt - style_name: {style_name}")
+    logger.info(f"Getting style prompt - style_name: {style_name}")
     
     with open(get_path('res', 'art_styles.csv'), 'r') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -112,7 +136,9 @@ def gen_style_prompt(style_name=None):
             logger.info(f"Selected random style: {result['name']}")
             return result
 
-def gen_positive_prompt(ckpt_name, lora_names, style_name=None):
+# def get_object():
+
+def gen_positive_prompt(ckpt_name, lora_names, embeddings, style_name=None):
     """
     Generates a positive prompt for a given checkpoint and a list of LoRAs.
 
@@ -125,7 +151,7 @@ def gen_positive_prompt(ckpt_name, lora_names, style_name=None):
     - str: A comma-separated string of the positive prompt.
     """
     logger.info(f"Generating positive prompt - style: {style_name}")
-    trigger_words = get_trigger_words(ckpt_name, lora_names)
+    trigger_words = get_trigger_words(ckpt_name, lora_names, embeddings)
     logger.debug(f"Got trigger words: {trigger_words}")
     
     object_string = random.choice([
@@ -133,17 +159,20 @@ def gen_positive_prompt(ckpt_name, lora_names, style_name=None):
         "1girl, a angel girl with huge wings, intricate lingerie, burning heart, kneeing", 
         "1girl, a cat girl, wearing a cat outfit, holding a cat toy, smiling at viewer", 
         "1girl, a demon girl with glowing tatoo on skin, burning hair, full body shot",
-        "1girl, a witch girl, long black hair,intricate outfit, holding a book, cowboy shot" 
+        "1mechanical girl,ultra realistic details, portrait, global illumination, shadows, octane render, 8k, ultra sharp,intricate, ornaments detailed, cold colors, metal, egypician detail, highly intricate details, realistic light, trending on cgsociety, glowing eyes, facing camera, neon details, machanical limbs,blood vessels connected to tubes,mechanical vertebra attaching to back,mechanical cervial attaching to neck,sitting,wires and cables connecting to head",
+        "complex composition, silhouette of a person sitting on a rock, night scene, vibrant wildflowers, glowing particles, dramatic moonlit sky, realistic textures, intricate details, dynamic lighting, shadows, atmospheric depth, high-quality rendering",
+        "1girl, petite, long hair, white hair, (bunny ears:1.075), black bunnysuit, pantyhose, smile, hands on hips, casino"
     ])  # Placeholder for the object
-    style_prompt = gen_style_prompt(style_name)
+
+    style_prompt = get_style_prompt(style_name)
     style_positive = style_prompt['positive']
     quality_modifiers = "masterpiece, best quality, ultra-detailed"
     
-    full_prompt = ', '.join([object_string, trigger_words, style_positive, quality_modifiers])
+    full_prompt = ', '.join([object_string, trigger_words['positive'], style_positive, quality_modifiers])
     logger.info(f"Generated positive prompt: {full_prompt}")
     return full_prompt
 
-def gen_negative_prompt(ckpt_name, lora_names, style_name=None):
+def gen_negative_prompt(ckpt_name, lora_names, embeddings, style_name=None):
     """
     Generates a negative prompt for a given checkpoint and a list of LoRAs.
 
@@ -157,11 +186,13 @@ def gen_negative_prompt(ckpt_name, lora_names, style_name=None):
     """
     logger.info(f"Generating negative prompt - style: {style_name}")
     
-    style_prompt = gen_style_prompt(style_name)
+    trigger_words = get_trigger_words(ckpt_name, lora_names, embeddings)
+    style_prompt = get_style_prompt(style_name)
     style_negative = style_prompt['negative']
-    quality_modifiers = "embedding:EasyNegative, bad quality, low quality, low resolution"
+    quality_modifiers = "bad quality, low quality, low resolution"
     
-    full_prompt = ', '.join([style_negative, quality_modifiers])
+    components = [trigger_words['negative'], style_negative, quality_modifiers]
+    full_prompt = ', '.join(component for component in components if component)
     logger.info(f"Generated negative prompt: {full_prompt}")
     return full_prompt
 

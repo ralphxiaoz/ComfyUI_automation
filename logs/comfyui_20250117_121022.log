@@ -1,0 +1,7 @@
+2025-01-17 12:10:22,861 - __main__ - INFO - before set_number_of_loras:===
+2025-01-17 12:10:22,861 - __main__ - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-17 12:10:22,861 - __main__ - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-17 12:10:22,861 - __main__ - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Florence2Run
+2025-01-17 12:10:22,861 - __main__ - INFO - node_manipulation.get_node_ID(): Found node ID: 24

@@ -7,17 +7,9 @@ import time
 from datetime import datetime
 from gen_prompt import gen_positive_prompt, gen_negative_prompt
 from config import get_path
-import logging
+from utils.logger_config import setup_logger
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('workflow.log'),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+logger = setup_logger(__name__)
 
 def get_node_ID(workflow, title):
     """
@@ -80,11 +72,11 @@ def set_KSampler(workflow, nodeTitle, seed, steps=20, cfg=7, sampler_name='dpmpp
     else:
         logger.info(f"node_manipulation.set_KSampler(): Failed - Node '{nodeTitle}' not found")
 
-def set_positive_prompt(workflow, ckpt_name, lora_names, nodeTitle="Positive", style_name=None):
+def set_positive_prompt(workflow, ckpt_name, lora_names, embeddings, nodeTitle="Positive", style_name=None):
     logger.info(f"\nnode_manipulation.set_positive_prompt(): Setting positive prompt")
-    logger.info(f"node_manipulation.set_positive_prompt(): Parameters - checkpoint={ckpt_name}, loras={lora_names}, style={style_name}")
+    logger.info(f"node_manipulation.set_positive_prompt(): Parameters - checkpoint={ckpt_name}, loras={lora_names}, embeddings={embeddings}, style={style_name}")
     
-    positive_prompt = gen_positive_prompt(ckpt_name, lora_names, style_name)
+    positive_prompt = gen_positive_prompt(ckpt_name, lora_names, embeddings, style_name)
     node_id = get_node_ID(workflow, nodeTitle)
     
     if node_id is not None:
@@ -94,8 +86,8 @@ def set_positive_prompt(workflow, ckpt_name, lora_names, nodeTitle="Positive", s
     else:
         logger.info(f"node_manipulation.set_positive_prompt(): Failed - Node '{nodeTitle}' not found")
 
-def set_negative_prompt(workflow, ckpt_name, lora_names, nodeTitle="Negative", style_name=None):
-    negative_prompt = gen_negative_prompt(ckpt_name, lora_names, style_name)
+def set_negative_prompt(workflow, ckpt_name, lora_names, embeddings, nodeTitle="Negative", style_name=None):
+    negative_prompt = gen_negative_prompt(ckpt_name, lora_names, embeddings, style_name)
     node_id = get_node_ID(workflow, nodeTitle)
     if node_id is not None:
         workflow[node_id]['inputs']['text'] = negative_prompt
@@ -127,9 +119,14 @@ def set_lora(workflow, nodeTitle, lora_name, strength_model=1, strength_clip=1):
     else:
         logger.info(f"node_manipulation.set_lora(): Failed - Node '{nodeTitle}' not found")
 
+
 def update_node_input(workflow, target_title, input_key, new_source_title):
     """
     Updates the input source of a target node in the workflow.
+    this is flawed because input has 2 parts: node id and the position of that node's output. 
+    however, the position is not always the same, and it's unknown how many positions there are.
+    also, input could be either a node in format of [node_id, position] or just a text.
+    for example, the default input of "text" of node 3 is text, but once converted to a input, it can accept a node, like ["24", 2]
 
     Parameters:
     - workflow (dict): The workflow dictionary containing nodes.
@@ -143,6 +140,7 @@ def update_node_input(workflow, target_title, input_key, new_source_title):
     if target_node_id is not None and new_source_node_id is not None:
         if input_key in workflow[target_node_id]['inputs']:
             workflow[target_node_id]['inputs'][input_key][0] = new_source_node_id
+            logger.info(f"node_manipulation.update_node_input(): Successfully updated input for node {target_node_id} with key {input_key} to {new_source_node_id}")
         else:
             logger.info(f"Input key '{input_key}' not found in node '{target_title}'.")
     else:
@@ -295,6 +293,9 @@ def main():
         json.dump(workflow, outfile, indent=4)
 
     set_number_of_loras(workflow, 0)
+
+    print("try to update node input")
+    update_node_input(workflow, "Positive", "text", "Florence2Run")
     
     logger.info("after set_number_of_loras:===")
     with open(get_path('workflow', 'randomizer_after_set_loras.json'), 'w') as outfile:

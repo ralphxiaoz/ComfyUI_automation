@@ -20,20 +20,110 @@ from utils.logger_config import setup_logger
 
 logger = setup_logger(__name__)
 
-def pick_models(num_loras, checkpoint=None, loras=None, skip_external=True):
+def assemble_loras(checkpoint, fixed_loras, lora_categories):
     """
-    Selects a checkpoint and a specified number of LoRAs from a CSV file.
+    Assembles a list of LoRAs based on the specified checkpoint, fixed LoRAs, and category quantities.
+    """
+    # Handle both string and list inputs for fixed_loras
+    if isinstance(fixed_loras, str):
+        fixed_loras_list = [lora.strip() for lora in fixed_loras.split(',')]
+    elif isinstance(fixed_loras, list):
+        fixed_loras_list = fixed_loras
+    else:
+        fixed_loras_list = []
+
+    selected_loras = []
+
+    # Read all rows from CSV file first
+    with open(get_path('res', 'models.csv'), newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        all_models = list(reader)  # Store all rows in memory
+
+    # Find checkpoint and its base
+    ckpt_row = next((row for row in all_models if row['Name'] == checkpoint), None)
+    if not ckpt_row:
+        logger.warning(f"No checkpoint found: {checkpoint}")
+        return []
+
+    base = ckpt_row['Base']
+    logger.info(f"Found checkpoint {checkpoint} with base {base}")
+
+    # Filter LoRAs by base and excluded status
+    available_loras = [
+        row for row in all_models 
+        if row['Type'] == 'Lora' 
+        and row['Base'] == base 
+        and row['Excluded'] != 'Y'
+    ]
+    logger.info(f"Found {len(available_loras)} LoRAs matching base {base}")
+
+    # Add fixed loras first
+    for lora_name in fixed_loras_list:
+        matching_lora = next((lora for lora in available_loras if lora['Name'] == lora_name), None)
+        if matching_lora:
+            selected_loras.append(matching_lora['Name'])  # Only append the name
+            logger.info(f"Added fixed LoRA: {lora_name}")
+        else:
+            logger.warning(f"Fixed LoRA not found: {lora_name}")
+
+    # Add flexible loras based on categories
+    for category, quantity in lora_categories.items():
+        category_models = [lora for lora in available_loras if lora['Category'] == category]
+        
+        if not category_models:
+            logger.warning(f"No LoRAs found for category: {category}")
+            continue
+            
+        logger.info(f"Processing category {category} with {len(category_models)} available LoRAs")
+        
+        if quantity == 'all':
+            selected_loras.extend([model['Name'] for model in category_models])  # Only extend with names
+            logger.info(f"Added all {len(category_models)} LoRAs from category {category}")
+        elif quantity == 'random':
+            if category_models:
+                random_count = random.randint(1, len(category_models))
+                selected = random.sample(category_models, random_count)
+                selected_loras.extend([model['Name'] for model in selected])  # Only extend with names
+                logger.info(f"Added {len(selected)} random LoRAs from category {category}")
+        else:
+            try:
+                count = int(quantity)
+                if category_models:
+                    selected = random.sample(category_models, min(count, len(category_models)))
+                    selected_loras.extend([model['Name'] for model in selected])  # Only extend with names
+                    logger.info(f"Added {len(selected)} LoRAs from category {category}")
+            except ValueError:
+                logger.error(f"Invalid quantity value for category {category}: {quantity}")
+
+    # Remove duplicates while preserving order
+    seen = set()
+    selected_loras = [x for x in selected_loras if not (x in seen or seen.add(x))]
+    
+    logger.info(f"Final selection: {len(selected_loras)} LoRAs")
+    for lora in selected_loras:
+        # Find the category for logging
+        lora_info = next((row for row in available_loras if row['Name'] == lora), None)
+        category = lora_info['Category'] if lora_info else 'Unknown'
+        logger.info(f"Selected LoRA: {lora} (Category: {category})")
+    
+    return selected_loras
+
+
+def get_model_params(num_loras, checkpoint=None, loras=None, embeddings=None, skip_external=True):
+    """
+    Gets model parameters by selecting a checkpoint and a specified number of LoRAs from a CSV file.
 
     Parameters:
     - num_loras (int): The number of LoRAs to select.
     - checkpoint (str, optional): The name of a specific checkpoint to use. If None, a random checkpoint is selected.
     - loras (list of str, optional): A list of specific LoRA names to use. If None, random LoRAs are selected based on the checkpoint's base.
+    - embeddings (list of str, optional): A list of specific embedding names to use. If None, random embeddings are selected based on the checkpoint's base.
     - skip_external (bool): If True, ignore models with a "location" of "external".
 
     Returns:
     - dict: A dictionary containing the selected checkpoint and LoRAs, along with their associated attributes.
     """
-    logger.info(f"Selecting models - num_loras: {num_loras}, checkpoint: {checkpoint}")
+    logger.info(f"Getting model parameters - num_loras: {num_loras}, checkpoint: {checkpoint}")
     models = []
 
     # Read the CSV file
@@ -52,12 +142,16 @@ def pick_models(num_loras, checkpoint=None, loras=None, skip_external=True):
     # If checkpoint or loras are specified, use them
     selected_checkpoint = None
     selected_loras = []
+    selected_embeddings = []
 
     if checkpoint:
         selected_checkpoint = next((model for model in models if model['Type'] == 'Checkpoint' and model['Name'] == checkpoint), None)
 
     if loras:
         selected_loras = [model for model in models if model['Type'] == 'Lora' and model['Name'] in loras]
+
+    if embeddings:
+        selected_embeddings = [model for model in models if model['Type'] == 'Embedding' and model['Name'] in embeddings]
 
     if not selected_checkpoint:
         # Randomly select a checkpoint if none specified
@@ -70,6 +164,12 @@ def pick_models(num_loras, checkpoint=None, loras=None, skip_external=True):
         # Randomly select the specified number of LoRAs
         selected_loras = random.sample(loras, min(num_loras, len(loras)))
 
+    if not selected_embeddings:
+        # Get all embeddings that match the checkpoint's base
+        embeddings = [model for model in models if model['Type'].startswith('Embedding') and model['Base'] == selected_checkpoint['Base']]
+        # Use all available embeddings
+        selected_embeddings = embeddings
+
     # Prepare the result dictionary
     result = {
         'checkpoint': selected_checkpoint['Name'],
@@ -79,6 +179,8 @@ def pick_models(num_loras, checkpoint=None, loras=None, skip_external=True):
         'ckpt_sampler': selected_checkpoint['Sampler'],
         'ckpt_scheduler': selected_checkpoint['Scheduler'],
         'ckpt_hires_fix': selected_checkpoint['HiRes_fix'],
+        'num_loras': len(selected_loras),
+        'num_embeddings': len(selected_embeddings)
     }
 
     # Add selected LoRAs to the result
@@ -93,6 +195,10 @@ def pick_models(num_loras, checkpoint=None, loras=None, skip_external=True):
         result[f'lora{i}_scheduler'] = lora['Scheduler']
         result[f'lora{i}_hires_fix'] = lora['HiRes_fix']
 
+    for i, embedding in enumerate(selected_embeddings, start=1):
+        result[f'embedding{i}'] = embedding['Name']
+
+    logger.info(f"===== Selected models & parameters: {result} =====")
     return result
 
 def load_models_into_workflow(workflow, models):
@@ -150,61 +256,25 @@ def queue_workflow(workflow):
                 time.sleep(retry_delay)
     return False
 
-# Example usage
-if __name__ == "__main__":
-    # Load the workflow from a JSON file
-    with open(get_path('workflow', 'workflow_base_API.json'), 'r') as file:
-        workflow = json.load(file)
-    
-    """
-    # Get models from pick_models
-    num_loras = random.randint(1, 4)
-    models = pick_models(num_loras, checkpoint="meinamix_v12Final.safetensors", loras=None)
+def run():
+    # Example parameters for testing
+    checkpoint = "meinamix_v12Final.safetensors"
+    fixed_loras = "tifa_v2.3.safetensors, genshinfull1-000006.safetensors"
+    lora_categories = {
+        "style": 2,
+        "detail": "all",
+        "quality": "random"
+    }
 
-    # Load models into the workflow
-    load_models_into_workflow(workflow, models)
-    current_time = datetime.now().strftime("%Y%m%d%H%M%S")
-    checkpoint_used = models['checkpoint']
-    loras_used = ', '.join([models[f'lora{i}'] for i in range(1, num_loras + 1)])
+    # Call the assemble_loras function
+    selected_loras = assemble_loras(checkpoint, fixed_loras, lora_categories)
 
-    print("Number of LoRAs:", num_loras)
-    print("Loras used:", loras_used)
+    # Log the results
+    if selected_loras:
+        print("\nSelected LoRAs:")
+        for lora in selected_loras:
+            print(f"- {lora}")
+    else:
+        print("No LoRAs selected")
 
-    # Set the filename for saving the image
-    workflow["12"]["inputs"]["filename_prefix"] = f"randomizer-{current_time}-{checkpoint_used.replace('.safetensors', '')}-{loras_used.replace('.safetensors', '')}"
-    """
-
-    with open(get_path('res', 'models.csv'), 'r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        checkpoints = [row['Name'] for row in reader if row['Type'] == 'Checkpoint']
-
-    with open(get_path('res', 'art_styles.csv'), 'r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        art_styles = [row for row in reader]
-
-    ckpt = "dreamshaper_8.safetensors"
-
-    for style in art_styles:
-        style_name = style['name']
-        for i in range(1, 3):
-            print("===== queueing workflow =====")
-            num_loras = random.randint(1, 4)
-            models = pick_models(num_loras, checkpoint=ckpt, loras=None)
-            load_models_into_workflow(workflow, models)
-            current_time = datetime.now().strftime("%Y%m%d%H%M%S")
-            checkpoint_used = models['checkpoint']
-            loras_used = ', '.join([models[f'lora{i}'] for i in range(1, num_loras + 1)])
-            set_KSampler(workflow, "KSampler", seed=random.randint(1, 1000000), steps=20, cfg=7, sampler_name='dpmpp_2m', scheduler='karras', denoise=1)
-            set_positive_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, style_name=style_name)
-            set_negative_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, style_name=style_name)
-            set_resolution(workflow, "Empty Latent Image", 768, 768)
-            workflow["12"]["inputs"]["filename_prefix"] = f"randomizer-{style_name}-{current_time}-{checkpoint_used.replace('.safetensors', '')}-{loras_used.replace('.safetensors', '')}"
-            queue_workflow(workflow)
-            print("===== workflow queued =====")
-            if i % 2 == 0:
-                time.sleep(100)
-    
-    # Save the updated workflow to a new JSON file
-    with open(get_path('workflow', 'randomizer_updated.json'), 'w') as outfile:
-        json.dump(workflow, outfile, indent=4)
-        outfile.write(f'\n// Datetime stamp: {datetime.now().isoformat()}\n')  # Commented out datetime stamp
+run()
