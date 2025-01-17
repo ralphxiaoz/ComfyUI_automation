@@ -60,12 +60,6 @@ if __name__ == "__main__":
         reader = csv.DictReader(csvfile)
         rows = list(reader)  # Read all rows into memory first
         
-        # Check for commas in ALL model names
-        for row in rows:
-            if ',' in row['Name']:
-                logger.error(f"Invalid model name found: {row['Name']}. Names cannot contain commas.")
-                raise ValueError("Model names cannot contain commas. Ending job.")
-        
         # Then get checkpoints
         checkpoints = [row['Name'] for row in rows if row['Type'] == 'Checkpoint']
 
@@ -125,23 +119,23 @@ if __name__ == "__main__":
     width = 512
     height = 768
     upscale_ratio = 2
-    run_with_upscale = True
+    run_with_upscale = False
 
     for j in range (1, 500):
     #for style in art_styles:
 
         #style_name = style['name']
-        style_name = "Photography - Fashion"
+        style_name = None
 
         for i in range(1, 5):
             print("===== queueing workflow =====")
-            num_loras = random.randint(1, 5) if not loras else len(loras)
+            num_loras = random.randint(1, 1) if not loras else len(loras) # when random, max loras can't be mroe than active loras in models.csv
             models = get_model_params(num_loras, checkpoint=ckpt, loras=loras)
             load_models_into_workflow(workflow, models)
             current_time = datetime.now().strftime("%Y%m%d%H%M%S")
 
             checkpoint_used = models['checkpoint']
-            loras_used = ', '.join([models[f'lora{i}'] for i in range(1, num_loras + 1)])
+            loras_used = [models[f'lora{i}'] for i in range(1, num_loras + 1)]
             embeddings_used = ', '.join([models[f'embedding{i}'] for i in range(1, models.get('num_embeddings', 0) + 1)])
             
             set_KSampler(workflow, "KSampler", seed=random.randint(1, 1000000), steps=20, cfg=7, sampler_name='dpmpp_2m', scheduler='karras', denoise=1)
@@ -155,7 +149,7 @@ if __name__ == "__main__":
             if run_with_upscale:
                 update_node_input(workflow, "Save Image", "images", "VAE Decode_scaled")
             
-            lora_prefixes = '-'.join([lora[:5] for lora in loras_used.split(', ')])
+            lora_prefixes = '-'.join([lora.replace(',', '_')[:5] for lora in loras_used])
             workflow["12"]["inputs"]["filename_prefix"] = f"{checkpoint_used.replace('.safetensors', '')}-{style_name}-{lora_prefixes}"
             
             # save the workflow to a file

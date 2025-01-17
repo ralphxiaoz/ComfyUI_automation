@@ -23,7 +23,7 @@
     },
     "3": {
         "inputs": {
-            "text": "1mechanical girl,ultra realistic details, portrait, global illumination, shadows, octane render, 8k, ultra sharp,intricate, ornaments detailed, cold colors, metal, egypician detail, highly intricate details, realistic light, trending on cgsociety, glowing eyes, facing camera, neon details, machanical limbs,blood vessels connected to tubes,mechanical vertebra attaching to back,mechanical cervial attaching to neck,sitting,wires and cables connecting to head, pxint, fashion photography, glamorous, stylish attire, captivating pose, dynamic composition, high-fashion aesthetic, professional studio lighting, expert styling, showcasing trend, conveying elegance, conveying attitude, evoking emotion, creating visual impact, editorial storytelling, artistic interpretation, fashion-forward visual, masterpiece, best quality, ultra-detailed",
+            "text": "1girl, a demon girl with glowing tatoo on skin, burning hair, full body shot, , Ethereal Assassin 3D character art style, ghostly and stealthy, shadowy figure, dynamic pose, glowing eyes, high-quality rendering techniques, professional-grade execution, volumetric, 4k, masterpiece, best quality, ultra-detailed",
             "clip": [
                 "5",
                 1
@@ -36,7 +36,7 @@
     },
     "4": {
         "inputs": {
-            "text": "NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution",
+            "text": "NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, bad quality, low quality, low resolution",
             "clip": [
                 "5",
                 1
@@ -49,8 +49,8 @@
     },
     "5": {
         "inputs": {
-            "lora_name": "AbstractMalePortraits_v2R_60_R-128.safetensors",
-            "strength_model": 0.9,
+            "lora_name": "dm_canvas_style3_1530.safetensors",
+            "strength_model": 0.2,
             "strength_clip": 1,
             "model": [
                 "1",
@@ -68,8 +68,8 @@
     },
     "6": {
         "inputs": {
-            "lora_name": "bichu-v0612.safetensors",
-            "strength_model": 1.0,
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
             "strength_clip": 1
         },
         "class_type": "LoraLoader",
@@ -79,8 +79,8 @@
     },
     "7": {
         "inputs": {
-            "lora_name": "AMechaSSS.safetensors",
-            "strength_model": 1.3,
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
             "strength_clip": 1
         },
         "class_type": "LoraLoader",
@@ -90,8 +90,8 @@
     },
     "8": {
         "inputs": {
-            "lora_name": "animeoutlineV4_16.safetensors",
-            "strength_model": 0.9,
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
             "strength_clip": 1
         },
         "class_type": "LoraLoader",
@@ -101,7 +101,7 @@
     },
     "9": {
         "inputs": {
-            "seed": 505605,
+            "seed": 650988,
             "steps": 20,
             "cfg": 7,
             "sampler_name": "dpmpp_2m",
@@ -158,9 +158,9 @@
     },
     "12": {
         "inputs": {
-            "filename_prefix": "dreamshaper_8-Photography - Fashion-Abstr",
+            "filename_prefix": "dreamshaper_8-None-dm_ca",
             "images": [
-                "18",
+                "11",
                 0
             ]
         },
@@ -283,8 +283,8 @@
     },
     "21": {
         "inputs": {
-            "lora_name": "AMechaSSS.safetensors",
-            "strength_model": 1.4,
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
             "strength_clip": 1
         },
         "class_type": "LoraLoader",
@@ -373,4 +373,4 @@
         }
     }
 }
-// Datetime stamp: 2025-01-17T16:06:44.547708
+// Datetime stamp: 2025-01-17T18:50:57.990774

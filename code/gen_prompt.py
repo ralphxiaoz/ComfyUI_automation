@@ -25,19 +25,14 @@ def get_trigger_words(ckpt_name: str, lora_names: Union[str, List[str]], embeddi
     """
     logger.info(f"Getting trigger words - checkpoint: {ckpt_name}, loras: {lora_names}, embeddings: {embeddings}")
     
-    if isinstance(lora_names, str):
-        lora_names = [name.strip() for name in lora_names.split(',')]
-        logger.debug(f"Converted lora_names string to list: {lora_names}")
     
     if isinstance(embeddings, str):
         embeddings = [name.strip() for name in embeddings.split(',')]
-        logger.debug(f"Converted embeddings string to list: {embeddings}")
 
     def get_keywords(name, type_, trigger_col, select_col):
         if not name:  # Skip if name is empty
             return []
             
-        logger.info(f"Searching for {type_}: {name}")
         with open(get_path('res', 'models.csv'), newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
@@ -53,14 +48,11 @@ def get_trigger_words(ckpt_name: str, lora_names: Union[str, List[str]], embeddi
                     if trigger_select.isdigit():
                         num_choices = int(trigger_select)
                         selected = random.sample(trigger_keywords, num_choices) if trigger_keywords else []
-                        logger.debug(f"Selected {num_choices} triggers: {selected}")
                         return selected
                     elif trigger_select == "random":
                         count = random.randint(2, len(trigger_keywords)) if trigger_keywords else 0
-                        logger.debug(f"Random selection - count: {count}, keywords: {trigger_keywords}")
                         return random.sample(trigger_keywords, count) if count > 0 else []
                     elif trigger_select == "all":
-                        logger.debug(f"Using all triggers: {trigger_keywords}")
                         return trigger_keywords
                     else:
                         error_msg = f"Invalid trigger selection type: {trigger_select}"
@@ -107,7 +99,6 @@ def get_style_prompt(style_name=None):
     Raises:
     - ValueError: If the specified style_name is not found in the CSV.
     """
-    logger.info(f"Getting style prompt - style_name: {style_name}")
     
     with open(get_path('res', 'art_styles.csv'), 'r') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -150,9 +141,6 @@ def gen_positive_prompt(ckpt_name, lora_names, embeddings, style_name=None):
     Returns:
     - str: A comma-separated string of the positive prompt.
     """
-    logger.info(f"Generating positive prompt - style: {style_name}")
-    trigger_words = get_trigger_words(ckpt_name, lora_names, embeddings)
-    logger.debug(f"Got trigger words: {trigger_words}")
     
     object_string = random.choice([
         "1girl, a demon girl with glowing tatoo on skin, smiling at viewer, combat pose", 
@@ -164,6 +152,7 @@ def gen_positive_prompt(ckpt_name, lora_names, embeddings, style_name=None):
         "1girl, petite, long hair, white hair, (bunny ears:1.075), black bunnysuit, pantyhose, smile, hands on hips, casino"
     ])  # Placeholder for the object
 
+    trigger_words = get_trigger_words(ckpt_name, lora_names, embeddings)
     style_prompt = get_style_prompt(style_name)
     style_positive = style_prompt['positive']
     quality_modifiers = "masterpiece, best quality, ultra-detailed"
@@ -184,7 +173,6 @@ def gen_negative_prompt(ckpt_name, lora_names, embeddings, style_name=None):
     Returns:
     - str: A comma-separated string of the negative prompt.
     """
-    logger.info(f"Generating negative prompt - style: {style_name}")
     
     trigger_words = get_trigger_words(ckpt_name, lora_names, embeddings)
     style_prompt = get_style_prompt(style_name)

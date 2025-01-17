@@ -1,8 +1,7 @@
 Type,Base,Name,Category,Pos_trigger,Pos_trigger_select,Neg_trigger,Neg_trigger_select,Weight_from,Weight_to,Clip_skip,CFG,Steps,Sampler,Scheduler,HiRes_fix,Special,Tags,Location,Excluded,Link
 Lora,Flux.1 D,Blue_Future.safetensors,style,,,,,1,1.5,-1,,,,,,,,,,https://civitai.com/models/658958?modelVersionId=737325
 Lora,Flux.1 D,Ethereal_Brush_Anime_v1.0.safetensors,style,,,,,-1,1,,,23,dpm_2,beta,,,,,,https://civitai.com/models/979910?modelVersionId=1097568
-Lora,Flux.1 D,flux.1_lora_flyway_Epic-detail_v2.safetensors,detail,,,,,0.8,1,,,,,,,,,,,https://civitai.com/models/736706/epic-gorgeous-details
-Lora,Flux.1 D,It's a LoRA for portraits_BUT! actually specialized in backgrounds. v1.0.safetensors,style,,,,,0.8,1,-2,,,,,,,,,,https://civitai.com/models/1005995/its-a-lora-for-portraits-but-actually-specialized-in-backgrounds-v10?modelVersionId=1127487
+Lora,Flux.1 D,"It's a LoRA for portraits, BUT! actually specialized in backgrounds. v1.0.safetensors",style,,,,,0.8,1,-2,,,,,,,,,,https://civitai.com/models/1005995/its-a-lora-for-portraits-but-actually-specialized-in-backgrounds-v10?modelVersionId=1127487
 Lora,Illustrious,69 pov_illustrious_V1.0.safetensors,pose,"69 pov, ass, pussy, anus, 1boy, penis, fellatio,oral",all,,,0.8,1,,,,,,,,"NSFW, character",,,https://civitai.com/models/1071741?modelVersionId=1203043
 Lora,Pony,dragonriderpxl.safetensors,effect,dragonriderpxl,all,,,0.8,1,,,,,,,,,,,https://civitai.com/models/722733/dragonrider-pony-xl-concept
 Lora,Pony,Expressive_H-000001.safetensors,expression,Expressiveh,all,,,0.9,1,-2,,,,,,,NSFW,,,https://civitai.com/models/341353/expressiveh-hentai-lora-style
@@ -34,7 +33,7 @@ Lora,SDXL 1.0,f1ngering-000036.safetensors,pose,"f1ngering, fingering,female mas
 Lora,SDXL 1.0,oil painting.safetensors,style,"oil painting,bichu",all,,,0.5,1,,,,,,,,,,,https://civitai.com/models/118223?modelVersionId=128212
 Lora,SDXL 1.0,texta.safetensors,text,"logo, text, sign that says {the word}",all,,,0.8,1,,,,,,,,,,,https://civitai.com/models/221240/texta-generate-text-with-sdxl
 Lora,SD 1.5,Drawing.safetensors,style,"drawing,style by NTY",,,,,,,,,,,,,,,,https://civitai.com/models/110244/drawing
-Lora,SD 1.5,AMechaSSS.safetensors,outfit,"mecha musume, mechanical parts, robot joints, headgear, mechanical arms",random,,,1,1.5,,,,,,,,"character, anime, mecha",,,https://civitai.com/models/15464/a-mecha-musume-a?modelVersionId=97207
+Lora,SD 1.5,"AMechaSSS[color_theme,mecha musume, mechanical parts,robot joints,headgear].safetensors",outfit,"mecha musume, mechanical parts, robot joints, headgear, mechanical arms",random,,,1,1.5,,,,,,,,"character, anime, mecha",,,https://civitai.com/models/15464/a-mecha-musume-a?modelVersionId=97207
 Lora,SD 1.5,see-through leotard-000004.safetensors,outfit,see-through leotard,1,,,,,,,,,,,,"NSFW, character, clothing",,,https://civitai.com/models/22256/clothes-see-through-leotard
 Embedding,SD 1.5,ng_deepnegative_v1_75t.pt,,,,NG_DeepNegative_V1_75T,1,,,,,,,,,,,,,https://civitai.com/models/4629/deep-negative-v1x
 Embedding,SD 1.5,badhandv4.pt,,,,badhandv4,1,,,,,,,,,,,,,https://civitai.com/models/16993/badhandv4?modelVersionId=20068
@@ -65,7 +64,7 @@ Checkpoint,SD 1.5,meinaunreal_v5.safetensors,,,,,,,,-2,7,,dpmpp_2m,Karras,Y,,,,,
 Checkpoint,SD 1.5,perfectWorld_v6Baked.safetensors,,,,,,,,-2,,,,,,,,External,,https://civitai.com/models/8281/perfect-world?modelVersionId=179446
 Checkpoint,SD 1.5,photon_v1.safetensors,,,,,,,,,6,20,dpmpp_2m,Karras,,,"Realistic, NSFW",,,https://civitai.com/models/84728?modelVersionId=90072
 Checkpoint,SD 1.5,revAnimated_v2Rebirth.safetensors,,"((best quality)), ((masterpiece)), (detailed)",all,,,,,,,,,,,,"fantasy, anime, semi-realistic, landscape",,,https://civitai.com/models/7371?modelVersionId=425083
-Checkpoint,SD 1.5,xsarchitectural_v11.safetensors,,,,,,,,,,,,,,,"realistic, architecture",,Y,https://civitai.com/models/28112?modelVersionId=50722
+Checkpoint,SD 1.5,xsarchitectural_v11.ckpt,,,,,,,,,,,,,,,"realistic, architecture",,Y,https://civitai.com/models/28112?modelVersionId=50722
 Checkpoint,SD 1.5 Hyper,realisticVisionV60B1_v51HyperVAE.safetensors,,,,,,,,,2,6,dpmpp_sde,Karras,,,,,,https://civitai.com/models/4201/realistic-vision-v60-b1
 Checkpoint,SDXL 1.0,animagineXLV31_v31.safetensors,,,,,,,,,,,,,,,,,,https://civitai.com/models/260267?modelVersionId=403131
 Checkpoint,SDXL 1.0,dreamshaperXL_v21TurboDPMSDE.safetensors,,,,,,,,,2,"4,6,8",dpmpp_sde,Karras,,,,,,https://civitai.com/models/112902?modelVersionId=351306
@@ -78,5 +77,20 @@ Checkpoint,SD 1.5,artErosAerosATribute_aerosNovae.safetensors,,"elden ring style
 Checkpoint,SD 1.5,wildlifexAnimals_wildlifexAnimals.safetensors,,,,,,,,-1,"3,5,7",20+,dpmpp_2m,Karras,,,"animal, realistic",,,https://civitai.com/models/262239/wildlifex-animals?modelVersionId=295773
 Checkpoint,SD 1.5,primemix_v21.safetensors,,,,,,,,,,,,,,,"NSFW, SFW, character, anime",,,https://civitai.com/models/28779/primemix?modelVersionId=67388
 Checkpoint,SD 1.5,astranime_V6.safetensors,,,,,,,,-2,,,dpmpp_2m,Karras,Y,,"NSFW, SFW, character, anime",,,https://civitai.com/models/248011?modelVersionId=334482
-Checkpoint,SDXL 1.0,XLGufengxl_gufengxl10.safetensors,,"traditional chinese ink painting, black and white ink painting, willow branches, willow tree in background",,"(((simple background))),monochrome ,lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, lowres, bad anatomy, bad hands, text, error, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, ugly,pregnant,vore,duplicate,morbid,mut ilated,tran nsexual, hermaphrodite,long neck,mutated hands,poorly drawn hands,poorly drawn face,mutation,deformed,blurry,bad anatomy,bad proportions,malformed limbs,extra limbs,cloned face,disfigured,gross proportions, (((missing arms))),(((missing legs))), (((extra arms))),(((extra legs))),pubic hair, plump,bad legs,error legs,username,blurry,bad feet",all,,,,,,,,,,,,,
-Lora,SD 1.5,animal_holding_sign_v1.0.safetensors,style,holding up a blank white sign,1,,,,,,,,,,,,,,,https://civitai.com/models/280139/cartoon-background-pop-style-characters-and-animals-anthropomorphic-poster-background
+Checkpoint,SDXL 1.0,XLGufengxl_gufengxl10.safetensors,,"traditional chinese ink painting, black and white ink painting, willow branches, willow tree in background",,"(((simple background))),monochrome ,lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, lowres, bad anatomy, bad hands, text, error, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, ugly,pregnant,vore,duplicate,morbid,mut ilated,tran nsexual, hermaphrodite,long neck,mutated hands,poorly drawn hands,poorly drawn face,mutation,deformed,blurry,bad anatomy,bad proportions,malformed limbs,extra limbs,cloned face,disfigured,gross proportions, (((missing arms))),(((missing legs))), (((extra arms))),(((extra legs))),pubic hair, plump,bad legs,error legs,username,blurry,bad feet",all,,,,,,,,,,,,,https://civitai.com/models/189523/xl-gufengxl
+Lora,SD 1.5,howlbgsv3.safetensors,style,<howlbgsv3:1>,1,,,,,,,,,,,,,,,https://civitai.com/models/14605/howls-moving-castle-interior-scenery-lora-ghibli-style-v3
+Lora,SD 1.5,mo.safetensors,style,ink splash,1,,,,,,"3,4,6",,,,,,,,,https://civitai.com/models/63347/ink-splash
+Lora,SD 1.5,LAS.safetensors,style,"cloud,colorful,starry,stars",random,,,0.6,0.8,,,,,,Y,,,,,https://civitai.com/models/17824/sun-and-shadow
+Lora,SD 1.5,contrast_slider_v10.safetensors,crispness,,,,,-5,5,,,,,,,,,,,https://civitai.com/models/155496/contrast-control-sd15
+Lora,SD 1.5,add_sharpness.safetensors,crispness,,,,,-2,2,,,,,,,,,,,https://civitai.com/models/69267/sharpness-tweaker-lora-lora
+Checkpoint,SD 1.5,leosamsFilmgirlUltra_ultraBaseModel.safetensors,,,,,,,,-1,9,,,,,,,,,https://civitai.com/models/33208/leosams-filmgirl-ultra
+Checkpoint,SD 1.5,ghostmix_v20Bakedvae.safetensors,,,,,,,,,,,,,,,,,,https://civitai.com/models/36520/ghostmix
+Checkpoint,SD 1.5,3Guofeng3_v34.safetensors,,,,,,,,,"30,50",,dpmpp_sde,Karras,,,NEEDS VAE!!!!!,,,https://civitai.com/models/10415/3-guofeng3
+Lora,SD 1.5,MoXinV1.safetensors,style,"shuimobysim,wuchangshuo,bonian,zhenbanqiao,badashanren",all,,,,,,,,,,,,,,,https://civitai.com/models/12597/moxin
+Lora,SD 1.5,Niji V2B.safetensors,style,"Realistic anime style, , Niji Stan Katayama style",1,,,,,,,,,,,,,,,https://civitai.com/models/871757/niji-anime
+Lora,Pony,Pony_DetailV1.0.safetensors,detail,,,,,1,1,-2,,,,,,,,,,https://civitai.com/models/383086?modelVersionId=427569
+Lora,SD 1.5,genshinfull1-000006.safetensors,character,"kukishinobudef,luminedef,doridef,fischldef,keqingdef,lisadef,raidenshogundef,yaemikodef,kujousaradef,beidoudef,dionadef,ganyudef,kamisatoayakadef,shenhedef,euladef,rosariadef,qiqidef,layladef,niloudef,kokomidef,yelandef,monadef,barbaradef,candacedef,colleidef,yaoyaodef,nahidadef,faruzandef,jeanfavonian,sucrosedef,sayudef,xianglingdef,dehyadef,yoimiyadef,kleedef,hutaodef,xinyandef,amber5star,yanfeidef,noelledef,yunjindef,ningguangdef",1,,,,,,,,,,,,,,,https://civitai.com/models/108649/genshin-impact-all-in-one-or-character-lora-43336
+Lora,SDXL 1.0,glowneon_xl_v1.safetensors,style,"glowneon,glowing,sparks,lightning",all,,,,,,,,,,,,,,,https://civitai.com/models/310235/glowneon-xl-lora
+Lora,SD 1.5,zyd232_InkStyle_v1_0.safetensors,style,"	
+zydink,monochrome,ink sketch",,,,0.8,1.2,,,,,,,,,,,https://civitai.com/models/73305?modelVersionId=78018
+Lora,SDXL 1.0,LineAniRedmondV2-Lineart-LineAniAF.safetensors,style,"lineart,LineAniAF",all,,,,,,,,,,,,,,,https://civitai.com/models/127018?modelVersionId=177544

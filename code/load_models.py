@@ -55,7 +55,6 @@ def assemble_loras(checkpoint, fixed_loras, lora_categories):
         and row['Base'] == base 
         and row['Excluded'] != 'Y'
     ]
-    logger.info(f"Found {len(available_loras)} LoRAs matching base {base}")
 
     # Add fixed loras first
     for lora_name in fixed_loras_list:
@@ -74,7 +73,6 @@ def assemble_loras(checkpoint, fixed_loras, lora_categories):
             logger.warning(f"No LoRAs found for category: {category}")
             continue
             
-        logger.info(f"Processing category {category} with {len(category_models)} available LoRAs")
         
         if quantity == 'all':
             selected_loras.extend([model['Name'] for model in category_models])  # Only extend with names
@@ -121,9 +119,8 @@ def get_model_params(num_loras, checkpoint=None, loras=None, embeddings=None, sk
     - skip_external (bool): If True, ignore models with a "location" of "external".
 
     Returns:
-    - dict: A dictionary containing the selected checkpoint and LoRAs, along with their associated attributes.
+    - dict: A dictionary containing the selected checkpoint and LoRAs, along with their associated recommended attributes.
     """
-    logger.info(f"Getting model parameters - num_loras: {num_loras}, checkpoint: {checkpoint}")
     models = []
 
     # Read the CSV file
