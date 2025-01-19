@@ -1,0 +1,1089 @@
+2025-01-18 23:59:06,735 - load_models - INFO - Found checkpoint meinamix_v12Final.safetensors with base SD 1.5
+2025-01-18 23:59:06,735 - load_models - INFO - Added fixed LoRA: tifa_v2.3.safetensors
+2025-01-18 23:59:06,735 - load_models - INFO - Added fixed LoRA: genshinfull1-000006.safetensors
+2025-01-18 23:59:06,749 - load_models - INFO - Added 2 LoRAs from category style
+2025-01-18 23:59:06,749 - load_models - INFO - Added all 2 LoRAs from category detail
+2025-01-18 23:59:06,749 - load_models - INFO - Added 1 random LoRAs from category quality
+2025-01-18 23:59:06,749 - load_models - INFO - Final selection: 7 LoRAs
+2025-01-18 23:59:06,750 - load_models - INFO - Selected LoRA: tifa_v2.3.safetensors (Category: character)
+2025-01-18 23:59:06,751 - load_models - INFO - Selected LoRA: genshinfull1-000006.safetensors (Category: character)
+2025-01-18 23:59:06,751 - load_models - INFO - Selected LoRA: nier_anime_style_offset.safetensors (Category: style)
+2025-01-18 23:59:06,751 - load_models - INFO - Selected LoRA: mo.safetensors (Category: style)
+2025-01-18 23:59:06,751 - load_models - INFO - Selected LoRA: more_details.safetensors (Category: detail)
+2025-01-18 23:59:06,751 - load_models - INFO - Selected LoRA: add_detail.safetensors (Category: detail)
+2025-01-18 23:59:06,751 - load_models - INFO - Selected LoRA: GoodHands-beta2.safetensors (Category: quality)
+2025-01-18 23:59:06,753 - __main__ - INFO - Starting workflow generation
+2025-01-18 23:59:06,756 - load_models - INFO - Found checkpoint majicmixRealistic_v7.safetensors with base SD 1.5
+2025-01-18 23:59:06,756 - load_models - INFO - Added 0 LoRAs from category style
+2025-01-18 23:59:06,756 - load_models - INFO - Added 0 LoRAs from category outfit
+2025-01-18 23:59:06,756 - load_models - INFO - Added 0 LoRAs from category lighting
+2025-01-18 23:59:06,756 - load_models - INFO - Final selection: 0 LoRAs
+2025-01-18 23:59:06,758 - __main__ - INFO - ******Loras:******* []
+2025-01-18 23:59:06,758 - __main__ - INFO - UNSELECTED available LoRAs with the same base as the checkpoint: AbstractMalePortraits_v2R_60_R-128.safetensors, AbstractPortrait_50_R.safetensors, animeoutlineV4_16.safetensors, backlight_slider_v10.safetensors, bichu-v0612.safetensors, dm_canvas_style3_1530.safetensors, GoodHands-beta2.safetensors, gubinxin.safetensors, manga2_by_XUEBI.safetensors, masturbation_female.safetensors, more_details.safetensors, nier_anime_style_offset.safetensors, pixel_f2.safetensors, add_detail.safetensors, tifa_v2.3.safetensors, WaterColoursScenev1.0.safetensors, XSarchitectural-38InteriorForBedroom.safetensors, Drawing.safetensors, AMechaSSS[color_theme,mecha musume, mechanical parts,robot joints,headgear].safetensors, see-through leotard-000004.safetensors, howlbgsv3.safetensors, mo.safetensors, LAS.safetensors, contrast_slider_v10.safetensors, add_sharpness.safetensors, MoXinV1.safetensors, Niji V2B.safetensors, genshinfull1-000006.safetensors, zyd232_InkStyle_v1_0.safetensors
+2025-01-18 23:59:06,758 - __main__ - INFO - Checkpoint and LoRAs have the same base: SD 1.5
+2025-01-18 23:59:06,758 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: CLIP Set Last Layer
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 2
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: CLIP Set Last Layer
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 2
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=407243, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:06,758 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:06,758 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:06,758 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:06,758 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:06,758 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:06,758 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:06,758 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:06,758 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:06,758 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:06,758 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:06,758 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:06,767 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:06,769 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:06,769 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-18 23:59:06,769 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:06,769 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:06,769 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:06,769 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:06,769 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:06,769 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:06,769 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:06,769 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:06,769 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:06,769 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:06,769 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:06,769 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-18 23:59:06,769 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:06,769 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:06,769 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:06,769 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:06,769 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:06,769 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:06,769 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:06,782 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:07,054 - load_models - INFO - Response: {"prompt_id": "5dec8628-6a68-4d99-90d5-ead2203b3f5f", "number": 5, "node_errors": {}}
+2025-01-18 23:59:12,060 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:12,060 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:12,060 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:12,060 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:12,060 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=338229, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:12,060 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:12,060 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:12,060 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:12,060 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:12,060 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:12,060 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:12,060 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:12,060 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:12,060 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:12,060 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:12,060 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:12,065 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:12,065 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:12,066 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:12,067 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:12,069 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:12,069 - gen_prompt - INFO - Selected random style: Photography - Long exposure
+2025-01-18 23:59:12,069 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , long exposure photography, streaking lights, smooth motion, dreamy landscapes, ethereal atmosphere, light painting, creative expression, time manipulation, surreal effects, captivating visuals, artistic interpretation, immersive experience, unique perspective, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:12,070 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:12,070 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:12,070 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:12,070 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , long exposure photography, streaking lights, smooth motion, dreamy landscapes, ethereal atmosphere, light painting, creative expression, time manipulation, surreal effects, captivating visuals, artistic interpretation, immersive experience, unique perspective, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:12,070 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:12,071 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:12,071 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:12,072 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:12,072 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:12,073 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:12,073 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:12,075 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:12,077 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:12,077 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-18 23:59:12,077 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:12,078 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:12,078 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:12,078 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:12,078 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:12,078 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:12,078 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:12,080 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:12,080 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:12,080 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:12,080 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:12,080 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:12,080 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:12,081 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:12,084 - load_models - INFO - Response: {"prompt_id": "e24af7a1-5105-4f20-b1a6-afe7a1ad74a7", "number": 6, "node_errors": {}}
+2025-01-18 23:59:17,085 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:17,085 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:17,085 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:17,085 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:17,085 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=538695, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:17,085 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:17,085 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:17,085 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:17,085 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:17,085 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:17,085 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:17,085 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:17,085 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:17,090 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:17,090 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:17,090 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:17,090 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:17,090 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:17,090 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:17,093 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:17,093 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:17,093 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-18 23:59:17,093 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:17,093 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:17,093 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:17,093 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:17,093 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:17,093 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:17,093 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:17,093 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:17,093 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:17,093 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:17,093 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:17,093 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:17,093 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:17,103 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:17,103 - gen_prompt - INFO - Selected random style: Photography - Long exposure
+2025-01-18 23:59:17,103 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:17,103 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:17,103 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:17,103 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:17,103 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:17,105 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:17,105 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:17,105 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:17,105 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:17,105 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:17,105 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:17,105 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:17,105 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:17,107 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:17,107 - load_models - INFO - Response: {"prompt_id": "10225dc0-7cb4-40a3-b712-b13000d3cb13", "number": 7, "node_errors": {}}
+2025-01-18 23:59:22,112 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:22,114 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:22,114 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:22,114 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:22,114 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=540647, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:22,114 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:22,114 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:22,116 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:22,116 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:22,116 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:22,116 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:22,116 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:22,118 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:22,118 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:22,118 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:22,120 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:22,120 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:22,122 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:22,122 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:22,124 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:22,126 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:22,128 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-18 23:59:22,128 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:22,128 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:22,128 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:22,128 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:22,128 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:22,130 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:22,130 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:22,130 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:22,132 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:22,134 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:22,136 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:22,138 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:22,140 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:22,144 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:22,144 - gen_prompt - INFO - Selected random style: Photography - Long exposure
+2025-01-18 23:59:22,144 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:22,146 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:22,146 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:22,146 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:22,146 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:22,146 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:22,146 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:22,148 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:22,148 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:22,148 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:22,148 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:22,148 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:22,148 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:22,150 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:22,154 - load_models - INFO - Response: {"prompt_id": "110e5fe6-cd57-4f93-b00f-bda3b5e21a0c", "number": 8, "node_errors": {}}
+2025-01-18 23:59:27,155 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:27,155 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:27,155 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:27,155 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:27,155 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=192877, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:27,155 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:27,155 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:27,155 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:27,155 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:27,155 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:27,155 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:27,155 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:27,155 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:27,163 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:27,163 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:27,163 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:27,163 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:27,163 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:27,163 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:27,163 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:27,163 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:27,163 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-18 23:59:27,173 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:27,173 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:27,173 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:27,173 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:27,173 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:27,173 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:27,173 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:27,173 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:27,173 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:27,173 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:27,173 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:27,173 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:27,173 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:27,183 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:27,183 - gen_prompt - INFO - Selected random style: Photography - Long exposure
+2025-01-18 23:59:27,183 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:27,183 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:27,183 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:27,183 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:27,183 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:27,183 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:27,183 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:27,183 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:27,183 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:27,183 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:27,183 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:27,183 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:27,183 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:27,183 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:27,194 - load_models - INFO - Response: {"prompt_id": "5e449247-3dbe-4326-8270-ed3edddd89d4", "number": 9, "node_errors": {}}
+2025-01-18 23:59:32,197 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:32,197 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:32,199 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:32,199 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:32,199 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=675924, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:32,199 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:32,199 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:32,199 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:32,199 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:32,199 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:32,199 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:32,199 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:32,199 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:32,203 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:32,204 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:32,204 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:32,204 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:32,204 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:32,204 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:32,204 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:32,213 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:32,213 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-18 23:59:32,213 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:32,213 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:32,213 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:32,213 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:32,213 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:32,213 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:32,213 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:32,213 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:32,213 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:32,213 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:32,213 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:32,213 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:32,224 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:32,224 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:32,224 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-18 23:59:32,224 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:32,224 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:32,224 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:32,224 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:32,224 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:32,224 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:32,224 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:32,224 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:32,234 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:32,234 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:32,234 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:32,234 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:32,234 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:32,238 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:32,238 - load_models - INFO - Response: {"prompt_id": "7076c4d5-345d-4cd6-af30-72b5bf1f4434", "number": 10, "node_errors": {}}
+2025-01-18 23:59:37,243 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:37,243 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:37,243 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:37,243 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:37,243 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=810895, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:37,243 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:37,243 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:37,243 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:37,243 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:37,243 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:37,243 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:37,243 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:37,243 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:37,243 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:37,252 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:37,252 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:37,254 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:37,254 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:37,256 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:37,256 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:37,260 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:37,262 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-18 23:59:37,262 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:37,262 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:37,262 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:37,262 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:37,262 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:37,264 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:37,264 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:37,264 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:37,266 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:37,267 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:37,267 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:37,268 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:37,270 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:37,272 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:37,272 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-18 23:59:37,272 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:37,272 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:37,272 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:37,272 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:37,272 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:37,272 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:37,272 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:37,272 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:37,272 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:37,272 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:37,272 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:37,272 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:37,272 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:37,272 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:37,282 - load_models - INFO - Response: {"prompt_id": "a6d8c59e-938e-4bba-a94f-347e4070f482", "number": 11, "node_errors": {}}
+2025-01-18 23:59:42,288 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:42,288 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:42,288 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:42,288 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:42,288 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=947502, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:42,288 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:42,288 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:42,288 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:42,288 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:42,288 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:42,288 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:42,288 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:42,288 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:42,288 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:42,294 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:42,294 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:42,294 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:42,294 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:42,297 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:42,299 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:42,303 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:42,303 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-18 23:59:42,304 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:42,304 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:42,304 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:42,304 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:42,304 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , macro photography, extreme close-ups, intricate details, unseen worlds, capturing texture, emphasizing details, revealing beauty in small things, professional lighting, precise focusing, artistic expression, immersive experience, expert technique, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:42,304 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:42,304 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:42,304 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:42,304 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:42,304 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:42,304 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:42,304 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:42,315 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:42,315 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:42,315 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-18 23:59:42,315 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:42,315 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:42,315 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:42,315 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:42,315 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:42,315 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:42,315 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:42,315 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:42,315 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:42,315 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:42,325 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:42,325 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:42,325 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:42,325 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:42,325 - load_models - INFO - Response: {"prompt_id": "2cf1f0a4-09d6-4546-861a-0a5348fa01aa", "number": 12, "node_errors": {}}
+2025-01-18 23:59:47,331 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:47,331 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:47,331 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:47,331 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:47,331 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=892652, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:47,331 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:47,331 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:47,331 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:47,331 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:47,331 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:47,331 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:47,331 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:47,331 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:47,331 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:47,331 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:47,331 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:47,341 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:47,341 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:47,341 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:47,341 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:47,341 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:47,341 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-18 23:59:47,341 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:47,341 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:47,341 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:47,341 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:47,341 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:47,341 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:47,351 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:47,351 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:47,353 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:47,353 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:47,353 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:47,353 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:47,353 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:47,361 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:47,361 - gen_prompt - INFO - Selected random style: Photography - Long exposure
+2025-01-18 23:59:47,361 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:47,361 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:47,361 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:47,361 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:47,361 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:47,361 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:47,361 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:47,361 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:47,361 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:47,361 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:47,361 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:47,361 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:47,361 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:47,361 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:47,361 - load_models - INFO - Response: {"prompt_id": "62fb39ac-074d-49b0-bec0-a84b5053d4e3", "number": 13, "node_errors": {}}
+2025-01-18 23:59:52,372 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:52,372 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:52,372 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:52,372 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:52,372 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=428238, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:52,372 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:52,372 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:52,372 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:52,372 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:52,372 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:52,372 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:52,372 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:52,372 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:52,378 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:52,378 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:52,380 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:52,380 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:52,380 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:52,382 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:52,382 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:52,384 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:52,384 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-18 23:59:52,386 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:52,386 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:52,386 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:52,386 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:52,386 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:52,386 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:52,388 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:52,388 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:52,390 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:52,390 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:52,392 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:52,392 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:52,394 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:52,398 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:52,398 - gen_prompt - INFO - Selected random style: Photography - Reflection
+2025-01-18 23:59:52,398 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:52,398 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:52,398 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:52,398 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:52,400 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:52,400 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:52,400 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:52,400 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:52,400 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:52,400 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:52,400 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:52,402 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:52,402 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:52,402 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:52,406 - load_models - INFO - Response: {"prompt_id": "595547e5-5366-44d5-9d10-498b136ee383", "number": 14, "node_errors": {}}
+2025-01-18 23:59:57,407 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-18 23:59:57,407 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-18 23:59:57,407 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-18 23:59:57,407 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-18 23:59:57,407 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=829136, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-18 23:59:57,407 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-18 23:59:57,407 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-18 23:59:57,407 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-18 23:59:57,407 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-18 23:59:57,407 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-18 23:59:57,407 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-18 23:59:57,407 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-18 23:59:57,407 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:57,407 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:57,407 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:57,407 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:57,407 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:57,417 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:57,417 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:57,417 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:57,417 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:57,417 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-18 23:59:57,425 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:57,425 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-18 23:59:57,425 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-18 23:59:57,425 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-18 23:59:57,425 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed
+2025-01-18 23:59:57,425 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-18 23:59:57,427 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:57,427 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-18 23:59:57,427 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-18 23:59:57,427 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-18 23:59:57,427 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-18 23:59:57,427 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-18 23:59:57,427 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-18 23:59:57,437 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-18 23:59:57,437 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-18 23:59:57,437 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-18 23:59:57,437 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-18 23:59:57,437 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-18 23:59:57,437 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-18 23:59:57,437 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-18 23:59:57,437 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-18 23:59:57,437 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-18 23:59:57,437 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-18 23:59:57,437 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-18 23:59:57,437 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-18 23:59:57,437 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-18 23:59:57,437 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-18 23:59:57,437 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-18 23:59:57,437 - load_models - INFO - Queueing workflow
+2025-01-18 23:59:57,621 - load_models - INFO - Response: {"prompt_id": "08df672c-58c6-45c8-9171-61168c529234", "number": 15, "node_errors": {}}
+2025-01-19 00:00:02,623 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-19 00:00:02,625 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-19 00:00:02,625 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-19 00:00:02,625 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-19 00:00:02,625 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=821669, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-19 00:00:02,625 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-19 00:00:02,625 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-19 00:00:02,625 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-19 00:00:02,625 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-19 00:00:02,625 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-19 00:00:02,627 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-19 00:00:02,627 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-19 00:00:02,627 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:02,627 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:02,629 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:02,629 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:02,630 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:02,630 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:02,632 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:02,634 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:02,640 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:02,640 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-19 00:00:02,640 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:02,640 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-19 00:00:02,640 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-19 00:00:02,640 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-19 00:00:02,640 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:02,640 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:02,640 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:02,640 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:02,640 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:02,640 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:02,640 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:02,640 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:02,650 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:02,651 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:02,651 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-19 00:00:02,651 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-19 00:00:02,651 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-19 00:00:02,651 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-19 00:00:02,651 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-19 00:00:02,651 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-19 00:00:02,651 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-19 00:00:02,655 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-19 00:00:02,655 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-19 00:00:02,655 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-19 00:00:02,655 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-19 00:00:02,655 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-19 00:00:02,655 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-19 00:00:02,655 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-19 00:00:02,657 - load_models - INFO - Queueing workflow
+2025-01-19 00:00:02,665 - load_models - INFO - Response: {"prompt_id": "ceebf547-cc7a-4176-9ee5-7e7758034822", "number": 16, "node_errors": {}}
+2025-01-19 00:00:07,667 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-19 00:00:07,667 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-19 00:00:07,667 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-19 00:00:07,667 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-19 00:00:07,667 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=637400, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-19 00:00:07,667 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-19 00:00:07,667 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-19 00:00:07,667 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-19 00:00:07,671 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-19 00:00:07,671 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-19 00:00:07,671 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-19 00:00:07,671 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-19 00:00:07,671 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:07,673 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:07,673 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:07,673 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:07,673 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:07,673 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:07,673 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:07,673 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:07,682 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:07,682 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-19 00:00:07,682 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:07,682 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-19 00:00:07,682 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-19 00:00:07,682 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-19 00:00:07,682 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:07,682 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:07,682 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:07,682 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:07,682 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:07,682 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:07,692 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:07,692 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:07,692 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:07,692 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:07,692 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-19 00:00:07,692 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-19 00:00:07,692 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-19 00:00:07,692 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-19 00:00:07,692 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-19 00:00:07,692 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-19 00:00:07,692 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-19 00:00:07,702 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-19 00:00:07,702 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-19 00:00:07,702 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-19 00:00:07,702 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-19 00:00:07,702 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-19 00:00:07,702 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-19 00:00:07,702 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-19 00:00:07,706 - load_models - INFO - Queueing workflow
+2025-01-19 00:00:07,712 - load_models - INFO - Response: {"prompt_id": "ed515907-67e9-478a-83ee-74c0a15e53b0", "number": 17, "node_errors": {}}
+2025-01-19 00:00:12,715 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-19 00:00:12,715 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-19 00:00:12,718 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-19 00:00:12,718 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-19 00:00:12,718 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=532683, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-19 00:00:12,718 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-19 00:00:12,719 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-19 00:00:12,719 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-19 00:00:12,719 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-19 00:00:12,719 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-19 00:00:12,721 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-19 00:00:12,721 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-19 00:00:12,721 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:12,722 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:12,722 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:12,722 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:12,722 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:12,722 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:12,722 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:12,729 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:12,734 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:12,734 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-19 00:00:12,734 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:12,734 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-19 00:00:12,734 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-19 00:00:12,734 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-19 00:00:12,734 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:12,734 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:12,734 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:12,734 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:12,740 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:12,740 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:12,740 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:12,740 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:12,740 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:12,740 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:12,740 - gen_prompt - INFO - Selected random style: Photography - Macro
+2025-01-19 00:00:12,740 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-19 00:00:12,740 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-19 00:00:12,740 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-19 00:00:12,750 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-19 00:00:12,750 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-19 00:00:12,750 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-19 00:00:12,750 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-19 00:00:12,750 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-19 00:00:12,750 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-19 00:00:12,750 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-19 00:00:12,750 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-19 00:00:12,750 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-19 00:00:12,750 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-19 00:00:12,750 - load_models - INFO - Queueing workflow
+2025-01-19 00:00:12,750 - load_models - INFO - Response: {"prompt_id": "90d6006e-ecc9-4680-9518-d3fdbdcd173e", "number": 18, "node_errors": {}}
+2025-01-19 00:00:17,760 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-19 00:00:17,760 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-19 00:00:17,760 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-19 00:00:17,760 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-19 00:00:17,760 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=70512, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-19 00:00:17,760 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-19 00:00:17,760 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-19 00:00:17,760 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-19 00:00:17,760 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-19 00:00:17,760 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-19 00:00:17,760 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-19 00:00:17,760 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-19 00:00:17,760 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:17,760 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:17,760 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:17,760 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:17,769 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:17,769 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:17,769 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:17,769 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:17,769 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:17,769 - gen_prompt - INFO - Selected random style: Photography - Long exposure
+2025-01-19 00:00:17,769 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , long exposure photography, streaking lights, smooth motion, dreamy landscapes, ethereal atmosphere, light painting, creative expression, time manipulation, surreal effects, captivating visuals, artistic interpretation, immersive experience, unique perspective, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:17,769 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-19 00:00:17,769 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-19 00:00:17,769 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-19 00:00:17,769 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , long exposure photography, streaking lights, smooth motion, dreamy landscapes, ethereal atmosphere, light painting, creative expression, time manipulation, surreal effects, captivating visuals, artistic interpretation, immersive experience, unique perspective, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:17,769 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:17,779 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:17,779 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:17,779 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:17,779 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:17,779 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:17,779 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:17,779 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:17,779 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:17,779 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-19 00:00:17,779 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-19 00:00:17,789 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-19 00:00:17,789 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-19 00:00:17,789 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-19 00:00:17,789 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-19 00:00:17,789 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-19 00:00:17,789 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-19 00:00:17,789 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-19 00:00:17,789 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-19 00:00:17,789 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-19 00:00:17,789 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-19 00:00:17,789 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-19 00:00:17,789 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-19 00:00:17,789 - load_models - INFO - Queueing workflow
+2025-01-19 00:00:17,796 - load_models - INFO - Response: {"prompt_id": "fb68b8d8-258f-458a-819f-efe972ab2c83", "number": 19, "node_errors": {}}
+2025-01-19 00:00:22,799 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-19 00:00:22,799 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-19 00:00:22,799 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-19 00:00:22,799 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-19 00:00:22,799 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=584629, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-19 00:00:22,799 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-19 00:00:22,799 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-19 00:00:22,799 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-19 00:00:22,799 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-19 00:00:22,799 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-19 00:00:22,799 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-19 00:00:22,799 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-19 00:00:22,799 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:22,799 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:22,799 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:22,799 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:22,809 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:22,809 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:22,809 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:22,809 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:22,809 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:22,809 - gen_prompt - INFO - Selected random style: Photography - Reflection
+2025-01-19 00:00:22,809 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , reflection photography, mirror-like surfaces, symmetry, visual echoes, capturing dual realities, distorted perspectives, ethereal beauty, introspective imagery, mesmerizing patterns, reflecting mood and emotion, creating visual depth, playing with perception, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:22,809 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-19 00:00:22,809 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-19 00:00:22,809 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-19 00:00:22,809 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , reflection photography, mirror-like surfaces, symmetry, visual echoes, capturing dual realities, distorted perspectives, ethereal beauty, introspective imagery, mesmerizing patterns, reflecting mood and emotion, creating visual depth, playing with perception, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:22,819 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:22,819 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:22,819 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:22,819 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:22,819 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:22,819 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:22,819 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:22,819 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:22,830 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:22,830 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-19 00:00:22,830 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-19 00:00:22,830 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-19 00:00:22,830 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-19 00:00:22,830 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-19 00:00:22,830 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-19 00:00:22,830 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-19 00:00:22,830 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-19 00:00:22,830 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-19 00:00:22,830 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-19 00:00:22,830 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-19 00:00:22,830 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-19 00:00:22,830 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-19 00:00:22,830 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-19 00:00:22,830 - load_models - INFO - Queueing workflow
+2025-01-19 00:00:22,841 - load_models - INFO - Response: {"prompt_id": "6f9e962c-768a-4802-ae95-350b233cb8cc", "number": 20, "node_errors": {}}
+2025-01-19 00:00:27,844 - load_models - INFO - ===== Selected models & parameters: {'checkpoint': 'majicmixRealistic_v7.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '20-40', 'ckpt_sampler': 'euler_ancestral', 'ckpt_scheduler': '', 'ckpt_hires_fix': 'Y', 'num_loras': 0, 'num_embeddings': 4, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'badhandv4.pt', 'embedding3': 'easynegative.safetensors', 'embedding4': 'an14.pt'} =====
+2025-01-19 00:00:27,845 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Load Checkpoint
+2025-01-19 00:00:27,845 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 1
+2025-01-19 00:00:27,845 - node_manipulation - INFO - 
+node_manipulation.set_KSampler(): Configuring KSampler node: KSampler
+2025-01-19 00:00:27,846 - node_manipulation - INFO - node_manipulation.set_KSampler(): Parameters - seed=363274, steps=20, cfg=7, sampler=dpmpp_2m, scheduler=karras, denoise=1
+2025-01-19 00:00:27,846 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: KSampler
+2025-01-19 00:00:27,846 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 9
+2025-01-19 00:00:27,847 - node_manipulation - INFO - node_manipulation.set_KSampler(): Successfully configured node 9
+2025-01-19 00:00:27,847 - node_manipulation - INFO - 
+node_manipulation.set_positive_prompt(): Setting positive prompt
+2025-01-19 00:00:27,847 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Parameters - checkpoint=majicmixRealistic_v7.safetensors, loras=[], embeddings=ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt, object_type=target, style=None
+2025-01-19 00:00:27,848 - gen_prompt - INFO - Attempting to get object of type: target
+2025-01-19 00:00:27,848 - gen_prompt - INFO - gen_prompt.get_object(): Selected random object: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love.
+2025-01-19 00:00:27,849 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:27,850 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:27,851 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:27,852 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:27,852 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:27,853 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:27,853 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:27,856 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:27,859 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:27,860 - gen_prompt - INFO - Selected random style: Photography - Fine Art
+2025-01-19 00:00:27,860 - gen_prompt - INFO -  === Full positive prompt === : An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:27,861 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Positive
+2025-01-19 00:00:27,861 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 3
+2025-01-19 00:00:27,861 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Successfully set prompt for node 3
+2025-01-19 00:00:27,862 - node_manipulation - INFO - node_manipulation.set_positive_prompt(): Prompt: An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed
+2025-01-19 00:00:27,862 - gen_prompt - INFO - Getting trigger words - checkpoint: majicmixRealistic_v7.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, badhandv4.pt, easynegative.safetensors, an14.pt
+2025-01-19 00:00:27,863 - gen_prompt - WARNING - No Pos_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:27,864 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-19 00:00:27,864 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-19 00:00:27,865 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-19 00:00:27,867 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-19 00:00:27,868 - gen_prompt - WARNING - No Neg_trigger_select found for majicmixRealistic_v7.safetensors
+2025-01-19 00:00:27,871 - gen_prompt - INFO - Final trigger words: {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, badhandv4, easynegative, an14'}
+2025-01-19 00:00:27,874 - gen_prompt - INFO - Total styles: 307, Included styles: 5
+2025-01-19 00:00:27,874 - gen_prompt - INFO - Selected random style: Photography - Black and White
+2025-01-19 00:00:27,875 - gen_prompt - INFO - Generated negative prompt: NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution
+2025-01-19 00:00:27,875 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Negative
+2025-01-19 00:00:27,876 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 4
+2025-01-19 00:00:27,876 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Empty Latent Image
+2025-01-19 00:00:27,876 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=912, height=512
+2025-01-19 00:00:27,877 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Empty Latent Image
+2025-01-19 00:00:27,877 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 10
+2025-01-19 00:00:27,877 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 912x512 for node 10
+2025-01-19 00:00:27,877 - node_manipulation - INFO - 
+node_manipulation.set_resolution(): Setting resolution for node: Up_res
+2025-01-19 00:00:27,877 - node_manipulation - INFO - node_manipulation.set_resolution(): Parameters - width=1824, height=1024
+2025-01-19 00:00:27,878 - node_manipulation - INFO - 
+node_manipulation.get_node_ID(): Searching for node title: Up_res
+2025-01-19 00:00:27,878 - node_manipulation - INFO - node_manipulation.get_node_ID(): Found node ID: 17
+2025-01-19 00:00:27,878 - node_manipulation - INFO - node_manipulation.set_resolution(): Successfully set resolution 1824x1024 for node 17
+2025-01-19 00:00:27,880 - load_models - INFO - Queueing workflow
+2025-01-19 00:00:27,884 - load_models - INFO - Response: {"prompt_id": "2f39d351-8ded-434e-b522-1600260df9b5", "number": 21, "node_errors": {}}

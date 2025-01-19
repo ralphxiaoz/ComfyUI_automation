@@ -72,11 +72,11 @@ def set_KSampler(workflow, nodeTitle, seed, steps=20, cfg=7, sampler_name='dpmpp
     else:
         logger.info(f"node_manipulation.set_KSampler(): Failed - Node '{nodeTitle}' not found")
 
-def set_positive_prompt(workflow, ckpt_name, lora_names, embeddings, nodeTitle="Positive", style_name=None):
+def set_positive_prompt(workflow, ckpt_name, lora_names, embeddings, object_type, nodeTitle="Positive", style_name=None):
     logger.info(f"\nnode_manipulation.set_positive_prompt(): Setting positive prompt")
-    logger.info(f"node_manipulation.set_positive_prompt(): Parameters - checkpoint={ckpt_name}, loras={lora_names}, embeddings={embeddings}, style={style_name}")
+    logger.info(f"node_manipulation.set_positive_prompt(): Parameters - checkpoint={ckpt_name}, loras={lora_names}, embeddings={embeddings}, object_type={object_type}, style={style_name}")
     
-    positive_prompt = gen_positive_prompt(ckpt_name, lora_names, embeddings, style_name)
+    positive_prompt = gen_positive_prompt(ckpt_name=ckpt_name, lora_names=lora_names, embeddings=embeddings, object_type=object_type, style_name=style_name)
     node_id = get_node_ID(workflow, nodeTitle)
     
     if node_id is not None:
@@ -153,20 +153,13 @@ def update_node_input(workflow, target_title, input_key, new_source_title):
 def set_number_of_loras(workflow, num_loras):
     """
     Sets the number of active LoRAs in the workflow and updates connections.
-
-    Parameters:
-    - workflow (dict): The workflow dictionary containing nodes.
-    - num_loras (int): The number of LoRAs to activate.
     """
     # Identify all LoRA nodes in order
     lora_nodes = sorted([
         node_id for node_id, node in workflow.items() 
         if node.get('class_type') == 'LoraLoader'
-        and node.get('_meta', {}).get('title', '').startswith('Lora')  # Only include numbered Loras
+        and node.get('_meta', {}).get('title', '').startswith('Lora')
     ], key=int)
-    
-    # Ensure num_loras does not exceed available LoRAs
-    num_loras = min(num_loras, len(lora_nodes))
     
     # First, unlink all LoRA nodes
     for lora_id in lora_nodes:
@@ -176,31 +169,47 @@ def set_number_of_loras(workflow, num_loras):
                 if k not in ['model', 'clip']
             }
 
-    # Then set up connections for active LoRAs
-    for i in range(num_loras):
-        current_lora = lora_nodes[i]
-        
-        if i == 0:
-            # First LoRA connects to checkpoint and CLIP
-            workflow[current_lora]['inputs']['model'] = ["1", 0]
-            workflow[current_lora]['inputs']['clip'] = ["2", 0]
-
-        else:
-            # Other LoRAs connect to previous LoRA
-            previous_lora = lora_nodes[i-1]
-            workflow[current_lora]['inputs']['model'] = [previous_lora, 0]
-            workflow[current_lora]['inputs']['clip'] = [previous_lora, 1]
-
-    # Update all nodes that take input from any LoRA to use the last active LoRA
     if num_loras > 0:
+        # First, set up the LoRA chain in forward order
+        for i in range(num_loras):
+            current_lora = lora_nodes[i]
+            
+            if i == 0:
+                # First LoRA connects to checkpoint and CLIP
+                workflow[current_lora]['inputs']['model'] = [get_node_ID(workflow, "Load Checkpoint"), 0]
+                workflow[current_lora]['inputs']['clip'] = [get_node_ID(workflow, "CLIP Set Last Layer"), 0]
+            else:
+                # Other LoRAs connect to previous LoRA
+                previous_lora = lora_nodes[i-1]
+                workflow[current_lora]['inputs']['model'] = [previous_lora, 0]
+                workflow[current_lora]['inputs']['clip'] = [previous_lora, 1]
+
+        # Then, update non-LoRA nodes to connect to the last active LoRA
         last_lora = lora_nodes[num_loras - 1]
         for node_id, node in workflow.items():
-            if 'inputs' in node:
+            if node_id not in lora_nodes:  # Only process non-LoRA nodes
+                if 'inputs' in node:
+                    for input_key, input_value in node['inputs'].items():
+                        if isinstance(input_value, list) and len(input_value) == 2:
+                            if input_value[0] in lora_nodes:
+                                workflow[node_id]['inputs'][input_key][0] = last_lora
+    else:
+        # When no LoRAs are used, find nodes that were connected to LoRAs and reconnect them
+        for node_id, node in workflow.items():
+            if ('inputs' in node and 
+                any(input_value[0] in lora_nodes 
+                    for input_key, input_value in node['inputs'].items() 
+                    if isinstance(input_value, list) and len(input_value) == 2)):
+                # This node was previously connected to a LoRA
                 for input_key, input_value in node['inputs'].items():
                     if isinstance(input_value, list) and len(input_value) == 2:
-                        if input_value[0] in lora_nodes and node_id not in lora_nodes:
-                            # Update the connection to point to the last active LoRA
-                            workflow[node_id]['inputs'][input_key][0] = last_lora
+                        if input_value[0] in lora_nodes:
+                            # For model inputs, connect to checkpoint loader
+                            if input_key == 'model':
+                                workflow[node_id]['inputs'][input_key] = [get_node_ID(workflow, "Load Checkpoint"), 0]
+                            # For clip inputs, connect to CLIP Set Last Layer
+                            elif input_key == 'clip':
+                                workflow[node_id]['inputs'][input_key] = [get_node_ID(workflow, "CLIP Set Last Layer"), 0]
 
 
 def set_resolution(workflow, nodeTitle, width, height):

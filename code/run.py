@@ -54,7 +54,7 @@ if __name__ == "__main__":
     # Load CSV files
     with open(get_path('res', 'art_styles.csv'), 'r') as csvfile:
         reader = csv.DictReader(csvfile)
-        art_styles = [row for row in reader]
+        art_styles = [row for row in reader if row.get('included', '').lower() == 'y']
 
     with open(get_path('res', 'models.csv'), 'r') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -64,7 +64,7 @@ if __name__ == "__main__":
         checkpoints = [row['Name'] for row in rows if row['Type'] == 'Checkpoint']
 
     # set checkpoint and loras ===============================================================================================
-    ckpt = "dreamshaper_8.safetensors"
+    ckpt = "majicmixRealistic_v7.safetensors"
     fixed_loras = []
     lora_categories = {
         "style": 0,
@@ -95,14 +95,14 @@ if __name__ == "__main__":
     # date: 2025-01-15
     # another way to implement this: create a function to assemble loras, categorize loras by types: quality, style, character, etc.
     # then, randomly select loras from each category - all quality, one or two style, one character, etc.
-    available_loras = []
+    unselected_available_loras = []
 
     # Find available LoRAs that have the same base as the checkpoint and are not in the specified loras
     for row in rows:
         if row['Type'] == 'Lora' and row['Base'] == ckpt_base and row['Name'] not in loras:
-            available_loras.append(row['Name'])
+            unselected_available_loras.append(row['Name'])
 
-    logger.info("Available LoRAs with the same base as the checkpoint: " + ", ".join(available_loras))
+    logger.info("UNSELECTED available LoRAs with the same base as the checkpoint: " + ", ".join(unselected_available_loras))
 
     # Check if the checkpoint and all LoRAs have the same base
     if ckpt_base and all(base == ckpt_base for base in lora_bases):
@@ -116,20 +116,22 @@ if __name__ == "__main__":
     - 4:3: 1024x768, 800x600
     - 3:2: 1280x800, 1152x768, 1024x682, 768x512
     """
-    width = 512
-    height = 768
+    width = 912
+    height = 512
     upscale_ratio = 2
     run_with_upscale = False
+    object_type = "target"
 
-    for j in range (1, 500):
-    #for style in art_styles:
+    #for j in range (1, 500):
+    #    print(f"===== queueing workflow {j} =====")
+    for style in art_styles:
 
-        #style_name = style['name']
-        style_name = None
+        style_name = style['name']
+        #style_name = None
 
-        for i in range(1, 5):
+        for i in range(1, 2):
             print("===== queueing workflow =====")
-            num_loras = random.randint(1, 1) if not loras else len(loras) # when random, max loras can't be mroe than active loras in models.csv
+            num_loras = len(loras)
             models = get_model_params(num_loras, checkpoint=ckpt, loras=loras)
             load_models_into_workflow(workflow, models)
             current_time = datetime.now().strftime("%Y%m%d%H%M%S")
@@ -139,7 +141,7 @@ if __name__ == "__main__":
             embeddings_used = ', '.join([models[f'embedding{i}'] for i in range(1, models.get('num_embeddings', 0) + 1)])
             
             set_KSampler(workflow, "KSampler", seed=random.randint(1, 1000000), steps=20, cfg=7, sampler_name='dpmpp_2m', scheduler='karras', denoise=1)
-            set_positive_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, embeddings=embeddings_used, style_name=style_name)
+            set_positive_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, embeddings=embeddings_used, object_type=object_type, style_name=style_name)
             set_negative_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, embeddings=embeddings_used, style_name=style_name)
             
             set_resolution(workflow, "Empty Latent Image", width, height)

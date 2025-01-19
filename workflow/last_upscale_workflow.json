@@ -23,7 +23,7 @@
     },
     "3": {
         "inputs": {
-            "text": "An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , fine art photography, conceptual expression, evocative imagery, artistic interpretation, emotional resonance, creative composition, professional lighting, exquisite detail, immersive experience, storytelling through imagery, conveying mood,  unique perspective, thought-provoking concept, capturing beauty, transcending reality, masterpiece, best quality, ultra-detailed",
+            "text": "An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , Cartoon watercolor painting style, playful cartoon character, dynamic composition, whimsical expression, soft and fluid texture, adds charm and personality, subtle gradients and blending, captures light and atmosphere, creates soft and dreamy scenes, watercolor texture, masterpiece, best quality, ultra-detailed",
             "clip": [
                 "2",
                 0
@@ -36,7 +36,7 @@
     },
     "4": {
         "inputs": {
-            "text": "NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, bad quality, low quality, low resolution",
+            "text": "NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, bad quality, low quality, low resolution",
             "clip": [
                 "2",
                 0
@@ -93,12 +93,12 @@
     },
     "9": {
         "inputs": {
-            "seed": 363274,
+            "seed": 94426,
             "steps": 20,
-            "cfg": 7,
+            "cfg": 7.0,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
-            "denoise": 1,
+            "denoise": 1.0,
             "model": [
                 "1",
                 0
@@ -150,9 +150,9 @@
     },
     "12": {
         "inputs": {
-            "filename_prefix": "majicmixRealistic_v7-None-",
+            "filename_prefix": "majicmixRealistic_v7-Painting - Watercolor - Cartoon-_00001__upscaled",
             "images": [
-                "11",
+                "18",
                 0
             ]
         },
@@ -235,8 +235,8 @@
     "17": {
         "inputs": {
             "upscale_method": "nearest-exact",
-            "width": 1824,
-            "height": 1024,
+            "width": 3840,
+            "height": 2160,
             "crop": "disabled",
             "image": [
                 "13",
@@ -307,4 +307,4 @@
         }
     }
 }
-// Datetime stamp: 2025-01-19T00:00:27.880137
+// Datetime stamp: 2025-01-18T21:51:17.603754

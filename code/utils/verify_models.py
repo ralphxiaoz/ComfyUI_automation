@@ -19,7 +19,8 @@ def get_model_files(base_path, subfolder):
         return set()
     
     extensions = {'.safetensors', '.pt', '.ckpt', '.pth'}
-    return {f.name for f in Path(model_dir).iterdir() 
+    # Convert all filenames to lowercase for case-insensitive comparison
+    return {f.name.lower() for f in Path(model_dir).iterdir() 
             if f.is_file() and f.suffix.lower() in extensions}
 
 def get_csv_models():
@@ -35,12 +36,13 @@ def get_csv_models():
             reader = csv.DictReader(csvfile)
             for row in reader:
                 model_type = row['Type'].lower()
+                # Convert model names to lowercase for case-insensitive comparison
                 if model_type == 'checkpoint':
-                    csv_models['checkpoints'].add(row['Name'])
+                    csv_models['checkpoints'].add(row['Name'].lower())
                 elif model_type == 'lora':
-                    csv_models['loras'].add(row['Name'])
+                    csv_models['loras'].add(row['Name'].lower())
                 elif model_type == 'embedding':
-                    csv_models['embeddings'].add(row['Name'])
+                    csv_models['embeddings'].add(row['Name'].lower())
     except FileNotFoundError:
         logger.error("models.csv not found")
         return csv_models

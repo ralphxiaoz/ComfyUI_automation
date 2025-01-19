@@ -1,7 +1,7 @@
 {
     "1": {
         "inputs": {
-            "ckpt_name": "meinamix_v12Final.safetensors"
+            "ckpt_name": "abyssorangemix2NSFW_abyssorangemix2Nsfw.safetensors"
         },
         "class_type": "CheckpointLoaderSimple",
         "_meta": {
@@ -23,9 +23,9 @@
     },
     "3": {
         "inputs": {
-            "text": "1girl, a demon girl with glowing tatoo on skin, smiling at viewer, combat pose, pxint, Whimsical Chibi painting art style, combines whimsical elements with chibi character, soft and pastel colors, dynamic and playful compositions, captures the essence of cuteness and whimsy, professional-grade execution, evokes a sense of joy and delight, masterpiece, best quality, ultra-detailed",
+            "text": "a robot in year 2077, cyberpunk style, cowboy shot",
             "clip": [
-                "5",
+                "8",
                 1
             ]
         },
@@ -36,9 +36,9 @@
     },
     "4": {
         "inputs": {
-            "text": "signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, embedding:EasyNegative, bad quality, low quality, low resolution",
+            "text": "embedding: easyNegative",
             "clip": [
-                "5",
+                "8",
                 1
             ]
         },
@@ -49,8 +49,8 @@
     },
     "5": {
         "inputs": {
-            "lora_name": "AbstractMalePortraits_v2R_60_R-128.safetensors",
-            "strength_model": 1.0,
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
             "strength_clip": 1,
             "model": [
                 "1",
@@ -68,9 +68,17 @@
     },
     "6": {
         "inputs": {
-            "lora_name": "Drawing.safetensors",
-            "strength_model": 1.0,
-            "strength_clip": 1
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
+            "strength_clip": 1,
+            "model": [
+                "5",
+                0
+            ],
+            "clip": [
+                "5",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -79,9 +87,17 @@
     },
     "7": {
         "inputs": {
-            "lora_name": "manga2_by_XUEBI.safetensors",
-            "strength_model": 0.9,
-            "strength_clip": 1
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
+            "strength_clip": 1,
+            "model": [
+                "6",
+                0
+            ],
+            "clip": [
+                "6",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -90,9 +106,17 @@
     },
     "8": {
         "inputs": {
-            "lora_name": "Drawing.safetensors",
-            "strength_model": 1.0,
-            "strength_clip": 1
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
+            "strength_clip": 1,
+            "model": [
+                "7",
+                0
+            ],
+            "clip": [
+                "7",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -101,14 +125,14 @@
     },
     "9": {
         "inputs": {
-            "seed": 821670,
+            "seed": 0,
             "steps": 20,
-            "cfg": 7,
+            "cfg": 8,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
             "denoise": 1,
             "model": [
-                "5",
+                "8",
                 0
             ],
             "positive": [
@@ -132,7 +156,7 @@
     "10": {
         "inputs": {
             "width": 512,
-            "height": 768,
+            "height": 512,
             "batch_size": 1
         },
         "class_type": "EmptyLatentImage",
@@ -158,7 +182,7 @@
     },
     "12": {
         "inputs": {
-            "filename_prefix": "randomizer-Experimental - Whimsical Chibi-20250113054426-meinamix_v12Final-AbstractMalePortraits_v2R_60_R-128",
+            "filename_prefix": "ComfyUI",
             "images": [
                 "11",
                 0
@@ -219,7 +243,7 @@
             "scheduler": "karras",
             "denoise": 0.4,
             "model": [
-                "5",
+                "8",
                 0
             ],
             "positive": [
@@ -269,7 +293,7 @@
         },
         "class_type": "VAEDecode",
         "_meta": {
-            "title": "VAE Decode Up"
+            "title": "VAE Decode_scaled"
         }
     },
     "20": {
@@ -291,6 +315,74 @@
         "_meta": {
             "title": "Lora5"
         }
+    },
+    "22": {
+        "inputs": {
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
+            "strength_clip": 1
+        },
+        "class_type": "LoraLoader",
+        "_meta": {
+            "title": "Lora6"
+        }
+    },
+    "23": {
+        "inputs": {
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
+            "strength_clip": 1
+        },
+        "class_type": "LoraLoader",
+        "_meta": {
+            "title": "Lora7"
+        }
+    },
+    "24": {
+        "inputs": {
+            "text_input": "",
+            "task": "more_detailed_caption",
+            "fill_mask": true,
+            "keep_model_loaded": false,
+            "max_new_tokens": 1024,
+            "num_beams": 3,
+            "do_sample": true,
+            "output_mask_select": "",
+            "seed": 1,
+            "image": [
+                "28",
+                0
+            ],
+            "florence2_model": [
+                "26",
+                0
+            ]
+        },
+        "class_type": "Florence2Run",
+        "_meta": {
+            "title": "Florence2Run"
+        }
+    },
+    "26": {
+        "inputs": {
+            "model": "thwri/CogFlorence-2.2-Large",
+            "precision": "fp16",
+            "attention": "sdpa"
+        },
+        "class_type": "DownloadAndLoadFlorence2Model",
+        "_meta": {
+            "title": "DownloadAndLoadFlorence2Model"
+        }
+    },
+    "28": {
+        "inputs": {
+            "image": "3JTVB0BM0GVFKKD80MA6FVNDS0.jpeg",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
     }
 }
-// Datetime stamp: 2025-01-13T05:45:26.254153
+// Datetime stamp: 2025-01-18T14:26:25.939743
