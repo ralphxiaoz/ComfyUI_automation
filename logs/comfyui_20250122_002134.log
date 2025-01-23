@@ -1,0 +1,334 @@
+2025-01-22 00:21:34,800 - __main__ - INFO - ===== run.main: Running iteration 1 =====
+2025-01-22 00:21:34,800 - __main__ - INFO - run.main: Style name: None
+2025-01-22 00:21:34,802 - load_models - INFO - load_models.assemble_loras: Found checkpoint realcartoon3d_v17.safetensors with base SD 1.5
+2025-01-22 00:21:34,802 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category style
+2025-01-22 00:21:34,802 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category character_outfit
+2025-01-22 00:21:34,802 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category lighting
+2025-01-22 00:21:34,803 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category detail
+2025-01-22 00:21:34,803 - load_models - INFO - load_models.assemble_loras: Final selection: 0 LoRAs
+2025-01-22 00:21:34,803 - __main__ - INFO - run.main: Selected loras: []
+2025-01-22 00:21:34,804 - load_models - INFO - load_models.get_model_params: Selected checkpoint: realcartoon3d_v17.safetensors
+2025-01-22 00:21:34,805 - load_models - INFO - load_models.get_model_params: No loras specified, selected random loras: []
+2025-01-22 00:21:34,805 - load_models - INFO - load_models.get_model_params: No embeddings specified, selected random embeddings: [{'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'easynegative.safetensors', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'easynegative', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/7808?modelVersionId=9208'}, {'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'ng_deepnegative_v1_75t.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'NG_DeepNegative_V1_75T', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/4629/deep-negative-v1x'}]
+2025-01-22 00:21:34,805 - load_models - INFO - ===== Selected models & parameters: 
+ {'checkpoint': 'realcartoon3d_v17.safetensors', 'ckpt_clip_skip': '-2', 'ckpt_cfg': '', 'ckpt_steps': '', 'ckpt_sampler': 'dpmpp_2m', 'ckpt_scheduler': 'Karras', 'ckpt_hires_fix': '', 'num_loras': 0, 'num_embeddings': 2, 'embedding1': 'easynegative.safetensors', 'embedding2': 'ng_deepnegative_v1_75t.pt'} =====
+2025-01-22 00:21:34,805 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 00:21:34,805 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 00:21:34,805 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 00:21:34,805 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 00:21:34,805 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 00:21:34,806 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 00:21:34,806 - node_manipulation - INFO - node_manipulation.set_node_value: Successfully set stop_at_clip_layer to -2 for node 2 - CLIP Set Last Layer
+2025-01-22 00:21:34,806 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 9
+2025-01-22 00:21:34,806 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 9 - KSampler
+2025-01-22 00:21:34,806 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 16
+2025-01-22 00:21:34,806 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 16 - KS_up
+2025-01-22 00:21:34,806 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:21:34,808 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:21:34,808 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: easynegative.safetensors, ng_deepnegative_v1_75t.pt
+2025-01-22 00:21:34,809 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:21:34,809 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-22 00:21:34,809 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:21:34,810 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:21:34,812 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'easynegative, NG_DeepNegative_V1_75T'}
+2025-01-22 00:21:34,814 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:21:34,814 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:21:34,814 - gen_prompt - INFO - gen_prompt.gen_positive_prompt: Full positive prompt: 
+ (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:21:34,815 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 3
+2025-01-22 00:21:34,815 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Successfully set prompt for node 3 - Positive
+2025-01-22 00:21:34,815 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Prompt: (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:21:34,815 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:21:34,816 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:21:34,816 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: easynegative.safetensors, ng_deepnegative_v1_75t.pt
+2025-01-22 00:21:34,816 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:21:34,816 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-22 00:21:34,817 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:21:34,817 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:21:34,819 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'easynegative, NG_DeepNegative_V1_75T'}
+2025-01-22 00:21:34,820 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:21:34,821 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:21:34,821 - gen_prompt - INFO - gen_prompt.gen_negative_prompt: Full negative prompt: 
+ easynegative, NG_DeepNegative_V1_75T, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:21:34,821 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 4
+2025-01-22 00:21:34,821 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Successfully set prompt for node 4 - Negative
+2025-01-22 00:21:34,821 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Prompt: easynegative, NG_DeepNegative_V1_75T, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:21:34,821 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 10
+2025-01-22 00:21:34,822 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 512x960 for node Empty Latent Image - 10
+2025-01-22 00:21:34,822 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 17
+2025-01-22 00:21:34,822 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 1024x1920 for node Up_res - 17
+2025-01-22 00:21:34,822 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 00:21:34,822 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 18
+2025-01-22 00:21:34,823 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-22 00:21:34,823 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 20
+2025-01-22 00:21:34,823 - node_manipulation - INFO - node_manipulation.set_vae_input: Successfully set vae_name to kl-f8-anime2.safetensors for node 20
+2025-01-22 00:21:34,823 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 11 to [20, 0]
+2025-01-22 00:21:34,823 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 15 to [20, 0]
+2025-01-22 00:21:34,824 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 18 to [20, 0]
+2025-01-22 00:21:35,058 - load_models - INFO - load_models.queue_workflow: Response: {"prompt_id": "01bcd71e-dae9-4a28-bf53-dde5e428e708", "number": 79, "node_errors": {}}
+2025-01-22 00:22:05,060 - load_models - INFO - load_models.assemble_loras: Found checkpoint realcartoon3d_v17.safetensors with base SD 1.5
+2025-01-22 00:22:05,060 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category style
+2025-01-22 00:22:05,060 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category character_outfit
+2025-01-22 00:22:05,060 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category lighting
+2025-01-22 00:22:05,060 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category detail
+2025-01-22 00:22:05,060 - load_models - INFO - load_models.assemble_loras: Final selection: 0 LoRAs
+2025-01-22 00:22:05,060 - __main__ - INFO - run.main: Selected loras: []
+2025-01-22 00:22:05,062 - load_models - INFO - load_models.get_model_params: Selected checkpoint: realcartoon3d_v17.safetensors
+2025-01-22 00:22:05,062 - load_models - INFO - load_models.get_model_params: No loras specified, selected random loras: []
+2025-01-22 00:22:05,062 - load_models - INFO - load_models.get_model_params: No embeddings specified, selected random embeddings: [{'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'badhandv4.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'badhandv4', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/16993/badhandv4?modelVersionId=20068'}, {'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'an14.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'an14', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/58726/asyncs-negative?modelVersionId=345593'}, {'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'ng_deepnegative_v1_75t.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'NG_DeepNegative_V1_75T', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/4629/deep-negative-v1x'}]
+2025-01-22 00:22:05,062 - load_models - INFO - ===== Selected models & parameters: 
+ {'checkpoint': 'realcartoon3d_v17.safetensors', 'ckpt_clip_skip': '-2', 'ckpt_cfg': '', 'ckpt_steps': '', 'ckpt_sampler': 'dpmpp_2m', 'ckpt_scheduler': 'Karras', 'ckpt_hires_fix': '', 'num_loras': 0, 'num_embeddings': 3, 'embedding1': 'badhandv4.pt', 'embedding2': 'an14.pt', 'embedding3': 'ng_deepnegative_v1_75t.pt'} =====
+2025-01-22 00:22:05,062 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 00:22:05,062 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 00:22:05,063 - node_manipulation - INFO - node_manipulation.set_node_value: Successfully set stop_at_clip_layer to -2 for node 2 - CLIP Set Last Layer
+2025-01-22 00:22:05,063 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 9
+2025-01-22 00:22:05,063 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 9 - KSampler
+2025-01-22 00:22:05,063 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 16
+2025-01-22 00:22:05,063 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 16 - KS_up
+2025-01-22 00:22:05,063 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:22:05,063 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:22:05,064 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: badhandv4.pt, an14.pt, ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:05,064 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:05,064 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-22 00:22:05,066 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-22 00:22:05,067 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:05,067 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:05,068 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'badhandv4, an14, NG_DeepNegative_V1_75T'}
+2025-01-22 00:22:05,070 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:22:05,070 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:22:05,070 - gen_prompt - INFO - gen_prompt.gen_positive_prompt: Full positive prompt: 
+ (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:22:05,070 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 3
+2025-01-22 00:22:05,070 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Successfully set prompt for node 3 - Positive
+2025-01-22 00:22:05,070 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Prompt: (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:22:05,070 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:22:05,072 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:22:05,072 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: badhandv4.pt, an14.pt, ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:05,072 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:05,072 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-22 00:22:05,073 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-22 00:22:05,073 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:05,073 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:05,075 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'badhandv4, an14, NG_DeepNegative_V1_75T'}
+2025-01-22 00:22:05,076 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:22:05,076 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:22:05,076 - gen_prompt - INFO - gen_prompt.gen_negative_prompt: Full negative prompt: 
+ badhandv4, an14, NG_DeepNegative_V1_75T, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 4
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Successfully set prompt for node 4 - Negative
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Prompt: badhandv4, an14, NG_DeepNegative_V1_75T, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 10
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 512x960 for node Empty Latent Image - 10
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 17
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 1024x1920 for node Up_res - 17
+2025-01-22 00:22:05,077 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 00:22:05,078 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 18
+2025-01-22 00:22:05,078 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-22 00:22:05,078 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 20
+2025-01-22 00:22:05,078 - node_manipulation - INFO - node_manipulation.set_vae_input: Successfully set vae_name to kl-f8-anime2.safetensors for node 20
+2025-01-22 00:22:05,078 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 11 to [20, 0]
+2025-01-22 00:22:05,078 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 15 to [20, 0]
+2025-01-22 00:22:05,079 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 18 to [20, 0]
+2025-01-22 00:22:05,084 - load_models - INFO - load_models.queue_workflow: Response: {"prompt_id": "d7bb8e32-041b-44c4-bb23-ce5bcf7cff0e", "number": 80, "node_errors": {}}
+2025-01-22 00:22:35,085 - __main__ - INFO - ===== run.main: Running iteration 2 =====
+2025-01-22 00:22:35,085 - __main__ - INFO - run.main: Style name: None
+2025-01-22 00:22:35,086 - load_models - INFO - load_models.assemble_loras: Found checkpoint realcartoon3d_v17.safetensors with base SD 1.5
+2025-01-22 00:22:35,086 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category style
+2025-01-22 00:22:35,086 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category character_outfit
+2025-01-22 00:22:35,088 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category lighting
+2025-01-22 00:22:35,088 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category detail
+2025-01-22 00:22:35,088 - load_models - INFO - load_models.assemble_loras: Final selection: 0 LoRAs
+2025-01-22 00:22:35,088 - __main__ - INFO - run.main: Selected loras: []
+2025-01-22 00:22:35,089 - load_models - INFO - load_models.get_model_params: Selected checkpoint: realcartoon3d_v17.safetensors
+2025-01-22 00:22:35,089 - load_models - INFO - load_models.get_model_params: No loras specified, selected random loras: []
+2025-01-22 00:22:35,089 - load_models - INFO - load_models.get_model_params: No embeddings specified, selected random embeddings: [{'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'ng_deepnegative_v1_75t.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'NG_DeepNegative_V1_75T', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/4629/deep-negative-v1x'}]
+2025-01-22 00:22:35,089 - load_models - INFO - ===== Selected models & parameters: 
+ {'checkpoint': 'realcartoon3d_v17.safetensors', 'ckpt_clip_skip': '-2', 'ckpt_cfg': '', 'ckpt_steps': '', 'ckpt_sampler': 'dpmpp_2m', 'ckpt_scheduler': 'Karras', 'ckpt_hires_fix': '', 'num_loras': 0, 'num_embeddings': 1, 'embedding1': 'ng_deepnegative_v1_75t.pt'} =====
+2025-01-22 00:22:35,089 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 00:22:35,089 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 00:22:35,090 - node_manipulation - INFO - node_manipulation.set_node_value: Successfully set stop_at_clip_layer to -2 for node 2 - CLIP Set Last Layer
+2025-01-22 00:22:35,090 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 9
+2025-01-22 00:22:35,090 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 9 - KSampler
+2025-01-22 00:22:35,090 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 16
+2025-01-22 00:22:35,090 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 16 - KS_up
+2025-01-22 00:22:35,090 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:22:35,092 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:22:35,092 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:35,092 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:35,093 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:35,093 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:35,094 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'NG_DeepNegative_V1_75T'}
+2025-01-22 00:22:35,095 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:22:35,096 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:22:35,096 - gen_prompt - INFO - gen_prompt.gen_positive_prompt: Full positive prompt: 
+ (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:22:35,096 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 3
+2025-01-22 00:22:35,096 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Successfully set prompt for node 3 - Positive
+2025-01-22 00:22:35,097 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Prompt: (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:22:35,097 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:22:35,097 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:22:35,097 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:35,098 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:35,101 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:22:35,102 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:22:35,102 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'NG_DeepNegative_V1_75T'}
+2025-01-22 00:22:35,104 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:22:35,105 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:22:35,105 - gen_prompt - INFO - gen_prompt.gen_negative_prompt: Full negative prompt: 
+ NG_DeepNegative_V1_75T, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:22:35,105 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 4
+2025-01-22 00:22:35,105 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Successfully set prompt for node 4 - Negative
+2025-01-22 00:22:35,105 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Prompt: NG_DeepNegative_V1_75T, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 10
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 512x960 for node Empty Latent Image - 10
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 17
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 1024x1920 for node Up_res - 17
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 18
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 20
+2025-01-22 00:22:35,106 - node_manipulation - INFO - node_manipulation.set_vae_input: Successfully set vae_name to kl-f8-anime2.safetensors for node 20
+2025-01-22 00:22:35,107 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 11 to [20, 0]
+2025-01-22 00:22:35,107 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 15 to [20, 0]
+2025-01-22 00:22:35,107 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 18 to [20, 0]
+2025-01-22 00:22:35,112 - load_models - INFO - load_models.queue_workflow: Response: {"prompt_id": "b2382e8b-a469-45f5-844b-4d3d5044073e", "number": 81, "node_errors": {}}
+2025-01-22 00:23:05,115 - load_models - INFO - load_models.assemble_loras: Found checkpoint realcartoon3d_v17.safetensors with base SD 1.5
+2025-01-22 00:23:05,115 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category style
+2025-01-22 00:23:05,115 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category character_outfit
+2025-01-22 00:23:05,115 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category lighting
+2025-01-22 00:23:05,115 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category detail
+2025-01-22 00:23:05,116 - load_models - INFO - load_models.assemble_loras: Final selection: 0 LoRAs
+2025-01-22 00:23:05,116 - __main__ - INFO - run.main: Selected loras: []
+2025-01-22 00:23:05,117 - load_models - INFO - load_models.get_model_params: Selected checkpoint: realcartoon3d_v17.safetensors
+2025-01-22 00:23:05,117 - load_models - INFO - load_models.get_model_params: No loras specified, selected random loras: []
+2025-01-22 00:23:05,117 - load_models - INFO - load_models.get_model_params: No embeddings specified, selected random embeddings: [{'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'ng_deepnegative_v1_75t.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'NG_DeepNegative_V1_75T', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/4629/deep-negative-v1x'}, {'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'an14.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'an14', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/58726/asyncs-negative?modelVersionId=345593'}, {'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'easynegative.safetensors', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'easynegative', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/7808?modelVersionId=9208'}]
+2025-01-22 00:23:05,119 - load_models - INFO - ===== Selected models & parameters: 
+ {'checkpoint': 'realcartoon3d_v17.safetensors', 'ckpt_clip_skip': '-2', 'ckpt_cfg': '', 'ckpt_steps': '', 'ckpt_sampler': 'dpmpp_2m', 'ckpt_scheduler': 'Karras', 'ckpt_hires_fix': '', 'num_loras': 0, 'num_embeddings': 3, 'embedding1': 'ng_deepnegative_v1_75t.pt', 'embedding2': 'an14.pt', 'embedding3': 'easynegative.safetensors'} =====
+2025-01-22 00:23:05,119 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 00:23:05,119 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 00:23:05,120 - node_manipulation - INFO - node_manipulation.set_node_value: Successfully set stop_at_clip_layer to -2 for node 2 - CLIP Set Last Layer
+2025-01-22 00:23:05,120 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 9
+2025-01-22 00:23:05,120 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 9 - KSampler
+2025-01-22 00:23:05,120 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 16
+2025-01-22 00:23:05,120 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 16 - KS_up
+2025-01-22 00:23:05,121 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:23:05,121 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:23:05,121 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, an14.pt, easynegative.safetensors
+2025-01-22 00:23:05,122 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:05,123 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:23:05,123 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-22 00:23:05,124 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-22 00:23:05,124 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:05,125 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, an14, easynegative'}
+2025-01-22 00:23:05,126 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:23:05,126 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:23:05,127 - gen_prompt - INFO - gen_prompt.gen_positive_prompt: Full positive prompt: 
+ (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:23:05,127 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 3
+2025-01-22 00:23:05,127 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Successfully set prompt for node 3 - Positive
+2025-01-22 00:23:05,129 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Prompt: (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:23:05,129 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:23:05,129 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:23:05,130 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: ng_deepnegative_v1_75t.pt, an14.pt, easynegative.safetensors
+2025-01-22 00:23:05,130 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:05,130 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:23:05,131 - gen_prompt - WARNING - No Pos_trigger_select found for an14.pt
+2025-01-22 00:23:05,131 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-22 00:23:05,131 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:05,132 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'NG_DeepNegative_V1_75T, an14, easynegative'}
+2025-01-22 00:23:05,134 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:23:05,135 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:23:05,135 - gen_prompt - INFO - gen_prompt.gen_negative_prompt: Full negative prompt: 
+ NG_DeepNegative_V1_75T, an14, easynegative, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:23:05,135 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 4
+2025-01-22 00:23:05,137 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Successfully set prompt for node 4 - Negative
+2025-01-22 00:23:05,137 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Prompt: NG_DeepNegative_V1_75T, an14, easynegative, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:23:05,137 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 10
+2025-01-22 00:23:05,137 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 512x960 for node Empty Latent Image - 10
+2025-01-22 00:23:05,138 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 17
+2025-01-22 00:23:05,138 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 1024x1920 for node Up_res - 17
+2025-01-22 00:23:05,138 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 00:23:05,138 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 18
+2025-01-22 00:23:05,138 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-22 00:23:05,139 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 20
+2025-01-22 00:23:05,139 - node_manipulation - INFO - node_manipulation.set_vae_input: Successfully set vae_name to kl-f8-anime2.safetensors for node 20
+2025-01-22 00:23:05,139 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 11 to [20, 0]
+2025-01-22 00:23:05,139 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 15 to [20, 0]
+2025-01-22 00:23:05,139 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 18 to [20, 0]
+2025-01-22 00:23:05,145 - load_models - INFO - load_models.queue_workflow: Response: {"prompt_id": "2670b877-1fce-4397-9ad5-ff6da7baf143", "number": 82, "node_errors": {}}
+2025-01-22 00:23:35,145 - __main__ - INFO - ===== run.main: Running iteration 3 =====
+2025-01-22 00:23:35,145 - __main__ - INFO - run.main: Style name: None
+2025-01-22 00:23:35,147 - load_models - INFO - load_models.assemble_loras: Found checkpoint realcartoon3d_v17.safetensors with base SD 1.5
+2025-01-22 00:23:35,148 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category style
+2025-01-22 00:23:35,148 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category character_outfit
+2025-01-22 00:23:35,148 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category lighting
+2025-01-22 00:23:35,148 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category detail
+2025-01-22 00:23:35,148 - load_models - INFO - load_models.assemble_loras: Final selection: 0 LoRAs
+2025-01-22 00:23:35,148 - __main__ - INFO - run.main: Selected loras: []
+2025-01-22 00:23:35,149 - load_models - INFO - load_models.get_model_params: Selected checkpoint: realcartoon3d_v17.safetensors
+2025-01-22 00:23:35,150 - load_models - INFO - load_models.get_model_params: No loras specified, selected random loras: []
+2025-01-22 00:23:35,150 - load_models - INFO - load_models.get_model_params: No embeddings specified, selected random embeddings: [{'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'badhandv4.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'badhandv4', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/16993/badhandv4?modelVersionId=20068'}, {'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'ng_deepnegative_v1_75t.pt', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'NG_DeepNegative_V1_75T', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/4629/deep-negative-v1x'}, {'Type': 'Embedding', 'Base': 'SD 1.5', 'Name': 'easynegative.safetensors', 'Category': '', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': 'easynegative', 'Neg_trigger_select': '1', 'Weight_from': '', 'Weight_to': '', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/7808?modelVersionId=9208'}]
+2025-01-22 00:23:35,150 - load_models - INFO - ===== Selected models & parameters: 
+ {'checkpoint': 'realcartoon3d_v17.safetensors', 'ckpt_clip_skip': '-2', 'ckpt_cfg': '', 'ckpt_steps': '', 'ckpt_sampler': 'dpmpp_2m', 'ckpt_scheduler': 'Karras', 'ckpt_hires_fix': '', 'num_loras': 0, 'num_embeddings': 3, 'embedding1': 'badhandv4.pt', 'embedding2': 'ng_deepnegative_v1_75t.pt', 'embedding3': 'easynegative.safetensors'} =====
+2025-01-22 00:23:35,150 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 00:23:35,151 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 00:23:35,151 - node_manipulation - INFO - node_manipulation.set_node_value: Successfully set stop_at_clip_layer to -2 for node 2 - CLIP Set Last Layer
+2025-01-22 00:23:35,151 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 9
+2025-01-22 00:23:35,151 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 9 - KSampler
+2025-01-22 00:23:35,151 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 16
+2025-01-22 00:23:35,151 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 16 - KS_up
+2025-01-22 00:23:35,151 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:23:35,152 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:23:35,152 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: badhandv4.pt, ng_deepnegative_v1_75t.pt, easynegative.safetensors
+2025-01-22 00:23:35,153 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:35,153 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-22 00:23:35,153 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:23:35,154 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-22 00:23:35,154 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:35,155 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'badhandv4, NG_DeepNegative_V1_75T, easynegative'}
+2025-01-22 00:23:35,158 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:23:35,158 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:23:35,159 - gen_prompt - INFO - gen_prompt.gen_positive_prompt: Full positive prompt: 
+ (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:23:35,159 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 3
+2025-01-22 00:23:35,159 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Successfully set prompt for node 3 - Positive
+2025-01-22 00:23:35,159 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Prompt: (masterpiece,best quality,highres:1.3),(official art,beautiful and aesthetic:1.2),(full shot:1.2),(1girl,solo,masterpiece,8k,HDR,),character concept art of a beautiful woman leaning over,((wearing Navy blue Sheer Teddy with Lace Trim,straps falling off her shoulder)),seductive,luscious lips,comic book art,rough colored sketch,(hourglass body,square shaped face,green eyes,full lips,high cheekbones),(copper red fishtail braid hair:1.2),small breasts,toned thighs,thigh gap,looking at the viewer),(luxurious modern bedroom,bokeh),, , , masterpiece, best quality, ultra-detailed
+2025-01-22 00:23:35,160 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 00:23:35,160 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 00:23:35,160 - gen_prompt - INFO - Getting trigger words - checkpoint: realcartoon3d_v17.safetensors, loras: [], embeddings: badhandv4.pt, ng_deepnegative_v1_75t.pt, easynegative.safetensors
+2025-01-22 00:23:35,161 - gen_prompt - WARNING - No Pos_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:35,162 - gen_prompt - WARNING - No Pos_trigger_select found for badhandv4.pt
+2025-01-22 00:23:35,162 - gen_prompt - WARNING - No Pos_trigger_select found for ng_deepnegative_v1_75t.pt
+2025-01-22 00:23:35,163 - gen_prompt - WARNING - No Pos_trigger_select found for easynegative.safetensors
+2025-01-22 00:23:35,163 - gen_prompt - WARNING - No Neg_trigger_select found for realcartoon3d_v17.safetensors
+2025-01-22 00:23:35,165 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': '', 'negative': 'badhandv4, NG_DeepNegative_V1_75T, easynegative'}
+2025-01-22 00:23:35,168 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 0
+2025-01-22 00:23:35,168 - gen_prompt - INFO - No styles available in art_styles.csv that are marked as included.
+2025-01-22 00:23:35,168 - gen_prompt - INFO - gen_prompt.gen_negative_prompt: Full negative prompt: 
+ badhandv4, NG_DeepNegative_V1_75T, easynegative, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:23:35,169 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 4
+2025-01-22 00:23:35,169 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Successfully set prompt for node 4 - Negative
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Prompt: badhandv4, NG_DeepNegative_V1_75T, easynegative, watermark, bad quality, low quality, low resolution, easynegative,(badhandv4),(bad quality:1.3),(worst quality:1.3),watermark,(blurry),5-funny-looking-fingers,
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 10
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 512x960 for node Empty Latent Image - 10
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 17
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 1024x1920 for node Up_res - 17
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 18
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-22 00:23:35,170 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 20
+2025-01-22 00:23:35,171 - node_manipulation - INFO - node_manipulation.set_vae_input: Successfully set vae_name to kl-f8-anime2.safetensors for node 20
+2025-01-22 00:23:35,171 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 11 to [20, 0]
+2025-01-22 00:23:35,171 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 15 to [20, 0]
+2025-01-22 00:23:35,171 - node_manipulation - INFO - node_manipulation.set_vae_input: Updated 'vae' input for node 18 to [20, 0]
+2025-01-22 00:23:35,176 - load_models - INFO - load_models.queue_workflow: Response: {"prompt_id": "39fea00b-6e48-41bc-9a3e-fe2e7ecd4b77", "number": 83, "node_errors": {}}

@@ -23,6 +23,16 @@ logger = setup_logger(__name__)
 def assemble_loras(checkpoint, fixed_loras, lora_categories):
     """
     Assembles a list of LoRAs based on the specified checkpoint, fixed LoRAs, and category quantities.
+    This function will only select LoRAs that have the same base as the checkpoint.
+    If fixed loras don't have the same base as the checkpoint, they will be ignored.
+
+    Parameters:
+    - checkpoint (str): The name of the checkpoint to use.
+    - fixed_loras (str or list): A string of fixed LoRAs separated by commas or a list of fixed LoRAs.
+    - lora_categories (dict): A dictionary specifying the number of LoRAs to select from each category.
+
+    Returns:
+    - list: A list of selected LoRAs.
     """
     # Handle both string and list inputs for fixed_loras
     if isinstance(fixed_loras, str):
@@ -46,7 +56,7 @@ def assemble_loras(checkpoint, fixed_loras, lora_categories):
         return []
 
     base = ckpt_row['Base']
-    logger.info(f"Found checkpoint {checkpoint} with base {base}")
+    logger.info(f"load_models.assemble_loras: Found checkpoint {checkpoint} with base {base}")
 
     # Filter LoRAs by base and excluded status
     available_loras = [
@@ -56,14 +66,14 @@ def assemble_loras(checkpoint, fixed_loras, lora_categories):
         and row['Excluded'] != 'Y'
     ]
 
-    # Add fixed loras first
+    # Add fixed loras first, only add if fixed lora is in available_loras
     for lora_name in fixed_loras_list:
         matching_lora = next((lora for lora in available_loras if lora['Name'] == lora_name), None)
         if matching_lora:
             selected_loras.append(matching_lora['Name'])  # Only append the name
-            logger.info(f"Added fixed LoRA: {lora_name}")
+            logger.info(f"load_models-assemble_loras: Added fixed LoRA: {lora_name}")
         else:
-            logger.warning(f"Fixed LoRA not found: {lora_name}")
+            logger.warning(f"load_models.assemble_loras: Fixed LoRA {lora_name} not in available_loras")
 
     # Add flexible loras based on categories
     for category, quantity in lora_categories.items():
@@ -72,40 +82,38 @@ def assemble_loras(checkpoint, fixed_loras, lora_categories):
         if not category_models:
             logger.warning(f"No LoRAs found for category: {category}")
             continue
-            
-        
+
         if quantity == 'all':
             selected_loras.extend([model['Name'] for model in category_models])  # Only extend with names
-            logger.info(f"Added all {len(category_models)} LoRAs from category {category}")
+            logger.info(f"load_models.assemble_loras: Added all {len(category_models)} LoRAs from category {category}")
         elif quantity == 'random':
             if category_models:
                 random_count = random.randint(1, len(category_models))
                 selected = random.sample(category_models, random_count)
                 selected_loras.extend([model['Name'] for model in selected])  # Only extend with names
-                logger.info(f"Added {len(selected)} random LoRAs from category {category}")
+                logger.info(f"load_models.assemble_loras: Added {len(selected)} random LoRAs from category {category}")
         else:
             try:
                 count = int(quantity)
                 if category_models:
                     selected = random.sample(category_models, min(count, len(category_models)))
                     selected_loras.extend([model['Name'] for model in selected])  # Only extend with names
-                    logger.info(f"Added {len(selected)} LoRAs from category {category}")
+                    logger.info(f"load_models.assemble_loras: Added {len(selected)} LoRAs from category {category}")
             except ValueError:
-                logger.error(f"Invalid quantity value for category {category}: {quantity}")
+                logger.error(f"load_models.assemble_loras: Invalid quantity value for category {category}: {quantity}")
 
     # Remove duplicates while preserving order
     seen = set()
     selected_loras = [x for x in selected_loras if not (x in seen or seen.add(x))]
     
-    logger.info(f"Final selection: {len(selected_loras)} LoRAs")
+    logger.info(f"load_models.assemble_loras: Final selection: {len(selected_loras)} LoRAs")
     for lora in selected_loras:
         # Find the category for logging
         lora_info = next((row for row in available_loras if row['Name'] == lora), None)
         category = lora_info['Category'] if lora_info else 'Unknown'
-        logger.info(f"Selected LoRA: {lora} (Category: {category})")
+        logger.info(f"load_models-assemble_loras: Selected LoRA: {lora} (Category: {category})")
     
     return selected_loras
-
 
 def get_model_params(num_loras, checkpoint=None, loras=None, embeddings=None, skip_external=True):
     """
@@ -143,29 +151,35 @@ def get_model_params(num_loras, checkpoint=None, loras=None, embeddings=None, sk
 
     if checkpoint:
         selected_checkpoint = next((model for model in models if model['Type'] == 'Checkpoint' and model['Name'] == checkpoint), None)
+        logger.info(f"load_models.get_model_params: Selected checkpoint: {selected_checkpoint['Name']}")
 
     if loras:
         selected_loras = [model for model in models if model['Type'] == 'Lora' and model['Name'] in loras]
+        logger.info(f"load_models.get_model_params: Selected loras: {selected_loras}")
 
     if embeddings:
         selected_embeddings = [model for model in models if model['Type'] == 'Embedding' and model['Name'] in embeddings]
+        logger.info(f"load_models.get_model_params: Selected embeddings: {selected_embeddings}")
 
     if not selected_checkpoint:
         # Randomly select a checkpoint if none specified
         checkpoints = [model for model in models if model['Type'] == 'Checkpoint']
         selected_checkpoint = random.choice(checkpoints)
+        logger.info(f"load_models.get_model_params: No checkpoint specified, selected random checkpoint: {selected_checkpoint['Name']}")
 
     if not selected_loras:
         # Filter LoRAs based on the selected checkpoint's base if none specified
         loras = [model for model in models if model['Type'] == 'Lora' and model['Base'] == selected_checkpoint['Base']]
         # Randomly select the specified number of LoRAs
         selected_loras = random.sample(loras, min(num_loras, len(loras)))
+        logger.info(f"load_models.get_model_params: No loras specified, selected random loras: {selected_loras}")
 
     if not selected_embeddings:
         # Get all embeddings that match the checkpoint's base
         embeddings = [model for model in models if model['Type'].startswith('Embedding') and model['Base'] == selected_checkpoint['Base']]
         # Use all available embeddings
-        selected_embeddings = embeddings
+        selected_embeddings = random.sample(embeddings, random.randint(0, len(embeddings)-1))
+        logger.info(f"load_models.get_model_params: No embeddings specified, selected random embeddings: {selected_embeddings}")
 
     # Prepare the result dictionary
     result = {
@@ -195,7 +209,7 @@ def get_model_params(num_loras, checkpoint=None, loras=None, embeddings=None, sk
     for i, embedding in enumerate(selected_embeddings, start=1):
         result[f'embedding{i}'] = embedding['Name']
 
-    logger.info(f"===== Selected models & parameters: {result} =====")
+    logger.info(f"===== Selected models & parameters: \n {result} =====")
     return result
 
 def load_models_into_workflow(workflow, models):
@@ -230,7 +244,7 @@ def load_models_into_workflow(workflow, models):
         set_lora(workflow, lora_node_title, lora_name, strength_model=weight)
 
 def queue_workflow(workflow):
-    logger.info("Queueing workflow")
+
     w = {"prompt": workflow}
     data = json.dumps(w).encode('utf-8')
     max_retries = 3
@@ -240,7 +254,7 @@ def queue_workflow(workflow):
         try:
             req = request.Request("http://127.0.0.1:8188/prompt", data=data)
             response = request.urlopen(req)
-            logger.info(f"Response: {response.read().decode()}")
+            logger.info(f"load_models.queue_workflow: Response: {response.read().decode()}")
             return True
         except urllib.error.HTTPError as e:
             logger.error(f"HTTP Error (attempt {attempt + 1}/{max_retries}): {e.code} {e.reason}")
@@ -253,7 +267,7 @@ def queue_workflow(workflow):
                 time.sleep(retry_delay)
     return False
 
-def run():
+def main():
     # Example parameters for testing
     checkpoint = "meinamix_v12Final.safetensors"
     fixed_loras = "tifa_v2.3.safetensors, genshinfull1-000006.safetensors"
@@ -274,4 +288,5 @@ def run():
     else:
         print("No LoRAs selected")
 
-run()
+if __name__ == "__main__":
+    main()

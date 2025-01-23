@@ -337,52 +337,6 @@
         "_meta": {
             "title": "Lora7"
         }
-    },
-    "24": {
-        "inputs": {
-            "text_input": "",
-            "task": "more_detailed_caption",
-            "fill_mask": true,
-            "keep_model_loaded": false,
-            "max_new_tokens": 1024,
-            "num_beams": 3,
-            "do_sample": true,
-            "output_mask_select": "",
-            "seed": 1,
-            "image": [
-                "28",
-                0
-            ],
-            "florence2_model": [
-                "26",
-                0
-            ]
-        },
-        "class_type": "Florence2Run",
-        "_meta": {
-            "title": "Florence2Run"
-        }
-    },
-    "26": {
-        "inputs": {
-            "model": "thwri/CogFlorence-2.2-Large",
-            "precision": "fp16",
-            "attention": "sdpa"
-        },
-        "class_type": "DownloadAndLoadFlorence2Model",
-        "_meta": {
-            "title": "DownloadAndLoadFlorence2Model"
-        }
-    },
-    "28": {
-        "inputs": {
-            "image": "3JTVB0BM0GVFKKD80MA6FVNDS0.jpeg",
-            "upload": "image"
-        },
-        "class_type": "LoadImage",
-        "_meta": {
-            "title": "Load Image"
-        }
     }
 }
-// Datetime stamp: 2025-01-18T14:26:25.939743
+// Datetime stamp: 2025-01-19T14:45:21.480524

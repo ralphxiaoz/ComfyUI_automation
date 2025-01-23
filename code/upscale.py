@@ -49,7 +49,7 @@ def determine_up_res(base_width, base_height, new_width=None, new_height=None):
     else:
         return None
 
-def process_images(new_width=None, new_height=None):
+def upscale_images(new_width=None, new_height=None):
     """
     Process images in the to_upscale directory and execute workflows
     
@@ -69,12 +69,12 @@ def process_images(new_width=None, new_height=None):
     for image_file in os.listdir(to_upscale):
         if image_file.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
             image_path = os.path.join(to_upscale, image_file)
-            logger.info(f"Processing {image_file}")
+            logger.info(f"upscale.process_images: Processing {image_file}")
             
             # Extract metadata including workflow
             metadata = extract_metadata(image_path)
             if not metadata or 'workflow' not in metadata:
-                logger.error(f"Skipping {image_file} - no valid workflow in metadata")
+                logger.error(f"upscale.process_images: Skipping {image_file} - no valid workflow in metadata")
                 continue
             
             workflow = metadata['workflow']
@@ -102,9 +102,9 @@ def process_images(new_width=None, new_height=None):
                 workflow[get_node_ID(workflow, "Save Image")]["inputs"]["filename_prefix"] = f"{base_name}_upscaled"
                 
                 # Queue the modified workflow
-                logger.info(f"Queuing workflow for {image_file}...")
+                logger.info(f"upscale.process_images: Queuing workflow for {image_file}")
                 queue_workflow(workflow)
-                logger.info(f"Workflow for {image_file} queued successfully")
+                logger.info(f"upscale.process_images: Successfully queued workflow for {image_file}")
                 
                 # Move processed image to a 'processed' folder
                 processed_dir = os.path.join(to_upscale, 'processed')
@@ -135,7 +135,7 @@ def process_images(new_width=None, new_height=None):
 
 def main():
     try:
-        process_images()
+        upscale_images()
     except ValueError as e:
         logger.error(f"Invalid input: {str(e)}")
     except Exception as e:

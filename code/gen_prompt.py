@@ -83,7 +83,7 @@ def get_trigger_words(ckpt_name: str, lora_names: Union[str, List[str]], embeddi
         'positive': ', '.join(filter(None, pos_checkpoint_keywords + pos_lora_keywords + pos_embedding_keywords)),
         'negative': ', '.join(filter(None, neg_checkpoint_keywords + neg_lora_keywords + neg_embedding_keywords))
     }
-    logger.info(f"Final trigger words: {result}")
+    logger.info(f"gen_prompt.get_trigger_words: Final trigger words: \n {result}")
     return result
 
 def get_style_prompt(style_name=None):
@@ -91,7 +91,7 @@ def get_style_prompt(style_name=None):
     Gets a style prompt by reading from art_styles.csv.
 
     Parameters:
-    - style_name (str, optional): The name of the style to retrieve. If None, returns a random style.
+    - style_name (str, optional): The name of the style to retrieve.
 
     Returns:
     - dict: A dictionary with 'positive' and 'negative' prompts for the selected style.
@@ -106,8 +106,12 @@ def get_style_prompt(style_name=None):
         
         # Log the number of rows and included styles for debugging
         included_rows = [row for row in rows if row.get('included', '').lower() == 'y']
-        logger.info(f"Total styles: {len(rows)}, Included styles: {len(included_rows)}")
+        logger.info(f"gen_prompt.select_random_style: Total styles: {len(rows)}, Included styles: {len(included_rows)}")
         
+        if included_rows == []:
+            logger.info("No styles available in art_styles.csv that are marked as included.")
+            return {"positive": "", "negative": ""}
+
         if style_name:
             for row in rows:
                 if row['name'].lower() == style_name.lower() and row.get('included', '').lower() == 'y':
@@ -122,6 +126,7 @@ def get_style_prompt(style_name=None):
             logger.error(error_msg)
             raise ValueError(error_msg)
         else:
+            """
             # Filter rows to only include those marked with 'y' in the "included" column
             included_rows = [row for row in rows if row.get('included', '').lower() == 'y']
             if not included_rows:
@@ -136,27 +141,58 @@ def get_style_prompt(style_name=None):
                 'positive': random_row['positive_prompt'] if random_row['positive_prompt'] else "No positive prompt available.",
                 'negative': random_row['negative_prompt'] if random_row['negative_prompt'] else "No negative prompt available."
             }
-            logger.info(f"Selected random style: {result['name']}")
-            return result
+            """
+            logger.info("No style selected")
+            return {"name":"", "positive": "", "negative": ""}
 
-def get_object(object_type):
-    logger.info(f"Attempting to get object of type: {object_type}")
+def get_object(identifier):
+    """
+    Gets an object prompt by reading from objects.csv.
+    Can be called with either a serial number or type.
+
+    Parameters:
+    - identifier (str/int): Either a serial number or type to search for
+
+    Returns:
+    - dict: A dictionary containing 'name', 'positive', and 'negative' prompts for the selected object
+    """
+    logger.info(f"gen_prompt.get_object: Getting object with identifier: {identifier}")
+    
     try:
         with open(get_path('res', 'objects.csv'), newline='') as csvfile:
             reader = csv.DictReader(csvfile)
-            prompts = [row['prompt'] for row in reader if row['type'].lower() == object_type.lower()]
-            if not prompts:
-                logger.warning(f"gen_prompt.get_object(): No prompts found for type: {object_type}")
-                return ""
-            result = random.choice(prompts)
-            logger.info(f"gen_prompt.get_object(): Selected random object: {result}")
+            rows = list(reader)
+            
+            # Check if identifier is a serial number
+            if str(identifier).isdigit():
+                matching_rows = [row for row in rows if row['serial_no'] == str(identifier)]
+                if not matching_rows:
+                    logger.warning(f"gen_prompt.get_object: No object found for serial_no: {identifier}")
+                    return {"name": "", "positive": "", "negative": ""}
+                selected_row = matching_rows[0]  # Take the exact match
+            else:
+                # Treat identifier as type
+                matching_rows = [row for row in rows if row['type'].lower() == str(identifier).lower()]
+                if not matching_rows:
+                    logger.warning(f"gen_prompt.get_object: No objects found for type: {identifier}")
+                    return {"name": "", "positive": "", "negative": ""}
+                selected_row = random.choice(matching_rows)  # Random selection from type
+            
+            result = {
+                "name": f"object_{selected_row['serial_no']}",
+                "positive": selected_row['positive_prompt'],
+                "negative": selected_row['negative_prompt']
+            }
+            
+            logger.info(f"gen_prompt.get_object: Selected object: {result['name']}")
             return result
+            
     except FileNotFoundError:
-        logger.error("gen_prompt.get_object(): objects.csv not found in res directory")
-        return ""
+        logger.error("gen_prompt.get_object: objects.csv not found in res directory")
+        return {"name": "", "positive": "", "negative": ""}
     except KeyError as e:
-        logger.error(f"gen_prompt.get_object(): CSV file missing required column: {e}")
-        return ""
+        logger.error(f"gen_prompt.get_object: CSV file missing required column: {e}")
+        return {"name": "", "positive": "", "negative": ""}
 
 def gen_positive_prompt(ckpt_name, lora_names, object_type, embeddings, style_name=None):
     """
@@ -173,7 +209,7 @@ def gen_positive_prompt(ckpt_name, lora_names, object_type, embeddings, style_na
     - str: A comma-separated string of the positive prompt.
     """
     
-    object_string = get_object(object_type)
+    object_string = get_object(object_type)['positive']
 
     trigger_words = get_trigger_words(ckpt_name, lora_names, embeddings)
     style_prompt = get_style_prompt(style_name)
@@ -181,10 +217,10 @@ def gen_positive_prompt(ckpt_name, lora_names, object_type, embeddings, style_na
     quality_modifiers = "masterpiece, best quality, ultra-detailed"
     
     full_prompt = ', '.join([object_string, trigger_words['positive'], style_positive, quality_modifiers])
-    logger.info(f" === Full positive prompt === : {full_prompt}")
+    logger.info(f"gen_prompt.gen_positive_prompt: Full positive prompt: \n {full_prompt}")
     return full_prompt
 
-def gen_negative_prompt(ckpt_name, lora_names, embeddings, style_name=None):
+def gen_negative_prompt(ckpt_name, lora_names, object_type, embeddings, style_name=None):
     """
     Generates a negative prompt for a given checkpoint and a list of LoRAs.
 
@@ -196,20 +232,21 @@ def gen_negative_prompt(ckpt_name, lora_names, embeddings, style_name=None):
     Returns:
     - str: A comma-separated string of the negative prompt.
     """
-    
+    object_string = get_object(object_type)['negative']
+
     trigger_words = get_trigger_words(ckpt_name, lora_names, embeddings)
     style_prompt = get_style_prompt(style_name)
     style_negative = style_prompt['negative']
-    quality_modifiers = "bad quality, low quality, low resolution"
+    quality_modifiers = "watermark, bad quality, low quality, low resolution"
     
-    components = [trigger_words['negative'], style_negative, quality_modifiers]
+    components = [trigger_words['negative'], style_negative, quality_modifiers, object_string]
     full_prompt = ', '.join(component for component in components if component)
-    logger.info(f"Generated negative prompt: {full_prompt}")
+    logger.info(f"gen_prompt.gen_negative_prompt: Full negative prompt: \n {full_prompt}")
     return full_prompt
 
 def main():
     ckpt_name = "duchaitenPonyXLNo_v70.safetensors"
-    lora_names = ["Blue_Future.safetensors", "g0th1c2XLP.safetensors", "tifa_v2.3.safetensors"]
+    lora_names = []
     try:
         logger.info("Starting prompt generation test")
         pos_prompt = gen_positive_prompt(ckpt_name, lora_names, "target", "")

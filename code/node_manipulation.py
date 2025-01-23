@@ -25,23 +25,29 @@ def get_node_ID(workflow, title):
     Raises:
     - ValueError: If multiple nodes with the same title are found.
     """
-    logger.info(f"\nnode_manipulation.get_node_ID(): Searching for node title: {title}")
     
     matching_ids = [node_id for node_id, node in workflow.items() if node.get('_meta', {}).get('title') == title]
     
     if len(matching_ids) > 1:
-        logger.error(f"node_manipulation.get_node_ID(): Error - Found duplicate titles: {matching_ids}")
+        logger.error(f"node_manipulation.get_node_ID: Error - Found duplicate titles: {matching_ids}")
         raise ValueError(f"Duplicate titles found for '{title}': {matching_ids}")
     
     if not matching_ids:
-        logger.info(f"node_manipulation.get_node_ID(): No node found with title: {title}")
+        logger.info(f"node_manipulation.get_node_ID: No node found with title: {title}")
         return None
         
-    logger.info(f"node_manipulation.get_node_ID(): Found node ID: {matching_ids[0]}")
+    logger.info(f"node_manipulation.get_node_ID: Found node ID: {matching_ids[0]}")
     return matching_ids[0]
 
+def set_node_value(workflow, nodeTitle, input_key, input_value):
+    node_id = get_node_ID(workflow, nodeTitle)
+    if node_id is not None:
+        workflow[node_id]['inputs'][input_key] = input_value
+        logger.info(f"node_manipulation.set_node_value: Successfully set {input_key} to {input_value} for node {node_id} - {nodeTitle}")
+    else:
+        logger.info(f"node_manipulation.set_node_value: Failed - Node '{nodeTitle}' not found")
 
-def set_KSampler(workflow, nodeTitle, seed, steps=20, cfg=7, sampler_name='dpmpp_2m', scheduler='karras', denoise=1):
+def set_KSampler(workflow, nodeTitle, seed, steps, cfg, sampler_name, scheduler, denoise):
     """
     Configures a KSampler node in the workflow with specified parameters.
 
@@ -55,8 +61,6 @@ def set_KSampler(workflow, nodeTitle, seed, steps=20, cfg=7, sampler_name='dpmpp
     - scheduler (str): The scheduler type.
     - denoise (float): The denoise level.
     """
-    logger.info(f"\nnode_manipulation.set_KSampler(): Configuring KSampler node: {nodeTitle}")
-    logger.info(f"node_manipulation.set_KSampler(): Parameters - seed={seed}, steps={steps}, cfg={cfg}, sampler={sampler_name}, scheduler={scheduler}, denoise={denoise}")
     
     node_id = get_node_ID(workflow, nodeTitle)
     if node_id is not None:
@@ -68,31 +72,30 @@ def set_KSampler(workflow, nodeTitle, seed, steps=20, cfg=7, sampler_name='dpmpp
             'scheduler': scheduler,
             'denoise': denoise
         })
-        logger.info(f"node_manipulation.set_KSampler(): Successfully configured node {node_id}")
+        logger.info(f"node_manipulation.set_KSampler: Successfully configured KSampler node: {node_id} - {nodeTitle}")
     else:
-        logger.info(f"node_manipulation.set_KSampler(): Failed - Node '{nodeTitle}' not found")
+        logger.info(f"node_manipulation.set_KSampler: Failed - Node '{nodeTitle}' not found")
 
 def set_positive_prompt(workflow, ckpt_name, lora_names, embeddings, object_type, nodeTitle="Positive", style_name=None):
-    logger.info(f"\nnode_manipulation.set_positive_prompt(): Setting positive prompt")
-    logger.info(f"node_manipulation.set_positive_prompt(): Parameters - checkpoint={ckpt_name}, loras={lora_names}, embeddings={embeddings}, object_type={object_type}, style={style_name}")
-    
     positive_prompt = gen_positive_prompt(ckpt_name=ckpt_name, lora_names=lora_names, embeddings=embeddings, object_type=object_type, style_name=style_name)
     node_id = get_node_ID(workflow, nodeTitle)
     
     if node_id is not None:
         workflow[node_id]['inputs']['text'] = positive_prompt
-        logger.info(f"node_manipulation.set_positive_prompt(): Successfully set prompt for node {node_id}")
-        logger.info(f"node_manipulation.set_positive_prompt(): Prompt: {positive_prompt}")
+        logger.info(f"node_manipulation.set_positive_prompt: Successfully set prompt for node {node_id} - {nodeTitle}")
+        logger.info(f"node_manipulation.set_positive_prompt: Prompt: {positive_prompt}")
     else:
-        logger.info(f"node_manipulation.set_positive_prompt(): Failed - Node '{nodeTitle}' not found")
+        logger.info(f"node_manipulation.set_positive_prompt: Failed - Node '{nodeTitle}' not found")
 
-def set_negative_prompt(workflow, ckpt_name, lora_names, embeddings, nodeTitle="Negative", style_name=None):
-    negative_prompt = gen_negative_prompt(ckpt_name, lora_names, embeddings, style_name)
+def set_negative_prompt(workflow, ckpt_name, lora_names, embeddings, object_type, nodeTitle="Negative", style_name=None):
+    negative_prompt = gen_negative_prompt(ckpt_name=ckpt_name, lora_names=lora_names, object_type=object_type, embeddings=embeddings, style_name=style_name)
     node_id = get_node_ID(workflow, nodeTitle)
     if node_id is not None:
         workflow[node_id]['inputs']['text'] = negative_prompt
+        logger.info(f"node_manipulation.set_negative_prompt: Successfully set prompt for node {node_id} - {nodeTitle}")
+        logger.info(f"node_manipulation.set_negative_prompt: Prompt: {negative_prompt}")
     else:
-        logger.info(f"node_manipulation.set_negative_prompt(): Node with title '{nodeTitle}' not found.")
+        logger.info(f"node_manipulation.set_negative_prompt: Node with title '{nodeTitle}' not found.")
 
 def set_lora(workflow, nodeTitle, lora_name, strength_model=1, strength_clip=1):
     """
@@ -105,8 +108,6 @@ def set_lora(workflow, nodeTitle, lora_name, strength_model=1, strength_clip=1):
     - strength_model (float): The model strength.
     - strength_clip (float): The clip strength.
     """
-    logger.info(f"\nnode_manipulation.set_lora(): Setting LoRA node: {nodeTitle}")
-    logger.info(f"node_manipulation.set_lora(): Parameters - lora={lora_name}, model_strength={strength_model}, clip_strength={strength_clip}")
     
     node_id = get_node_ID(workflow, nodeTitle)
     if node_id is not None:
@@ -115,9 +116,11 @@ def set_lora(workflow, nodeTitle, lora_name, strength_model=1, strength_clip=1):
             'strength_model': strength_model,
             'strength_clip': strength_clip
         })
-        logger.info(f"node_manipulation.set_lora(): Successfully configured node {node_id}")
+        logger.info(f"node_manipulation.set_lora: Successfully configured LoRA node: {node_id} - {nodeTitle}")
+        logger.info(f"node_manipulation.set_lora: Parameters - lora={lora_name}, model_strength={strength_model}, clip_strength={strength_clip}")
+
     else:
-        logger.info(f"node_manipulation.set_lora(): Failed - Node '{nodeTitle}' not found")
+        logger.info(f"node_manipulation.set_lora: Failed - Node '{nodeTitle}' not found")
 
 
 def update_node_input(workflow, target_title, input_key, new_source_title):
@@ -224,32 +227,15 @@ def set_resolution(workflow, nodeTitle, width, height):
     
     """
 
-    logger.info(f"\nnode_manipulation.set_resolution(): Setting resolution for node: {nodeTitle}")
-    logger.info(f"node_manipulation.set_resolution(): Parameters - width={width}, height={height}")
-
     node_id = get_node_ID(workflow, nodeTitle)
     if node_id is not None:
         workflow[node_id]['inputs'].update({
             'width': width,
             'height': height
         })
-        logger.info(f"node_manipulation.set_resolution(): Successfully set resolution {width}x{height} for node {node_id}")
+        logger.info(f"node_manipulation.set_resolution: Successfully set resolution {width}x{height} for node {nodeTitle} - {node_id}")
     else:
-        logger.info(f"node_manipulation.set_resolution(): Failed - Node '{nodeTitle}' not found")
-
-
-def set_image_upscale_model(workflow, nodeTitle, model=None):
-    """
-    Sets the image upscale model of a node in the workflow.
-    """
-    node_id = get_node_ID(workflow, nodeTitle)
-    if node_id is not None:
-        workflow[node_id]['inputs'].update({
-            'model': model
-        })
-        logger.info(f"node_manipulation.set_image_upscale_model(): Successfully set image upscale model {model} for node {node_id}")
-    else:
-        logger.info(f"node_manipulation.set_image_upscale_model(): Failed - Node '{nodeTitle}' not found")
+        logger.info(f"node_manipulation.set_resolution: Failed - Node '{nodeTitle}' not found")
 
 
 def output_node_relationship(workflow):
@@ -287,6 +273,32 @@ def output_node_relationship(workflow):
     )
     
     logger.info(f"{{ {formatted_output} }}")
+
+
+def update_vae_input(workflow, vae_name):
+    """
+    Updates the 'vae' input of all nodes in the workflow to point to the Load VAE node.
+
+    Parameters:
+    - workflow (dict): The workflow dictionary containing nodes.
+    - vae_node_title (str): The title of the Load VAE node to reference.
+    """
+    # Get the node ID for the Load VAE node
+    vae_node_id = get_node_ID(workflow, "Load VAE")
+    
+    if vae_node_id is None:
+        logger.info(f"node_manipulation.set_vae_input: Failed - Node 'Load VAE' not found.")
+        return
+    else:
+        workflow[vae_node_id]['inputs']['vae_name'] = vae_name
+        logger.info(f"node_manipulation.set_vae_input: Successfully set vae_name to {vae_name} for node {vae_node_id}")
+
+    # Iterate through each node in the workflow
+    for node_id, node in workflow.items():
+        if 'inputs' in node and 'vae' in node['inputs']:
+            # Update the 'vae' input to point to the Load VAE node
+            node['inputs']['vae'] = [vae_node_id, 0]
+            logger.info(f"node_manipulation.set_vae_input: Updated 'vae' input for node {node_id} to [{vae_node_id}, 0]")
 
 
 def main():

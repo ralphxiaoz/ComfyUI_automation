@@ -1,7 +1,7 @@
 {
     "1": {
         "inputs": {
-            "ckpt_name": "majicmixRealistic_v7.safetensors"
+            "ckpt_name": "helloartOil_helloartOilV10kvae.safetensors"
         },
         "class_type": "CheckpointLoaderSimple",
         "_meta": {
@@ -23,10 +23,10 @@
     },
     "3": {
         "inputs": {
-            "text": "An abstract painting depicts numerous heart-shaped objects in various shades of pink, orange, and white. The background is a soft blend of pale pink and white, creating a dreamy and ethereal atmosphere. elegent composition. The expressive style features bold brushstrokes and a harmonious color palette that evokes feelings of warmth and love., , Cartoon watercolor painting style, playful cartoon character, dynamic composition, whimsical expression, soft and fluid texture, adds charm and personality, subtle gradients and blending, captures light and atmosphere, creates soft and dreamy scenes, watercolor texture, masterpiece, best quality, ultra-detailed",
+            "text": ",  oil painting in Anders Zorn style, Add lightsource to front, flower,  covering, black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed",
             "clip": [
-                "2",
-                0
+                "8",
+                1
             ]
         },
         "class_type": "CLIPTextEncode",
@@ -36,10 +36,10 @@
     },
     "4": {
         "inputs": {
-            "text": "NG_DeepNegative_V1_75T, badhandv4, easynegative, an14, signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, bad quality, low quality, low resolution",
+            "text": "easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, watermark, bad quality, low quality, low resolution",
             "clip": [
-                "2",
-                0
+                "8",
+                1
             ]
         },
         "class_type": "CLIPTextEncode",
@@ -49,9 +49,17 @@
     },
     "5": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "backlight_slider_v10.safetensors",
+            "strength_model": -1.67,
+            "strength_clip": -1.67,
+            "model": [
+                "1",
+                0
+            ],
+            "clip": [
+                "2",
+                0
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -60,9 +68,17 @@
     },
     "6": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "add_detail.safetensors",
+            "strength_model": 0.87,
+            "strength_clip": 0.87,
+            "model": [
+                "5",
+                0
+            ],
+            "clip": [
+                "5",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -71,9 +87,17 @@
     },
     "7": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "add_sharpness.safetensors",
+            "strength_model": -0.67,
+            "strength_clip": -0.67,
+            "model": [
+                "6",
+                0
+            ],
+            "clip": [
+                "6",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -82,9 +106,17 @@
     },
     "8": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "lora_name": "flower_covering_lora01.safetensors",
+            "strength_model": 0.83,
+            "strength_clip": 0.83,
+            "model": [
+                "7",
+                0
+            ],
+            "clip": [
+                "7",
+                1
+            ]
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -93,14 +125,14 @@
     },
     "9": {
         "inputs": {
-            "seed": 94426,
+            "seed": 434797039,
             "steps": 20,
-            "cfg": 7.0,
+            "cfg": 9.0,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
             "denoise": 1.0,
             "model": [
-                "1",
+                "8",
                 0
             ],
             "positive": [
@@ -150,7 +182,7 @@
     },
     "12": {
         "inputs": {
-            "filename_prefix": "majicmixRealistic_v7-Painting - Watercolor - Cartoon-_00001__upscaled",
+            "filename_prefix": "helloartOil_helloartOilV10kvae-Photography-Black and White-backl-add_d-add_s-flowe_00001__tweaked_2_00001__upscaled",
             "images": [
                 "18",
                 0
@@ -204,14 +236,14 @@
     },
     "16": {
         "inputs": {
-            "seed": 0,
-            "steps": 10,
-            "cfg": 8,
+            "seed": 434797039,
+            "steps": 20,
+            "cfg": 9.0,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
             "denoise": 0.4,
             "model": [
-                "1",
+                "8",
                 0
             ],
             "positive": [
@@ -276,8 +308,8 @@
     "21": {
         "inputs": {
             "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "strength_model": 0.87,
+            "strength_clip": 0.87
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -287,8 +319,8 @@
     "22": {
         "inputs": {
             "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "strength_model": 0.87,
+            "strength_clip": 0.87
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -298,8 +330,8 @@
     "23": {
         "inputs": {
             "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
+            "strength_model": 0.87,
+            "strength_clip": 0.87
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -307,4 +339,4 @@
         }
     }
 }
-// Datetime stamp: 2025-01-18T21:51:17.603754
+// Datetime stamp: 2025-01-22T23:32:06.469007

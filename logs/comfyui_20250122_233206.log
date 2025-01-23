@@ -1,0 +1,11 @@
+2025-01-22 23:32:06,220 - __main__ - INFO - upscale.process_images: Processing helloartOil_helloartOilV10kvae-Photography-Black and White-backl-add_d-add_s-flowe_00001__tweaked_2_00001_.png
+2025-01-22 23:32:06,255 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 17
+2025-01-22 23:32:06,256 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 3840x2160 for node Up_res - 17
+2025-01-22 23:32:06,256 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 23:32:06,256 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 18
+2025-01-22 23:32:06,257 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-22 23:32:06,257 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 23:32:06,257 - __main__ - INFO - upscale.process_images: Queuing workflow for helloartOil_helloartOilV10kvae-Photography-Black and White-backl-add_d-add_s-flowe_00001__tweaked_2_00001_.png
+2025-01-22 23:32:06,467 - load_models - INFO - load_models.queue_workflow: Response: {"prompt_id": "43b94040-4e78-45b6-ac2e-163e666641f5", "number": 0, "node_errors": {}}
+2025-01-22 23:32:06,467 - __main__ - INFO - upscale.process_images: Successfully queued workflow for helloartOil_helloartOilV10kvae-Photography-Black and White-backl-add_d-add_s-flowe_00001__tweaked_2_00001_.png
+2025-01-22 23:32:06,469 - __main__ - INFO - Saved last workflow to last_upscale_workflow.json

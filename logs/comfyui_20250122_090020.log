@@ -1,0 +1,67 @@
+2025-01-22 09:00:20,962 - __main__ - INFO - ===== run.main: Running iteration 1 =====
+2025-01-22 09:00:20,962 - __main__ - INFO - run.main: Style name: Experimental-Dreamy Animal
+2025-01-22 09:00:20,963 - load_models - INFO - load_models.assemble_loras: Found checkpoint ghostxl_v10BakedVAE.safetensors with base SDXL 1.0
+2025-01-22 09:00:20,964 - load_models - INFO - load_models.assemble_loras: Added 0 LoRAs from category style
+2025-01-22 09:00:20,964 - load_models - WARNING - No LoRAs found for category: character_outfit
+2025-01-22 09:00:20,964 - load_models - WARNING - No LoRAs found for category: lighting
+2025-01-22 09:00:20,964 - load_models - INFO - load_models.assemble_loras: Added 1 LoRAs from category detail
+2025-01-22 09:00:20,965 - load_models - WARNING - No LoRAs found for category: crispness
+2025-01-22 09:00:20,965 - load_models - WARNING - No LoRAs found for category: quality
+2025-01-22 09:00:20,965 - load_models - INFO - load_models.assemble_loras: Final selection: 1 LoRAs
+2025-01-22 09:00:20,965 - load_models - INFO - load_models-assemble_loras: Selected LoRA: detailed_notrigger.safetensors (Category: detail)
+2025-01-22 09:00:20,965 - __main__ - INFO - run.main: Selected loras: ['detailed_notrigger.safetensors']
+2025-01-22 09:00:20,967 - load_models - INFO - load_models.get_model_params: Selected checkpoint: ghostxl_v10BakedVAE.safetensors
+2025-01-22 09:00:20,967 - load_models - INFO - load_models.get_model_params: Selected loras: [{'Type': 'Lora', 'Base': 'SDXL 1.0', 'Name': 'detailed_notrigger.safetensors', 'Category': 'detail', 'Pos_trigger': '', 'Pos_trigger_select': '', 'Neg_trigger': '', 'Neg_trigger_select': '', 'Weight_from': '-1', 'Weight_to': '1', 'Clip_skip': '', 'CFG': '', 'Steps': '', 'Sampler': '', 'Scheduler': '', 'HiRes_fix': '', 'Special': '', 'Tags': '', 'VAE': '', 'Location': '', 'Excluded': '', 'Link': 'https://civitai.com/models/229213/extremely-detailed-no-trigger-slidersntcaixyz'}]
+2025-01-22 09:00:20,967 - load_models - INFO - load_models.get_model_params: No embeddings specified, selected random embeddings: []
+2025-01-22 09:00:20,967 - load_models - INFO - ===== Selected models & parameters: 
+ {'checkpoint': 'ghostxl_v10BakedVAE.safetensors', 'ckpt_clip_skip': '', 'ckpt_cfg': '', 'ckpt_steps': '', 'ckpt_sampler': '', 'ckpt_scheduler': '', 'ckpt_hires_fix': '', 'num_loras': 1, 'num_embeddings': 0, 'lora1': 'detailed_notrigger.safetensors', 'lora1_weight_from': '-1', 'lora1_weight_to': '1', 'lora1_clip_skip': '', 'lora1_cfg': '', 'lora1_steps': '', 'lora1_sampler': '', 'lora1_scheduler': '', 'lora1_hires_fix': ''} =====
+2025-01-22 09:00:20,968 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 09:00:20,968 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 1
+2025-01-22 09:00:20,968 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 09:00:20,968 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 5
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.set_lora: Successfully configured LoRA node: 5 - Lora1
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.set_lora: Parameters - lora=detailed_notrigger.safetensors, model_strength=0.6, clip_strength=1
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 2
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.set_node_value: Successfully set stop_at_clip_layer to -2 for node 2 - CLIP Set Last Layer
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 9
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 9 - KSampler
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 16
+2025-01-22 09:00:20,969 - node_manipulation - INFO - node_manipulation.set_KSampler: Successfully configured KSampler node: 16 - KS_up
+2025-01-22 09:00:20,970 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 09:00:20,970 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 09:00:20,970 - gen_prompt - INFO - Getting trigger words - checkpoint: ghostxl_v10BakedVAE.safetensors, loras: ['detailed_notrigger.safetensors'], embeddings: 
+2025-01-22 09:00:20,971 - gen_prompt - WARNING - No Pos_trigger_select found for detailed_notrigger.safetensors
+2025-01-22 09:00:20,971 - gen_prompt - WARNING - No Neg_trigger_select found for ghostxl_v10BakedVAE.safetensors
+2025-01-22 09:00:20,972 - gen_prompt - WARNING - No Neg_trigger_select found for detailed_notrigger.safetensors
+2025-01-22 09:00:20,972 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': 'realistic anime art style,  realistic art style', 'negative': ''}
+2025-01-22 09:00:20,973 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 307
+2025-01-22 09:00:20,974 - gen_prompt - INFO - Found style. Result: {'name': 'Experimental-Dreamy Animal', 'positive': 'Dreamy Animal illustration art style, combines dreamy elements with adorable animals, soft and pastel colors, dynamic and charming compositions, captures the essence of cute and dreamlike animal worlds, professional-grade execution, evokes a sense of serenity and cuteness', 'negative': 'signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-22 09:00:20,974 - gen_prompt - INFO - gen_prompt.gen_positive_prompt: Full positive prompt: 
+ , realistic anime art style,  realistic art style, Dreamy Animal illustration art style, combines dreamy elements with adorable animals, soft and pastel colors, dynamic and charming compositions, captures the essence of cute and dreamlike animal worlds, professional-grade execution, evokes a sense of serenity and cuteness, masterpiece, best quality, ultra-detailed
+2025-01-22 09:00:20,974 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 3
+2025-01-22 09:00:20,974 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Successfully set prompt for node 3 - Positive
+2025-01-22 09:00:20,974 - node_manipulation - INFO - node_manipulation.set_positive_prompt: Prompt: , realistic anime art style,  realistic art style, Dreamy Animal illustration art style, combines dreamy elements with adorable animals, soft and pastel colors, dynamic and charming compositions, captures the essence of cute and dreamlike animal worlds, professional-grade execution, evokes a sense of serenity and cuteness, masterpiece, best quality, ultra-detailed
+2025-01-22 09:00:20,975 - gen_prompt - INFO - gen_prompt.get_object: Getting object with identifier: 10
+2025-01-22 09:00:20,975 - gen_prompt - INFO - gen_prompt.get_object: Selected object: object_10
+2025-01-22 09:00:20,975 - gen_prompt - INFO - Getting trigger words - checkpoint: ghostxl_v10BakedVAE.safetensors, loras: ['detailed_notrigger.safetensors'], embeddings: 
+2025-01-22 09:00:20,976 - gen_prompt - WARNING - No Pos_trigger_select found for detailed_notrigger.safetensors
+2025-01-22 09:00:20,977 - gen_prompt - WARNING - No Neg_trigger_select found for ghostxl_v10BakedVAE.safetensors
+2025-01-22 09:00:20,977 - gen_prompt - WARNING - No Neg_trigger_select found for detailed_notrigger.safetensors
+2025-01-22 09:00:20,977 - gen_prompt - INFO - gen_prompt.get_trigger_words: Final trigger words: 
+ {'positive': 'realistic anime art style,  realistic art style', 'negative': ''}
+2025-01-22 09:00:20,979 - gen_prompt - INFO - gen_prompt.select_random_style: Total styles: 307, Included styles: 307
+2025-01-22 09:00:20,979 - gen_prompt - INFO - Found style. Result: {'name': 'Experimental-Dreamy Animal', 'positive': 'Dreamy Animal illustration art style, combines dreamy elements with adorable animals, soft and pastel colors, dynamic and charming compositions, captures the essence of cute and dreamlike animal worlds, professional-grade execution, evokes a sense of serenity and cuteness', 'negative': 'signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts'}
+2025-01-22 09:00:20,980 - gen_prompt - INFO - gen_prompt.gen_negative_prompt: Full negative prompt: 
+ signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, watermark, bad quality, low quality, low resolution
+2025-01-22 09:00:20,980 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 4
+2025-01-22 09:00:20,980 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Successfully set prompt for node 4 - Negative
+2025-01-22 09:00:20,981 - node_manipulation - INFO - node_manipulation.set_negative_prompt: Prompt: signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, watermark, bad quality, low quality, low resolution
+2025-01-22 09:00:20,981 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 10
+2025-01-22 09:00:20,981 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 912x512 for node Empty Latent Image - 10
+2025-01-22 09:00:20,981 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 17
+2025-01-22 09:00:20,981 - node_manipulation - INFO - node_manipulation.set_resolution: Successfully set resolution 1824x1024 for node Up_res - 17
+2025-01-22 09:00:20,982 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 12
+2025-01-22 09:00:20,982 - node_manipulation - INFO - node_manipulation.get_node_ID: Found node ID: 18
+2025-01-22 09:00:20,982 - node_manipulation - INFO - node_manipulation.update_node_input(): Successfully updated input for node 12 with key images to 18
+2025-01-22 09:00:21,198 - load_models - INFO - load_models.queue_workflow: Response: {"prompt_id": "9ac4353e-16fd-412b-843a-3fc62c63e53e", "number": 375, "node_errors": {}}
