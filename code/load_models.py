@@ -77,7 +77,7 @@ def assemble_loras(checkpoint, fixed_loras, lora_categories):
 
     # Add flexible loras based on categories
     for category, quantity in lora_categories.items():
-        category_models = [lora for lora in available_loras if lora['Category'] == category]
+        category_models = [lora for lora in available_loras if lora['Category'] == category and lora['Excluded'].lower() != 'y']
         
         if not category_models:
             logger.warning(f"No LoRAs found for category: {category}")

@@ -1,7 +1,7 @@
 import json
 import os
 from PIL import Image
-from load_models import queue_workflow
+from load_models import queue_workflow, set_KSampler
 import time
 from config import get_path
 from utils.logger_config import setup_logger
@@ -100,6 +100,9 @@ def upscale_images(new_width=None, new_height=None):
                 # Update output filename to indicate upscaled version
                 base_name = os.path.splitext(image_file)[0]
                 workflow[get_node_ID(workflow, "Save Image")]["inputs"]["filename_prefix"] = f"{base_name}_upscaled"
+
+                # set the KSampler node values
+                set_KSampler(workflow, nodeTitle="KS_up", seed=888, steps=10, cfg=7, sampler_name='dpmpp_2m', scheduler='karras', denoise=0.4)
                 
                 # Queue the modified workflow
                 logger.info(f"upscale.process_images: Queuing workflow for {image_file}")

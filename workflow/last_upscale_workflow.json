@@ -1,7 +1,7 @@
 {
     "1": {
         "inputs": {
-            "ckpt_name": "helloartOil_helloartOilV10kvae.safetensors"
+            "ckpt_name": "wildlifexAnimals_wildlifexAnimals.safetensors"
         },
         "class_type": "CheckpointLoaderSimple",
         "_meta": {
@@ -23,10 +23,10 @@
     },
     "3": {
         "inputs": {
-            "text": ",  oil painting in Anders Zorn style, Add lightsource to front, flower,  covering, black and white photography, timeless elegance, classic aesthetic, dramatic contrasts, emphasizing shapes and textures, evoking nostalgia, focusing on light and shadow, monochromatic storytelling, capturing mood and emotion, artistic expression, minimalist compositions, conveying depth and atmosphere, timeless beauty, masterpiece, best quality, ultra-detailed",
+            "text": "A sleek golden snake intertwined with Feng Shui coins, resting on a reflective surface to amplify its energy, inviting blessings and good fortune into the home , Add lightsource to front, , masterpiece, best quality, ultra-detailed",
             "clip": [
-                "8",
-                1
+                "2",
+                0
             ]
         },
         "class_type": "CLIPTextEncode",
@@ -36,10 +36,10 @@
     },
     "4": {
         "inputs": {
-            "text": "easynegative, an14, bad anatomy, comics, cropped, cross-eyed, worst quality, low quality, painting, 3D render, drawing, crayon, sketch, graphite, impressionist, cartoon, anime, noisy, blurry, soft, deformed, ugly, lowres, low details, JPEG artifacts, airbrushed, semi-realistic, CGI, render, Blender, digital art, manga, amateur, mutilated, distorted, watermark, bad quality, low quality, low resolution",
+            "text": "NG_DeepNegative_V1_75T, an14, watermark, bad quality, low quality, low resolution",
             "clip": [
-                "8",
-                1
+                "2",
+                0
             ]
         },
         "class_type": "CLIPTextEncode",
@@ -50,8 +50,8 @@
     "5": {
         "inputs": {
             "lora_name": "backlight_slider_v10.safetensors",
-            "strength_model": -1.67,
-            "strength_clip": -1.67,
+            "strength_model": 1.1,
+            "strength_clip": 1,
             "model": [
                 "1",
                 0
@@ -68,9 +68,9 @@
     },
     "6": {
         "inputs": {
-            "lora_name": "add_detail.safetensors",
-            "strength_model": 0.87,
-            "strength_clip": 0.87,
+            "lora_name": "more_details.safetensors",
+            "strength_model": 0.8,
+            "strength_clip": 1,
             "model": [
                 "5",
                 0
@@ -88,8 +88,8 @@
     "7": {
         "inputs": {
             "lora_name": "add_sharpness.safetensors",
-            "strength_model": -0.67,
-            "strength_clip": -0.67,
+            "strength_model": -0.2,
+            "strength_clip": 1,
             "model": [
                 "6",
                 0
@@ -106,9 +106,9 @@
     },
     "8": {
         "inputs": {
-            "lora_name": "flower_covering_lora01.safetensors",
-            "strength_model": 0.83,
-            "strength_clip": 0.83,
+            "lora_name": "SDXLrender_v2.0.safetensors",
+            "strength_model": 0.7,
+            "strength_clip": 1,
             "model": [
                 "7",
                 0
@@ -125,23 +125,23 @@
     },
     "9": {
         "inputs": {
-            "seed": 434797039,
-            "steps": 20,
-            "cfg": 9.0,
+            "seed": 543442451,
+            "steps": 30,
+            "cfg": 8.0,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
             "denoise": 1.0,
             "model": [
-                "8",
+                "1",
                 0
             ],
             "positive": [
-                "3",
+                "35",
                 0
             ],
             "negative": [
-                "4",
-                0
+                "35",
+                1
             ],
             "latent_image": [
                 "10",
@@ -182,7 +182,7 @@
     },
     "12": {
         "inputs": {
-            "filename_prefix": "helloartOil_helloartOilV10kvae-Photography-Black and White-backl-add_d-add_s-flowe_00001__tweaked_2_00001__upscaled",
+            "filename_prefix": "wildlifexAnimals_wildlifexAnimals-None-backl-more_-add_s-SDXLr_00001__upscaled",
             "images": [
                 "18",
                 0
@@ -236,23 +236,23 @@
     },
     "16": {
         "inputs": {
-            "seed": 434797039,
-            "steps": 20,
-            "cfg": 9.0,
+            "seed": 888,
+            "steps": 10,
+            "cfg": 7,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
             "denoise": 0.4,
             "model": [
-                "8",
+                "1",
                 0
             ],
             "positive": [
-                "3",
+                "35",
                 0
             ],
             "negative": [
-                "4",
-                0
+                "35",
+                1
             ],
             "latent_image": [
                 "15",
@@ -307,9 +307,9 @@
     },
     "21": {
         "inputs": {
-            "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 0.87,
-            "strength_clip": 0.87
+            "lora_name": "SDXLrender_v2.0.safetensors",
+            "strength_model": 0.7,
+            "strength_clip": 1
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -319,8 +319,8 @@
     "22": {
         "inputs": {
             "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 0.87,
-            "strength_clip": 0.87
+            "strength_model": 1,
+            "strength_clip": 1
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -330,13 +330,124 @@
     "23": {
         "inputs": {
             "lora_name": "2b_nier_automata.safetensors",
-            "strength_model": 0.87,
-            "strength_clip": 0.87
+            "strength_model": 1,
+            "strength_clip": 1
         },
         "class_type": "LoraLoader",
         "_meta": {
             "title": "Lora7"
         }
+    },
+    "29": {
+        "inputs": {
+            "image": "snake_year_6.jpg",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        },
+        "is_changed": [
+            "7740d17f30056b0fb2508bf8a4b6221498f386635e1a9946792ff11641995b05"
+        ]
+    },
+    "30": {
+        "inputs": {
+            "preprocessor": "DepthAnythingV2Preprocessor",
+            "resolution": 512,
+            "image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "AIO_Preprocessor",
+        "_meta": {
+            "title": "net1"
+        }
+    },
+    "32": {
+        "inputs": {
+            "preprocessor": "CannyEdgePreprocessor",
+            "resolution": 512,
+            "image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "AIO_Preprocessor",
+        "_meta": {
+            "title": "net2"
+        }
+    },
+    "33": {
+        "inputs": {
+            "switch_1": "On",
+            "controlnet_1": "controlnet11Models_depth.safetensors",
+            "controlnet_strength_1": 1.0,
+            "start_percent_1": 0.0,
+            "end_percent_1": 1.0,
+            "switch_2": "On",
+            "controlnet_2": "controlnet11Models_canny.safetensors",
+            "controlnet_strength_2": 1.0,
+            "start_percent_2": 0.0,
+            "end_percent_2": 1.0,
+            "switch_3": "Off",
+            "controlnet_3": "None",
+            "controlnet_strength_3": 1.0,
+            "start_percent_3": 0.0,
+            "end_percent_3": 1.0,
+            "image_1": [
+                "30",
+                0
+            ],
+            "image_2": [
+                "32",
+                0
+            ],
+            "image_3": [
+                "34",
+                0
+            ]
+        },
+        "class_type": "CR Multi-ControlNet Stack",
+        "_meta": {
+            "title": "\ud83d\udd79\ufe0f CR Multi-ControlNet Stack"
+        }
+    },
+    "34": {
+        "inputs": {
+            "preprocessor": "none",
+            "resolution": 512,
+            "image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "AIO_Preprocessor",
+        "_meta": {
+            "title": "net3"
+        }
+    },
+    "35": {
+        "inputs": {
+            "switch": "On",
+            "base_positive": [
+                "3",
+                0
+            ],
+            "base_negative": [
+                "4",
+                0
+            ],
+            "controlnet_stack": [
+                "33",
+                0
+            ]
+        },
+        "class_type": "CR Apply Multi-ControlNet",
+        "_meta": {
+            "title": "\ud83d\udd79\ufe0f CR Apply Multi-ControlNet"
+        }
     }
 }
-// Datetime stamp: 2025-01-22T23:32:06.469007
+// Datetime stamp: 2025-01-30T00:07:08.703778

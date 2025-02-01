@@ -123,7 +123,7 @@ def set_lora(workflow, nodeTitle, lora_name, strength_model=1, strength_clip=1):
         logger.info(f"node_manipulation.set_lora: Failed - Node '{nodeTitle}' not found")
 
 
-def update_node_input(workflow, target_title, input_key, new_source_title):
+def update_node_input(workflow, target_title, input_key, new_input_node_title):
     """
     Updates the input source of a target node in the workflow.
     this is flawed because input has 2 parts: node id and the position of that node's output. 
@@ -135,10 +135,10 @@ def update_node_input(workflow, target_title, input_key, new_source_title):
     - workflow (dict): The workflow dictionary containing nodes.
     - target_title (str): The title of the target node to update.
     - input_key (str): The input key to update.
-    - new_source_title (str): The title of the new source node.
+    - new_input_node_title (str): The title of the new input node.
     """
     target_node_id = get_node_ID(workflow, target_title)
-    new_source_node_id = get_node_ID(workflow, new_source_title)
+    new_source_node_id = get_node_ID(workflow, new_input_node_title)
     
     if target_node_id is not None and new_source_node_id is not None:
         if input_key in workflow[target_node_id]['inputs']:
@@ -150,7 +150,7 @@ def update_node_input(workflow, target_title, input_key, new_source_title):
         if target_node_id is None:
             logger.info(f"Node with title '{target_title}' not found.")
         if new_source_node_id is None:
-            logger.info(f"Node with title '{new_source_title}' not found.")
+            logger.info(f"Node with title '{new_input_node_title}' not found.")
 
 
 def set_number_of_loras(workflow, num_loras):

@@ -104,11 +104,6 @@ def tweak_image(image_path, num_tweaks=5):
         # Wait between generations
         time.sleep(30)  # Adjust sleep time as needed
         
-        # Save the tweaked workflow for reference
-        workflow_filename = f"tweaked_workflow_{base_filename}_{tweak_num+1}.json"
-        with open(get_path('workflow', workflow_filename), 'w') as outfile:
-            json.dump(tweaked_workflow, outfile, indent=4)
-            outfile.write(f'\n// Datetime stamp: {datetime.now().isoformat()}\n')
 
 def process_directory():
     """Process all images in the to_tweak directory"""
