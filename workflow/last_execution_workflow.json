@@ -1,7 +1,7 @@
 {
     "1": {
         "inputs": {
-            "ckpt_name": "wildlifexAnimals_wildlifexAnimals.safetensors"
+            "ckpt_name": "etherBluMix_etherBluMix7.safetensors"
         },
         "class_type": "CheckpointLoaderSimple",
         "_meta": {
@@ -23,7 +23,7 @@
     },
     "3": {
         "inputs": {
-            "text": "A golden snake with blue eyes.\n Behind it, a shadow dragon : Use diluted gray ink to create a translucent dragon shadow with hints of claws , pearls , and swirling clouds around it., Add lightsource to front, , masterpiece, best quality, ultra-detailed",
+            "text": "Futuristic logo for 'AokI' with 'AI' in holographic cyan. A stylized neon-blue tree made of floating data particles and binary code forms the letter 'I' in 'AokI.' The 'K' is metallic chrome with circuit patterns. Background: starry void with subtle AI equations. Clean, 3D-rendered., , Bio-mechanical fantasy illustration style, blends organic and mechanical elements, vibrant and surreal, dynamic composition, professional-grade execution, captures the essence of fantasy and science fiction, detailed and imaginative environment, masterpiece, best quality, ultra-detailed",
             "clip": [
                 "2",
                 0
@@ -36,7 +36,7 @@
     },
     "4": {
         "inputs": {
-            "text": "easynegative, watermark, bad quality, low quality, low resolution",
+            "text": "NG_DeepNegative_V1_75T, an14, signature, watermark, photo, photorealistic, realism, ugly, off-center, deformed, 35mm film, dslr, cropped, frame, worst quality, low quality, lowres, JPEG artifacts, watermark, bad quality, low quality, low resolution",
             "clip": [
                 "2",
                 0
@@ -49,17 +49,9 @@
     },
     "5": {
         "inputs": {
-            "lora_name": "backlight_slider_v10.safetensors",
-            "strength_model": -1.9,
-            "strength_clip": 1,
-            "model": [
-                "1",
-                0
-            ],
-            "clip": [
-                "2",
-                0
-            ]
+            "lora_name": "add_detail.safetensors",
+            "strength_model": 1,
+            "strength_clip": 1
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -68,17 +60,9 @@
     },
     "6": {
         "inputs": {
-            "lora_name": "add_detail.safetensors",
-            "strength_model": 1.0,
-            "strength_clip": 1,
-            "model": [
-                "5",
-                0
-            ],
-            "clip": [
-                "5",
-                1
-            ]
+            "lora_name": "bichu-v0612.safetensors",
+            "strength_model": 0.5,
+            "strength_clip": 1
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -87,17 +71,9 @@
     },
     "7": {
         "inputs": {
-            "lora_name": "SDXLrender_v2.0.safetensors",
-            "strength_model": 0.7,
-            "strength_clip": 1,
-            "model": [
-                "6",
-                0
-            ],
-            "clip": [
-                "6",
-                1
-            ]
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 0,
+            "strength_clip": 0
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -106,9 +82,9 @@
     },
     "8": {
         "inputs": {
-            "lora_name": "add_sharpness.safetensors",
-            "strength_model": -1.8,
-            "strength_clip": 1
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 0,
+            "strength_clip": 0
         },
         "class_type": "LoraLoader",
         "_meta": {
@@ -117,9 +93,9 @@
     },
     "9": {
         "inputs": {
-            "seed": 659252375,
+            "seed": 119003910,
             "steps": 30,
-            "cfg": 8,
+            "cfg": 6,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
             "denoise": 1,
@@ -147,7 +123,7 @@
     },
     "10": {
         "inputs": {
-            "width": 912,
+            "width": 512,
             "height": 512,
             "batch_size": 1
         },
@@ -174,9 +150,9 @@
     },
     "12": {
         "inputs": {
-            "filename_prefix": "wildlifexAnimals_wildlifexAnimals-None-backl-add_d-SDXLr",
+            "filename_prefix": "etherBluMix_etherBluMix7-Experimental-Bio-Mechanical Fantasy-",
             "images": [
-                "11",
+                "18",
                 0
             ]
         },
@@ -228,12 +204,12 @@
     },
     "16": {
         "inputs": {
-            "seed": 659252375,
-            "steps": 20,
-            "cfg": 9,
+            "seed": 119003910,
+            "steps": 10,
+            "cfg": 4,
             "sampler_name": "dpmpp_2m",
             "scheduler": "karras",
-            "denoise": 0.4,
+            "denoise": 0.6,
             "model": [
                 "1",
                 0
@@ -259,7 +235,7 @@
     "17": {
         "inputs": {
             "upscale_method": "nearest-exact",
-            "width": 1824,
+            "width": 1024,
             "height": 1024,
             "crop": "disabled",
             "image": [
@@ -299,8 +275,8 @@
     },
     "21": {
         "inputs": {
-            "lora_name": "SDXLrender_v2.0.safetensors",
-            "strength_model": 0.8,
+            "lora_name": "2b_nier_automata.safetensors",
+            "strength_model": 1,
             "strength_clip": 1
         },
         "class_type": "LoraLoader",
@@ -332,7 +308,7 @@
     },
     "29": {
         "inputs": {
-            "image": "snake_year_12.jpg",
+            "image": "Logo_AokI.jpg",
             "upload": "image"
         },
         "class_type": "LoadImage",
@@ -439,4 +415,4 @@
         }
     }
 }
-// Datetime stamp: 2025-01-29T23:14:38.852109
+// Datetime stamp: 2025-02-14T16:06:16.318552

@@ -154,12 +154,12 @@ def get_object(identifier):
     - identifier (str/int): Either a serial number or type to search for
 
     Returns:
-    - dict: A dictionary containing 'name', 'positive', and 'negative' prompts for the selected object
+    - dict: A dictionary containing 'name', 'positive', 'negative' prompts and input_files for the selected object
     """
     logger.info(f"gen_prompt.get_object: Getting object with identifier: {identifier}")
     
     try:
-        with open(get_path('res', 'objects.csv'), newline='') as csvfile:
+        with open(get_path('res', 'objects.csv'), newline='', encoding='latin-1') as csvfile:
             reader = csv.DictReader(csvfile)
             rows = list(reader)
             
@@ -168,20 +168,26 @@ def get_object(identifier):
                 matching_rows = [row for row in rows if row['serial_no'] == str(identifier)]
                 if not matching_rows:
                     logger.warning(f"gen_prompt.get_object: No object found for serial_no: {identifier}")
-                    return {"name": "", "positive": "", "negative": ""}
+                    return {"name": "", "positive": "", "negative": "", "input_files": []}
                 selected_row = matching_rows[0]  # Take the exact match
             else:
                 # Treat identifier as type
                 matching_rows = [row for row in rows if row['type'].lower() == str(identifier).lower()]
                 if not matching_rows:
                     logger.warning(f"gen_prompt.get_object: No objects found for type: {identifier}")
-                    return {"name": "", "positive": "", "negative": ""}
+                    return {"name": "", "positive": "", "negative": "", "input_files": []}
                 selected_row = random.choice(matching_rows)  # Random selection from type
+            
+            # Process input files - split by comma and strip whitespace
+            input_files = []
+            if selected_row['input_file']:
+                input_files = [f.strip() for f in selected_row['input_file'].split(',')]
             
             result = {
                 "name": f"object_{selected_row['serial_no']}",
                 "positive": selected_row['positive_prompt'],
-                "negative": selected_row['negative_prompt']
+                "negative": selected_row['negative_prompt'],
+                "input_files": input_files
             }
             
             logger.info(f"gen_prompt.get_object: Selected object: {result['name']}")
@@ -189,10 +195,10 @@ def get_object(identifier):
             
     except FileNotFoundError:
         logger.error("gen_prompt.get_object: objects.csv not found in res directory")
-        return {"name": "", "positive": "", "negative": ""}
+        return {"name": "", "positive": "", "negative": "", "input_files": []}
     except KeyError as e:
         logger.error(f"gen_prompt.get_object: CSV file missing required column: {e}")
-        return {"name": "", "positive": "", "negative": ""}
+        return {"name": "", "positive": "", "negative": "", "input_files": []}
 
 def gen_positive_prompt(ckpt_name, lora_names, object_type, embeddings, style_name=None):
     """

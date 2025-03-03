@@ -12,7 +12,9 @@ from node_manipulation import (
     set_KSampler, 
     set_resolution,
     set_positive_prompt,
-    set_negative_prompt
+    set_negative_prompt,
+    set_node_value,
+    update_node_input
 )
 from gen_prompt import gen_positive_prompt, gen_negative_prompt
 from config import get_path

@@ -17,7 +17,7 @@ from node_manipulation import (
     update_vae_input,
     set_node_value
 )
-from gen_prompt import gen_positive_prompt, gen_negative_prompt
+from gen_prompt import gen_positive_prompt, gen_negative_prompt, get_object
 from load_models import (
     get_model_params,
     load_models_into_workflow,
@@ -47,19 +47,21 @@ if __name__ == "__main__":
         # pool of checkpoints - for now, SD 1.5 & local only
         checkpoints = [row['Name'] for row in rows 
                         if row['Type'] == 'Checkpoint' 
-                        and row['Base'] == "SD 1.5" 
-                        and row['Location'] != 'External']
+                        and row['Base'] == "SD 1.5"
+                        and row['Location'] != 'External'
+                        and row['Excluded'] != 'y']
+
 
     # set checkpoint and loras =================================================================================================
-    ckpt = "meinamix_v12Final.safetensors"
+    ckpt = "helloartOil_helloartOilV10kvae.safetensors"
     set_vae = False
     vae_name = "vaeFtMse840000EmaPruned_vaeFtMse840k.safetensors"
     
     fixed_loras = []
     lora_categories = {
-        "style": 0,
+        "style": 1,
         "character_outfit": 0,
-        "lighting": 0,
+        "lighting": 1,
         "detail": 1,
         "crispness": 1,
         "quality": 1,
@@ -76,50 +78,46 @@ if __name__ == "__main__":
     - 4:3: 1024x768, 800x600
     - 3:2: 1366x1024, 1280x800, 1152x768, 1024x682, 768x512
     """
-    width = 912
+    width = 512
     height = 512
     upscale_ratio = 2
-    run_with_upscale = False
-    sleep_time = 100
+    run_with_upscale = True
+    sleep_time_up = 80
+    sleep_time_regular = 30
 
-    use_art_style = False
+    use_art_style = True
 
-    object_type = 14 # setting this to "target" will error out, need to fix
+    object_type = "target" # setting this to "target" will error out, need to fix
 
-    randome_override = True
+    random_override = True
 
     for j in range (1, 500):
         
         # random override
-        if randome_override:
+        if random_override:
             ckpt = random.choice(checkpoints) # this means no need to factor in random check points in get_model_params ***
             fixed_loras = []
+
             lora_categories = {
-                "style": random.randint(0, 1),
-                "lighting": random.randint(0, 1),
-                "detail": random.randint(0, 1),
-                "crispness": random.randint(0, 1),
-                "quality": random.randint(0, 1)
+                #"style": random.randint(0, 1),
+                #"lighting": random.randint(0, 1),
+                #"detail": random.randint(0, 1),
+                #"crispness": random.randint(0, 1),
+                #"quality": random.randint(0, 1)
             }
-        object_type = random.randint(18, 19)
+        
+        # Get object info including input files
+        object_info = get_object(object_type)
         
         # ControlNet setup
-        if object_type == 13:
-            input_img_name = random.choice(["snake_year_1.jpg"])
-        elif object_type == 14:
-            input_img_name = random.choice(["snake_year_2.jpg", "snake_year_3.jpg"])
-        elif object_type == 15:
-            input_img_name = random.choice(["snake_year_4.jpg", "snake_year_5.jpg"])
-        elif object_type == 16:
-            input_img_name = random.choice(["snake_year_6.jpg", "snake_year_7.jpg"])
-        elif object_type == 17:
-            input_img_name = random.choice(["snake_year_8.jpg", "snake_year_9.jpg"])
-        elif object_type == 18:
-            input_img_name = random.choice(["snake_year_10.jpg", "snake_year_11.jpg", "snake_year_12.jpg"])
-        elif object_type == 19:
-            input_img_name = random.choice(["snake_year_13.jpg", "snake_year_14.jpg"])
+        if object_info["input_files"]:
+            input_img_name = random.choice(object_info["input_files"])
+            logger.info(f"run.main: Selected input image {input_img_name} from available files: {object_info['input_files']}")
+        else:
+            logger.warning(f"run.main: No input files found for object type {object_type}")
+            input_img_name = None
 
-        if get_node_ID(workflow, "net1") is not None:
+        if get_node_ID(workflow, "net1") is not None and input_img_name:
             logger.info(f"run.main: Setting input image to {input_img_name}")
             set_node_value(workflow, "Load Image", "image", input_img_name)
 
@@ -131,7 +129,6 @@ if __name__ == "__main__":
         logger.info(f"run.main: Style name: {style_name}")
 
         for i in range(1, 2):
-            print("===== queueing workflow =====")
             seed = random.randint(1, 1000000000) if use_random_seed else 999999999
             loras = assemble_loras(ckpt, fixed_loras, lora_categories)
             logger.info(f"run.main: Selected loras: {loras}")
@@ -148,8 +145,8 @@ if __name__ == "__main__":
             set_node_value(workflow, "CLIP Set Last Layer", "stop_at_clip_layer", -2)
 
             # set the KSampler node values
-            set_KSampler(workflow, nodeTitle="KSampler", seed=seed, steps=30, cfg=8, sampler_name='dpmpp_2m', scheduler='karras', denoise=1)
-            set_KSampler(workflow, nodeTitle="KS_up", seed=seed, steps=20, cfg=9, sampler_name='dpmpp_2m', scheduler='karras', denoise=0.4)
+            set_KSampler(workflow, nodeTitle="KSampler", seed=seed, steps=30, cfg=6, sampler_name='dpmpp_2m', scheduler='karras', denoise=1)
+            set_KSampler(workflow, nodeTitle="KS_up", seed=seed, steps=10, cfg=4, sampler_name='dpmpp_2m', scheduler='karras', denoise=0.6)
             set_positive_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, embeddings=embeddings_used, object_type=object_type, style_name=style_name)
             set_negative_prompt(workflow, ckpt_name=checkpoint_used, lora_names=loras_used, embeddings=embeddings_used, object_type=object_type, style_name=style_name)
             
@@ -175,7 +172,7 @@ if __name__ == "__main__":
             queue_workflow(workflow)
             
             if i % 1 == 0:
-                time.sleep(sleep_time if run_with_upscale else 20)
+                time.sleep(sleep_time_up if run_with_upscale else sleep_time_regular)
     
     # Save the updated workflow
     with open(get_path('workflow', 'randomizer_updated.json'), 'w') as outfile:

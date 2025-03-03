@@ -3,11 +3,16 @@ import csv
 from pathlib import Path
 import sys
 
+"""
+This script verifies that all models in the CSV exist in the directories and vice versa.
+"""
+
 # Add the parent directory to the Python path so we can import config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import get_path
 from utils.logger_config import setup_logger
+
 
 logger = setup_logger(__name__)
 
